@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/preguntas', 'PreguntaController');
 
 Route::resource('/respuestas', 'RespuestaController');
+
+Route::resource('/categoriasPregunta', 'CategoriaPreguntaController');
