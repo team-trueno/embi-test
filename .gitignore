@@ -20,4 +20,3 @@ yarn-error.log
 ehthumbs.db
 Thumbs.db
 .phpintel
-app/Providers/AppServiceProvider.php
