@@ -14,7 +14,8 @@ class RespuestaController extends Controller
      */
     public function index()
     {
-        //
+        $respuestas=Respuesta::orderBy('id','DESC')->paginate(5);
+        return view('respuestas.index',compact('respuestas'));
     }
 
     /**
@@ -24,7 +25,7 @@ class RespuestaController extends Controller
      */
     public function create()
     {
-        //
+        return view('respuestas.create');
     }
 
     /**
@@ -35,7 +36,23 @@ class RespuestaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reglas = [
+            'respuesta'=>'required|string|min:2|max:100',
+            'correcta'=>'required|boolean',
+            'pregunta_id'=>'required|string|min:1|max:100'
+
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto', 
+            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'max'=>'El campo debe tener un máximo de :max caracteres',
+            'boolean'=>'El campo debe ser un booleano',
+        ];
+        
+        $this->validate($request, $reglas, $mensajes);
+        Respuesta::create($request->all());
+        return redirect()->route('respuestas.index')->with('success','Registro creado satisfactoriamente');
     }
 
     /**
@@ -44,9 +61,10 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function show(Respuesta $respuesta)
+    public function show($id)
     {
-        //
+        $respuestas=Respuesta::find($id);
+        return  view('respuestas.show',compact('respuestas'));
     }
 
     /**
@@ -55,9 +73,10 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function edit(Respuesta $respuesta)
+    public function edit($id)
     {
-        //
+        $respuestas=Respuesta::find($id);
+        return view('respuestas.edit',compact('respuestas'));
     }
 
     /**
@@ -67,9 +86,26 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Respuesta $respuesta)
+    public function update(Request $request, Respuesta $respuesta, $id)
     {
-        //
+        $reglas = [
+            'respuesta'=>'required|string|min:2|max:100',
+            'correcta'=>'required|boolean',
+            'pregunta_id'=>'required|string|min:1|max:100'
+
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto', 
+            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'max'=>'El campo debe tener un máximo de :max caracteres',
+            'boolean'=>'El campo debe ser un booleano',
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+ 
+        Respuesta::find($id)->update($request->all());
+        return redirect()->route('respuestas.index')->with('success','Registro actualizado satisfactoriamente');
     }
 
     /**
@@ -78,8 +114,9 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Respuesta $respuesta)
+    public function destroy($id)
     {
-        //
+        Respuesta::find($id)->delete();
+        return redirect()->route('respuestas.index')->with('success','Registro eliminado satisfactoriamente');
     }
 }
