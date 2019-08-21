@@ -18,29 +18,29 @@
                             <thead>
                                 <th>Respuestas</th>
                                 <th>Correcta</th>
-                                <th>Pregunta ID</th>                              
+                                <th>Pregunta ID</th>
                             </thead>
                             <tbody>
-                                @if($respuestas->count()>0)
+                                @if($respuestas->count())
                                 @foreach($respuestas as $respuesta)
                                 <tr>
                                     <td>{{$respuesta->detalle}}</td>
                                     <td>{{$respuesta->correcta}}</td>
                                     <td>{{$respuesta->pregunta_id}}</td>
                                     <td>
-                                        <a class="btn btn-warning btn-xs" href="{{action('RespuestaController@show', $respuesta->id)}}">Ver</a>
+                                        <a class="btn btn-warning btn-xs" href="{{ route('respuestas.show', $respuesta->id) }}">Ver</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-outline-warning btn-xs" href="{{action('RespuestaController@edit', $respuesta->id)}}">Editar</a>
+                                        <a class="btn btn-outline-warning btn-xs" href="{{ route('respuestas.edit', $respuesta->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{action('RespuestaController@destroy', $respuesta->id)}}" method="post">
+                                        <form action="{{ route('respuestas.destroy', $respuesta->id) }}" method="post">
+                                            @method('DELETE')
                                             @csrf
-                                            
-                                            <input name="_method" type="hidden" value="DELETE">
 
                                             <button class="btn btn-dark btn-xs" type="submit">Eliminar</button>
-                                    </td>                                    
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 @else
