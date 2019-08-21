@@ -42,15 +42,15 @@ class PreguntaController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo debe ser un texto', 
-            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
             'max'=>'El campo debe tener un máximo de :max caracteres',
             'unique'=>'Esta pregunta ya está registrada en la Base de Datos'
         ];
-        
+
         $this->validate($request, $reglas, $mensajes);
         Pregunta::create($request->all());
-        return redirect()->route('preguntas.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('preguntas.index');
     }
 
     /**
@@ -75,9 +75,8 @@ class PreguntaController extends Controller
      * @param  \App\Pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pregunta $pregunta)
     {
-        $preguntas=Pregunta::find($id);
         return view('preguntas.edit', compact('preguntas'));
     }
 
@@ -88,24 +87,25 @@ class PreguntaController extends Controller
      * @param  \App\Pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pregunta $pregunta, $id)
+    public function update(Request $request, Pregunta $pregunta)
     {
         $reglas = [
-            'pregunta'=>'required|string|min:5|max:100|unique:preguntas,pregunta',
-            'categoria_pregunta_id'=>'required|string|min:1|max:100|unique:preguntas,categoria_pregunta_id'
+            'pregunta'=>'required|string|min:5|max:100',
+            'categoria_pregunta_id'=>'required|string|min:1|max:100'
         ];
 
         $mensajes = [
-            'string'=>'El campo debe ser un texto', 
-            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
             'max'=>'El campo debe tener un máximo de :max caracteres',
             'unique'=>'Esta pregunta ya está registrada en la Base de Datos'
         ];
 
         $this->validate($request, $reglas, $mensajes);
- 
-        Pregunta::find($id)->update($request->all());
-        return redirect()->route('preguntas.index')->with('success','Registro actualizado satisfactoriamente');
+
+        $pregunta->update($request->all());
+
+        return redirect()->route('preguntas.index');
     }
 
     /**
@@ -114,9 +114,9 @@ class PreguntaController extends Controller
      * @param  \App\Pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pregunta $pregunta)
     {
-        Pregunta::find($id)->delete();
-        return redirect()->route('preguntas.index')->with('success','Registro eliminado satisfactoriamente');
+        $pregunta->delete();
+        return redirect()->route('preguntas.index');
     }
 }
