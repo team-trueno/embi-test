@@ -14,8 +14,8 @@ class CategoriaPreguntaController extends Controller
      */
     public function index()
     {
-        $categoriasPreguntas=CategoriaPregunta::orderBy('id','DESC')->paginate(5);
-        return view('categorias-preguntas.index',compact('categoriasPreguntas'));
+        $categoriaPreguntas = CategoriaPregunta::orderBy('id','DESC')->paginate(5);
+        return view('categorias-preguntas.index',compact('categoriaPreguntas'));
     }
 
     /**
@@ -37,7 +37,7 @@ class CategoriaPreguntaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'categoria'=>'required|string|min:1|max:100|unique:categoria_preguntas,categoria'
+            'detalle'=>'required|string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
 
         $mensajes = [
@@ -49,7 +49,7 @@ class CategoriaPreguntaController extends Controller
         
         $this->validate($request, $reglas, $mensajes);
         CategoriaPregunta::create($request->all());
-        return redirect()->route('categorias-preguntas.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('categorias-preguntas.index');
     }
 
     /**
@@ -58,10 +58,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function show(CategoriaPregunta $categoriaPregunta, $id)
+    public function show(CategoriaPregunta $categoriaPregunta)
     {
-        $categoriasPreguntas=CategoriaPregunta::find($id);
-        return  view('categorias-preguntas.show',compact('categoriasPreguntas'));
+        return  view('categorias-preguntas.show',compact('categoriaPregunta'));
     }
 
     /**
@@ -70,10 +69,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function edit(CategoriaPregunta $categoriaPregunta, $id)
+    public function edit(CategoriaPregunta $categoriaPregunta)
     {
-        $categoriasPreguntas=CategoriaPregunta::find($id);
-        return view('categorias-preguntas.edit',compact('categoriasPreguntas'));
+        return view('categorias-preguntas.edit',compact('categoriaPregunta'));
     }
 
     /**
@@ -83,10 +81,10 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CategoriaPregunta $categoriaPregunta, $id)
+    public function update(Request $request, CategoriaPregunta $categoriaPregunta)
     {
         $reglas = [
-            'categoria'=>'required|string|min:1|max:100|unique:categoria_preguntas,categoria'
+            'detalle'=>'required|string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
 
         $mensajes = [
@@ -98,8 +96,9 @@ class CategoriaPreguntaController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
  
-        CategoriaPregunta::find($id)->update($request->all());
-        return redirect()->route('categorias-preguntas.index')->with('success','Registro actualizado satisfactoriamente');
+        $categoriaPregunta->update($request->all());
+
+        return redirect()->route('categorias-preguntas.index');
     }
 
     /**
@@ -108,9 +107,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CategoriaPregunta $categoriaPregunta, $id)
+    public function destroy(CategoriaPregunta $categoriaPregunta)
     {
-        CategoriaPregunta::find($id)->delete();
-        return redirect()->route('categorias-preguntas.index')->with('success','Registro eliminado satisfactoriamente');
+        $categoriaPregunta->delete();
+        return redirect()->route('categorias-preguntas.index');
     }
 }
