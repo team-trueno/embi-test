@@ -37,7 +37,7 @@ class PreguntaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'detalle'=>'required|string|min:5|max:100|unique:preguntas,pregunta',
+            'detalle'=>'required|string|min:5|max:100|unique:preguntas,detalle',
             'categoria_pregunta_id'=>'required|string|min:1|max:100'
         ];
 
