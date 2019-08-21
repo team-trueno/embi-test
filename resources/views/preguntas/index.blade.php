@@ -27,20 +27,20 @@
                                     <td>{{$pregunta->detalle}}</td>
                                     <td>{{$pregunta->categoria_pregunta_id}}</td>
                                     <td>
-                                        <a class="btn btn-warning btn-xs" href="{{ action('PreguntaController@show', $pregunta->id) }}">Ver</a>
+                                        <a class="btn btn-warning btn-xs" href="{{ route('preguntas.show', $pregunta->id) }}">Ver</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-outline-warning btn-xs" href="{{ action('PreguntaController@edit', $pregunta->id) }}">Editar</a>
+                                        <a class="btn btn-outline-warning btn-xs" href="{{ route('preguntas.edit', $pregunta->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{action('PreguntaController@destroy', $pregunta->id)}}" method="post">
+                                        <form action="{{ route('preguntas.destroy', $pregunta->id) }}" method="post">
                                             @method('DELETE')
                                             @csrf
-                                            
+
                                             {{-- Aca hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
                                             <button class="btn btn-dark btn-xs" type="submit">Eliminar</button>
                                         </form>
-                                    </td>                                    
+                                    </td>
                                 </tr>
                                 @endforeach
                                 @else
