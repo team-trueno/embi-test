@@ -15,7 +15,7 @@ class RespuestaController extends Controller
     public function index()
     {
         $respuestas = Respuesta::orderBy('id','DESC')->paginate(5);
-        return view('respuestas.index',compact('respuestas'));
+        return view('respuestas.index', compact('respuestas'));
     }
 
     /**
@@ -39,17 +39,16 @@ class RespuestaController extends Controller
         $reglas = [
             'detalle'=>'string|min:2|max:100',
             'correcta'=>'required|boolean',
-            'pregunta_id'=>'required|string|min:1|max:100'
-
+            'pregunta_id'=>'required|string|min:1|max:100',
         ];
 
         $mensajes = [
-            'string'=>'El campo debe ser un texto', 
-            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
             'max'=>'El campo debe tener un máximo de :max caracteres',
             'boolean'=>'El campo debe ser un booleano',
         ];
-        
+
         $this->validate($request, $reglas, $mensajes);
         Respuesta::create($request->all());
         return redirect()->route('respuestas.index');
@@ -74,7 +73,7 @@ class RespuestaController extends Controller
      */
     public function edit(Respuesta $respuesta)
     {
-        return view('respuestas.edit',compact('respuesta'));
+        return view('respuestas.edit', compact('respuesta'));
     }
 
     /**
@@ -84,24 +83,23 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Respuesta $respuesta, $id)
+    public function update(Request $request, Respuesta $respuesta)
     {
         $reglas = [
             'detalle'=>'required|string|min:2|max:100',
             'correcta'=>'required|boolean',
-            'pregunta_id'=>'required|string|min:1|max:100'
-
+            'pregunta_id'=>'required|string|min:1|max:100',
         ];
 
         $mensajes = [
-            'string'=>'El campo debe ser un texto', 
-            'min'=>'El campo debe tener un minimo de :min caracteres', 
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
             'max'=>'El campo debe tener un máximo de :max caracteres',
             'boolean'=>'El campo debe ser un booleano',
         ];
 
         $this->validate($request, $reglas, $mensajes);
- 
+
         $respuesta->update($request->all());
 
         return redirect()->route('respuestas.index');
