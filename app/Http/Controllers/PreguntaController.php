@@ -37,7 +37,7 @@ class PreguntaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'pregunta'=>'required|string|min:5|max:100|unique:preguntas,pregunta',
+            'detalle'=>'required|string|min:5|max:100|unique:preguntas,pregunta',
             'categoria_pregunta_id'=>'required|string|min:1|max:100'
         ];
 
@@ -77,7 +77,7 @@ class PreguntaController extends Controller
      */
     public function edit(Pregunta $pregunta)
     {
-        return view('preguntas.edit', compact('preguntas'));
+        return view('preguntas.edit', compact('pregunta'));
     }
 
     /**
@@ -90,7 +90,7 @@ class PreguntaController extends Controller
     public function update(Request $request, Pregunta $pregunta)
     {
         $reglas = [
-            'pregunta'=>'required|string|min:5|max:100',
+            'detalle'=>'required|string|min:5|max:100',
             'categoria_pregunta_id'=>'required|string|min:1|max:100'
         ];
 
