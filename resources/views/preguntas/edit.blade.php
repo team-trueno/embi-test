@@ -7,11 +7,11 @@
             <div class="card">
 
                 <div class="card-header">
-                <h3>Actualizar datos de la pregunta "{{$pregunta->detalle}}"</h3>
+                <h3>Actualizar datos de la pregunta "{{ $pregunta->detalle }}"</h3>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('preguntas.update',$pregunta->id) }}" role="form">
+                    <form method="POST" action="{{ route('preguntas.update', $pregunta->id) }}" role="form">
                         @csrf
                         @method('PATCH')
 
@@ -22,7 +22,7 @@
                             <div class="col-md-6">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
-                                    value="{{$pregunta->detalle}}" required autocomplete="detalle" autofocus>
+                                    value="{{ $pregunta->detalle }}" required autocomplete="detalle" autofocus>
 
                                 @error('detalle')
                                 <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <input id="categoria_pregunta_id" type="text"
                                     class="form-control @error('categoria_pregunta_id') is-invalid @enderror" name="categoria_pregunta_id"
-                                    value="{{$pregunta->categoria_pregunta_id}}" required autocomplete="categoria_pregunta_id">
+                                    value="{{ $pregunta->categoria_pregunta_id }}" required autocomplete="categoria_pregunta_id">
 
                                 @error('categoria_pregunta_id')
                                 <span class="invalid-feedback" role="alert">
