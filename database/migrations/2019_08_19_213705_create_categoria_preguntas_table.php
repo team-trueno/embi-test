@@ -15,7 +15,7 @@ class CreateCategoriaPreguntasTable extends Migration
     {
         Schema::create('categoria_preguntas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('categoria');
+            $table->string('detalle');
             $table->timestamps();
         });
     }
