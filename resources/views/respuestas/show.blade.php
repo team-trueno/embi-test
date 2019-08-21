@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-            <div class="card-header"><h3>Detalles de la respuesta "{{$respuestas->respuesta}}"</h3></div>
+            <div class="card-header"><h3>Detalles de la respuesta "{{$respuesta->detalle}}"</h3></div>
                 <div class="card-body">
-                    <p>Respuesta: {{$respuestas->respuesta}}</p>
-                    <p>Correcta: {{$respuestas->correcta}}</p>
-                    <p>Pregunta ID: {{$respuestas->pregunta_id}}</p>
-                    <p>Pregunta Texto: {{ $respuestas->pregunta->pregunta }}</p>
+                    <p>Respuesta: {{$respuesta->detalle}}</p>
+                    <p>Correcta: {{$respuesta->correcta}}</p>
+                    <p>Pregunta ID: {{$respuesta->pregunta_id}}</p>
+                    <p>Pregunta Texto: {{ $respuesta->pregunta->detalle }}</p>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
             </div>
             <br>
             <div class="col-md-8 offset-md-4">
-                <a class="btn btn-outline-warning btn-xs" href="{{action('RespuestaController@edit', $respuestas->id)}}">Editar</a>
+                <a class="btn btn-outline-warning btn-xs" href="{{action('RespuestaController@edit', $respuesta->id)}}">Editar</a>
             </div>
         </div>
     </div>

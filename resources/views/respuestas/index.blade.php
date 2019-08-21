@@ -24,7 +24,7 @@
                                 @if($respuestas->count()>0)
                                 @foreach($respuestas as $respuesta)
                                 <tr>
-                                    <td>{{$respuesta->respuesta}}</td>
+                                    <td>{{$respuesta->detalle}}</td>
                                     <td>{{$respuesta->correcta}}</td>
                                     <td>{{$respuesta->pregunta_id}}</td>
                                     <td>

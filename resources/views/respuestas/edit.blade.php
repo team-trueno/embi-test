@@ -7,13 +7,13 @@
             <div class="card">
 
                 <div class="card-header">
-                <h3>Actualizar datos de la respuesta "{{$respuestas->respuesta}}"</h3>
+                <h3>Actualizar datos de la respuesta "{{$respuesta->detalle}}"</h3>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('respuestas.update',$respuestas->id) }}" role="form">
+                    <form method="POST" action="{{ route('respuestas.update',$respuesta->id) }}" role="form">
                         @csrf
-                        <input name="_method" type="hidden" value="PATCH">
+                        @method('PATCH')
 
                         <div class="form-group row">
                             <label for="respuesta"
@@ -22,7 +22,7 @@
                             <div class="col-md-6">
                                 <input id="respuesta" type="text"
                                     class="form-control @error('respuesta') is-invalid @enderror" name="respuesta"
-                                    value="{{$respuestas->respuesta}}" required autocomplete="respuesta" autofocus>
+                                    value="{{$respuesta->detalle}}" required autocomplete="respuesta" autofocus>
 
                                 @error('respuesta')
                                 <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <input id="correcta" type="text"
                                     class="form-control @error('correcta') is-invalid @enderror" name="correcta"
-                                    value="{{$respuestas->correcta}}" required autocomplete="correcta" autofocus>
+                                    value="{{$respuesta->correcta}}" required autocomplete="correcta" autofocus>
 
                                 @error('correcta')
                                 <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                             <div class="col-md-6">
                                 <input id="pregunta_id" type="text"
                                     class="form-control @error('pregunta_id') is-invalid @enderror" name="pregunta_id"
-                                    value="{{$respuestas->pregunta_id}}" required autocomplete="pregunta_id" autofocus>
+                                    value="{{$respuesta->pregunta_id}}" required autocomplete="pregunta_id" autofocus>
 
                                 @error('pregunta_id')
                                 <span class="invalid-feedback" role="alert">

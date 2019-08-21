@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-            <div class="card-header"><h3>Detalles de la pregunta "{{$pregunta->pregunta}}"</h3></div>
+            <div class="card-header"><h3>Detalles de la pregunta "{{$pregunta->detalle}}"</h3></div>
                 <div class="card-body">
-                    <p>Pregunta: {{$pregunta->pregunta}}</p>
+                    <p>Pregunta: {{$pregunta->detalle}}</p>
                     <p>Categoría ID: {{$pregunta->categoria_pregunta_id}}</p>
 
                     <ul>
                         @foreach ($pregunta->respuestas as $respuesta)
-                        <li>{{ $respuesta->respuesta }} {{ $respuesta->correcta }} <a class="btn btn-warning btn-xs" href="{{ action('RespuestaController@show', $respuesta->id) }}">Ver</a></li>
+                        <li>{{ $respuesta->detalle }} {{ $respuesta->correcta }} <a class="btn btn-warning btn-xs" href="{{ action('RespuestaController@show', $respuesta->id) }}">Ver</a></li>
                         @endforeach
                     </ul>
 

@@ -7,24 +7,24 @@
             <div class="card">
 
                 <div class="card-header">
-                <h3>Actualizar datos de la pregunta "{{$preguntas->pregunta}}"</h3>
+                <h3>Actualizar datos de la pregunta "{{$pregunta->detalle}}"</h3>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('preguntas.update',$preguntas->id) }}" role="form">
+                    <form method="POST" action="{{ route('preguntas.update',$pregunta->id) }}" role="form">
                         @csrf
-                        <input name="_method" type="hidden" value="PATCH">
+                        @method('PATCH')
 
                         <div class="form-group row">
-                            <label for="pregunta"
+                            <label for="detalle"
                                 class="col-md-4 col-form-label text-md-right">{{ __('Pregunta') }}</label>
 
                             <div class="col-md-6">
-                                <input id="pregunta" type="text"
-                                    class="form-control @error('pregunta') is-invalid @enderror" name="pregunta"
-                                    value="{{$preguntas->pregunta}}" required autocomplete="pregunta" autofocus>
+                                <input id="detalle" type="text"
+                                    class="form-control @error('detalle') is-invalid @enderror" name="detalle"
+                                    value="{{$pregunta->detalle}}" required autocomplete="detalle" autofocus>
 
-                                @error('pregunta')
+                                @error('detalle')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <input id="categoria_pregunta_id" type="text"
                                     class="form-control @error('categoria_pregunta_id') is-invalid @enderror" name="categoria_pregunta_id"
-                                    value="{{$preguntas->categoria_pregunta_id}}" required autocomplete="categoria_pregunta_id">
+                                    value="{{$pregunta->categoria_pregunta_id}}" required autocomplete="categoria_pregunta_id">
 
                                 @error('categoria_pregunta_id')
                                 <span class="invalid-feedback" role="alert">

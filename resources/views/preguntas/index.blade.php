@@ -24,7 +24,7 @@
                                 @if($preguntas->count()>0)
                                 @foreach($preguntas as $pregunta)
                                 <tr>
-                                    <td>{{$pregunta->pregunta}}</td>
+                                    <td>{{$pregunta->detalle}}</td>
                                     <td>{{$pregunta->categoria_pregunta_id}}</td>
                                     <td>
                                         <a class="btn btn-warning btn-xs" href="{{ action('PreguntaController@show', $pregunta->id) }}">Ver</a>
