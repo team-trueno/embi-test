@@ -14,8 +14,8 @@ class PreguntaController extends Controller
      */
     public function index()
     {
-        $preguntas=Pregunta::orderBy('id','DESC')->paginate(5);
-        return view('preguntas.index',compact('preguntas'));
+        $preguntas = Pregunta::orderBy('id','DESC')->paginate(5);
+        return view('preguntas.index', compact('preguntas'));
     }
 
     /**
@@ -38,7 +38,7 @@ class PreguntaController extends Controller
     {
         $reglas = [
             'pregunta'=>'required|string|min:5|max:100|unique:preguntas,pregunta',
-            'categoria_pregunta_id'=>'required|string|min:1|max:100|unique:preguntas,categoria_pregunta_id'
+            'categoria_pregunta_id'=>'required|string|min:1|max:100'
         ];
 
         $mensajes = [
@@ -59,10 +59,14 @@ class PreguntaController extends Controller
      * @param  \App\Pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pregunta $pregunta)
     {
-        $preguntas=Pregunta::find($id);
-        return  view('preguntas.show',compact('preguntas'));
+        //$preguntas = Pregunta::find($id);
+        //$preguntas = Pregunta::findOrFail($id);
+
+        //$preguntas = $pregunta;
+
+        return  view('preguntas.show', compact('pregunta'));
     }
 
     /**
@@ -74,7 +78,7 @@ class PreguntaController extends Controller
     public function edit($id)
     {
         $preguntas=Pregunta::find($id);
-        return view('preguntas.edit',compact('preguntas'));
+        return view('preguntas.edit', compact('preguntas'));
     }
 
     /**

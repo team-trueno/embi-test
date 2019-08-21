@@ -64,7 +64,7 @@ class RespuestaController extends Controller
     public function show($id)
     {
         $respuestas=Respuesta::find($id);
-        return  view('respuestas.show',compact('respuestas'));
+        return view('respuestas.show',compact('respuestas'));
     }
 
     /**

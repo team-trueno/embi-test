@@ -5,10 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-            <div class="card-header"><h3>Detalles de la pregunta "{{$preguntas->pregunta}}"</h3></div>
+            <div class="card-header"><h3>Detalles de la pregunta "{{$pregunta->pregunta}}"</h3></div>
                 <div class="card-body">
-                    <p>Pregunta: {{$preguntas->pregunta}}</p>
-                    <p>Categoría ID: {{$preguntas->categoria_pregunta_id}}</p>
+                    <p>Pregunta: {{$pregunta->pregunta}}</p>
+                    <p>Categoría ID: {{$pregunta->categoria_pregunta_id}}</p>
+
+                    <ul>
+                        @foreach ($pregunta->respuestas as $respuesta)
+                        <li>{{ $respuesta->respuesta }} {{ $respuesta->correcta }} <a class="btn btn-warning btn-xs" href="{{ action('RespuestaController@show', $respuesta->id) }}">Ver</a></li>
+                        @endforeach
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -18,7 +25,7 @@
             </div>
             <br>
             <div class="col-md-8 offset-md-4">
-                <a class="btn btn-outline-warning btn-xs" href="{{action('PreguntaController@edit', $preguntas->id)}}">Editar</a>
+                <a class="btn btn-outline-warning btn-xs" href="{{action('PreguntaController@edit', $pregunta->id)}}">Editar</a>
             </div>
         </div>
     </div>

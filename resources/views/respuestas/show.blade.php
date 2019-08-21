@@ -10,12 +10,13 @@
                     <p>Respuesta: {{$respuestas->respuesta}}</p>
                     <p>Correcta: {{$respuestas->correcta}}</p>
                     <p>Pregunta ID: {{$respuestas->pregunta_id}}</p>
+                    <p>Pregunta Texto: {{ $respuestas->pregunta->pregunta }}</p>
                 </div>
             </div>
         </div>
         <div class="form-group row mb-0">
             <div class="col-md-8 offset-md-4">
-                <a href="{{ route('respuesta.index') }}" class="btn btn-dark">Atrás</a>
+                <a href="{{ route('respuestas.index') }}" class="btn btn-dark">Atrás</a>
             </div>
             <br>
             <div class="col-md-8 offset-md-4">
