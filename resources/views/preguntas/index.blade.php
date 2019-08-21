@@ -21,7 +21,7 @@
                                 <th>Categoría ID</th>
                             </thead>
                             <tbody>
-                                @if($preguntas->count()>0)
+                                @if($preguntas->count())
                                 @foreach($preguntas as $pregunta)
                                 <tr>
                                     <td>{{$pregunta->detalle}}</td>
