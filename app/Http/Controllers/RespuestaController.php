@@ -14,7 +14,7 @@ class RespuestaController extends Controller
      */
     public function index()
     {
-        $respuestas=Respuesta::orderBy('id','DESC')->paginate(5);
+        $respuestas = Respuesta::orderBy('id','DESC')->paginate(5);
         return view('respuestas.index',compact('respuestas'));
     }
 
@@ -37,7 +37,7 @@ class RespuestaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'respuesta'=>'required|string|min:2|max:100',
+            'detalle'=>'string|min:2|max:100',
             'correcta'=>'required|boolean',
             'pregunta_id'=>'required|string|min:1|max:100'
 
@@ -52,7 +52,7 @@ class RespuestaController extends Controller
         
         $this->validate($request, $reglas, $mensajes);
         Respuesta::create($request->all());
-        return redirect()->route('respuestas.index')->with('success','Registro creado satisfactoriamente');
+        return redirect()->route('respuestas.index');
     }
 
     /**
@@ -61,10 +61,9 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Respuesta $respuesta)
     {
-        $respuestas=Respuesta::find($id);
-        return view('respuestas.show',compact('respuestas'));
+        return view('respuestas.show',compact('respuesta'));
     }
 
     /**
@@ -73,10 +72,9 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Respuesta $respuesta)
     {
-        $respuestas=Respuesta::find($id);
-        return view('respuestas.edit',compact('respuestas'));
+        return view('respuestas.edit',compact('respuesta'));
     }
 
     /**
@@ -89,7 +87,7 @@ class RespuestaController extends Controller
     public function update(Request $request, Respuesta $respuesta, $id)
     {
         $reglas = [
-            'respuesta'=>'required|string|min:2|max:100',
+            'detalle'=>'required|string|min:2|max:100',
             'correcta'=>'required|boolean',
             'pregunta_id'=>'required|string|min:1|max:100'
 
@@ -104,8 +102,9 @@ class RespuestaController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
  
-        Respuesta::find($id)->update($request->all());
-        return redirect()->route('respuestas.index')->with('success','Registro actualizado satisfactoriamente');
+        $respuesta->update($request->all());
+
+        return redirect()->route('respuestas.index');
     }
 
     /**
@@ -114,9 +113,9 @@ class RespuestaController extends Controller
      * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Respuesta $respuesta)
     {
-        Respuesta::find($id)->delete();
-        return redirect()->route('respuestas.index')->with('success','Registro eliminado satisfactoriamente');
+        $respuesta->delete();
+        return redirect()->route('respuestas.index');
     }
 }
