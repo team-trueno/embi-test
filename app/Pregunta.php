@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pregunta extends Model
 {
-    protected $fillable = ['pregunta', 'categoria_pregunta_id'];
+    protected $fillable = ['detalle', 'categoria_pregunta_id'];
 
 
     public function respuestas()
