@@ -37,7 +37,7 @@ class CategoriaPreguntaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'detalle'=>'required|string|min:1|max:100|unique:categoria_preguntas,detalle'
+            'detalle'=>'string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
 
         $mensajes = [
