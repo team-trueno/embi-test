@@ -15,15 +15,15 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="categoria"
+                            <label for="detalle"
                                 class="col-md-4 col-form-label text-md-right">{{ __('Nombre de la Categoría') }}</label>
 
                             <div class="col-md-6">
-                                <input id="categoria" type="text"
-                                    class="form-control @error('categoria') is-invalid @enderror" name="categoria"
-                                    value="{{ old('categoria') }}" required autocomplete="categoria" autofocus>
+                                <input id="detalle" type="text"
+                                    class="form-control @error('detalle') is-invalid @enderror" name="detalle"
+                                    value="{{ old('detalle') }}" required autocomplete="detalle" autofocus>
 
-                                @error('categoria')
+                                @error('detalle')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

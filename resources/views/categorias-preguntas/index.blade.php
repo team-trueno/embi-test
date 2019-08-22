@@ -19,10 +19,10 @@
                                 <th>Categoria</th>
                             </thead>
                             <tbody>
-                                @if($categoriasPreguntas->count()>0)
-                                @foreach($categoriasPreguntas as $categoriaPregunta)
+                                @if($categoriaPreguntas->count()>0)
+                                @foreach($categoriaPreguntas as $categoriaPregunta)
                                 <tr>
-                                    <td>{{$categoriaPregunta->categoria}}</td>
+                                    <td>{{$categoriaPregunta->detalle}}</td>
                                     <td>
                                         <a class="btn btn-warning btn-xs" href="{{action('CategoriaPreguntaController@show', $categoriaPregunta->id)}}">Ver</a>
                                     </td>
@@ -49,7 +49,7 @@
                         </table>
                     </div>
                 </div>
-                {{ $categoriasPreguntas->links() }}
+                {{ $categoriaPreguntas->links() }}
             </div>
         </div>
     </div>

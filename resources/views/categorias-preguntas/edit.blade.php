@@ -7,24 +7,24 @@
             <div class="card">
 
                 <div class="card-header">
-                <h3>Actualizar datos de la categoría "{{$categoriasPreguntas->categoria}}"</h3>
+                <h3>Actualizar datos de la categoría "{{$categoriaPregunta->detalle}}"</h3>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('categorias-preguntas.update',$categoriasPreguntas->id) }}" role="form">
+                    <form method="POST" action="{{ route('categorias-preguntas.update',$categoriaPregunta->id) }}" role="form">
                         @csrf
-                        <input name="_method" type="hidden" value="PATCH">
+                        @method('PATCH')
 
                         <div class="form-group row">
-                            <label for="categoria"
+                            <label for="detalle"
                                 class="col-md-4 col-form-label text-md-right">{{ __('Categoría') }}</label>
 
                             <div class="col-md-6">
-                                <input id="categoria" type="text"
-                                    class="form-control @error('categoria') is-invalid @enderror" name="categoria"
-                                    value="{{$categoriasPreguntas->categoria}}" required autocomplete="categoria" autofocus>
+                                <input id="detalle" type="text"
+                                    class="form-control @error('detalle') is-invalid @enderror" name="detalle"
+                                    value="{{$categoriaPregunta->detalle}}" required autocomplete="detalle" autofocus>
 
-                                @error('categoria')
+                                @error('detalle')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
