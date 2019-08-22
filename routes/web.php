@@ -23,4 +23,5 @@ Route::resource('/preguntas', 'PreguntaController');
 
 Route::resource('/respuestas', 'RespuestaController');
 
-Route::resource('/categorias-preguntas', 'CategoriaPreguntaController');
+//Route::resource('/categorias-preguntas', 'CategoriaPreguntaController');
+Route::resource('/preguntas/categorias', 'CategoriaPreguntaController');
