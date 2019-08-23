@@ -14,7 +14,6 @@ class CategoriaPreguntaController extends Controller
      */
     public function index()
     {
-        dd(1);
         $categorias = CategoriaPregunta::orderBy('id','DESC')->paginate(5);
         return view('categorias.index',compact('categorias'));
     }
@@ -85,7 +84,7 @@ class CategoriaPreguntaController extends Controller
     public function update(Request $request, CategoriaPregunta $categoria)
     {
         $reglas = [
-            'detalle'=>'required|string|min:1|max:100|unique:categoria_preguntas,detalle'
+            'detalle'=>'string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
 
         $mensajes = [
