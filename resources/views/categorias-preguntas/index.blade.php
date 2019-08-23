@@ -19,18 +19,18 @@
                                 <th>Categoria</th>
                             </thead>
                             <tbody>
-                                @if($categoriaPreguntas->count()>0)
-                                @foreach($categoriaPreguntas as $categoriaPregunta)
+                                @if($categoriasPreguntas->count()>0)
+                                @foreach($categoriasPreguntas as $categoriasPregunta)
                                 <tr>
-                                    <td>{{$categoriaPregunta->detalle}}</td>
+                                    <td>{{$categoriasPregunta->detalle}}</td>
                                     <td>
-                                        <a class="btn btn-warning btn-xs" href="{{action('CategoriaPreguntaController@show', $categoriaPregunta->id)}}">Ver</a>
+                                        <a class="btn btn-warning btn-xs" href="{{action('CategoriaPreguntaController@show', $categoriasPregunta->id)}}">Ver</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-outline-warning btn-xs" href="{{action('CategoriaPreguntaController@edit', $categoriaPregunta->id)}}">Editar</a>
+                                        <a class="btn btn-outline-warning btn-xs" href="{{action('CategoriaPreguntaController@edit', $categoriasPregunta->id)}}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{action('CategoriaPreguntaController@destroy', $categoriaPregunta->id)}}" method="post">
+                                        <form action="{{action('CategoriaPreguntaController@destroy', $categoriasPregunta->id)}}" method="post">
                                             @csrf
                                             
                                             <input name="_method" type="hidden" value="DELETE">
@@ -49,7 +49,7 @@
                         </table>
                     </div>
                 </div>
-                {{ $categoriaPreguntas->links() }}
+                {{ $categoriasPreguntas->links() }}
             </div>
         </div>
     </div>

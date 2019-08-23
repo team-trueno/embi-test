@@ -7,11 +7,11 @@
             <div class="card">
 
                 <div class="card-header">
-                <h3>Actualizar datos de la categoría "{{$categoriaPregunta->detalle}}"</h3>
+                <h3>Actualizar datos de la categoría "{{$categoriasPregunta->detalle}}"</h3>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('categorias-preguntas.update',$categoriaPregunta->id) }}" role="form">
+                    <form method="POST" action="{{ route('categorias-preguntas.update',$categoriasPregunta->id) }}" role="form">
                         @csrf
                         @method('PATCH')
 
@@ -22,7 +22,7 @@
                             <div class="col-md-6">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
-                                    value="{{$categoriaPregunta->detalle}}" required autocomplete="detalle" autofocus>
+                                    value="{{$categoriasPregunta->detalle}}" required autocomplete="detalle" autofocus>
 
                                 @error('detalle')
                                 <span class="invalid-feedback" role="alert">

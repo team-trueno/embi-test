@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-            <div class="card-header"><h3>Detalles de la categoría "{{$categoriaPregunta->detalle}}"</h3></div>
+            <div class="card-header"><h3>Detalles de la categoría "{{$categoriasPregunta->detalle}}"</h3></div>
                 <div class="card-body">
-                    <p>Categoría: {{$categoriaPregunta->detalle}}</p>
+                    <p>Categoría: {{$categoriasPregunta->detalle}}</p>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
             </div>
             <br>
             <div class="col-md-8 offset-md-4">
-                <a class="btn btn-outline-warning btn-xs" href="{{action('CategoriaPreguntaController@edit', $categoriaPregunta->id)}}">Editar</a>
+                <a class="btn btn-outline-warning btn-xs" href="{{action('CategoriaPreguntaController@edit', $categoriasPregunta->id)}}">Editar</a>
             </div>
         </div>
     </div>
