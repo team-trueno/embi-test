@@ -14,8 +14,9 @@ class CategoriaPreguntaController extends Controller
      */
     public function index()
     {
-        $categoriasPreguntas = CategoriaPregunta::orderBy('id','DESC')->paginate(5);
-        return view('categorias-preguntas.index',compact('categoriasPreguntas'));
+        dd(1);
+        $categorias = CategoriaPregunta::orderBy('id','DESC')->paginate(5);
+        return view('categorias.index',compact('categorias'));
     }
 
     /**
@@ -25,7 +26,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function create()
     {
-        return view('categorias-preguntas.create');
+        return view('categorias.create');
     }
 
     /**
@@ -49,7 +50,7 @@ class CategoriaPreguntaController extends Controller
         
         $this->validate($request, $reglas, $mensajes);
         CategoriaPregunta::create($request->all());
-        return redirect()->route('categorias-preguntas.index');
+        return redirect()->route('categorias.index');
     }
 
     /**
@@ -58,9 +59,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function show(CategoriaPregunta $categoriasPregunta)
+    public function show(CategoriaPregunta $categoria)
     {
-        return  view('categorias-preguntas.show',compact('categoriasPregunta'));
+        return  view('categorias.show',compact('categoria'));
     }
 
     /**
@@ -69,9 +70,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function edit(CategoriaPregunta $categoriasPregunta)
+    public function edit(CategoriaPregunta $categoria)
     {
-        return view('categorias-preguntas.edit',compact('categoriasPregunta'));
+        return view('categorias.edit',compact('categoria'));
     }
 
     /**
@@ -81,7 +82,7 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CategoriaPregunta $categoriasPregunta)
+    public function update(Request $request, CategoriaPregunta $categoria)
     {
         $reglas = [
             'detalle'=>'required|string|min:1|max:100|unique:categoria_preguntas,detalle'
@@ -96,9 +97,9 @@ class CategoriaPreguntaController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
  
-        $categoriasPregunta->update($request->all());
+        $categoria->update($request->all());
 
-        return redirect()->route('categorias-preguntas.index');
+        return redirect()->route('categorias.index');
     }
 
     /**
@@ -107,9 +108,9 @@ class CategoriaPreguntaController extends Controller
      * @param  \App\CategoriaPregunta  $categoriaPregunta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CategoriaPregunta $categoriasPregunta)
+    public function destroy(CategoriaPregunta $categoria)
     {
-        $categoriasPregunta->delete();
-        return redirect()->route('categorias-preguntas.index');
+        $categoria->delete();
+        return redirect()->route('categorias.index');
     }
 }
