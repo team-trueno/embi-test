@@ -9,7 +9,7 @@
                         <h3>Listado de Categorías</h3><br>
                     </div>
                     <div class="btn-group">
-                        <a href="{{ route('categorias-preguntas.create') }}" class="btn btn-warning">Añadir una nueva Categoría</a>
+                        <a href="{{ route('categorias.create') }}" class="btn btn-warning">Añadir una nueva Categoría</a>
                     </div>
                     <br><br>
                 </div>
@@ -19,18 +19,18 @@
                                 <th>Categoria</th>
                             </thead>
                             <tbody>
-                                @if($categoriasPreguntas->count()>0)
-                                @foreach($categoriasPreguntas as $categoriasPregunta)
+                                @if($categorias->count()>0)
+                                @foreach($categorias as $categoria)
                                 <tr>
-                                    <td>{{$categoriasPregunta->detalle}}</td>
+                                    <td>{{$categoria->detalle}}</td>
                                     <td>
-                                        <a class="btn btn-warning btn-xs" href="{{action('CategoriaPreguntaController@show', $categoriasPregunta->id)}}">Ver</a>
+                                        <a class="btn btn-warning btn-xs" href="{{ route('categorias.show', $categoria->id) }}">Ver</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-outline-warning btn-xs" href="{{action('CategoriaPreguntaController@edit', $categoriasPregunta->id)}}">Editar</a>
+                                        <a class="btn btn-outline-warning btn-xs" href="{{ route('categorias.edit', $categoria->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{action('CategoriaPreguntaController@destroy', $categoriasPregunta->id)}}" method="post">
+                                        <form action="{{ route('categorias.destroy', $categoria->id) }}" method="post">
                                             @csrf
                                             
                                             <input name="_method" type="hidden" value="DELETE">
@@ -49,7 +49,7 @@
                         </table>
                     </div>
                 </div>
-                {{ $categoriasPreguntas->links() }}
+                {{ $categorias->links() }}
             </div>
         </div>
     </div>
