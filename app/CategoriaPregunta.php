@@ -18,6 +18,6 @@ class CategoriaPregunta extends Model
 
     public function preguntas()
     {
-        return $this->hasMany(Pregunta::class, 'categoria_pregunta_id');
+        return $this->hasMany('App\Pregunta', 'categoria_pregunta_id');
     }
 }
