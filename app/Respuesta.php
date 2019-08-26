@@ -6,10 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Respuesta extends Model
 {
-    protected $fillable = ['detalle', 'correcta', 'pregunta_id'];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'detalle', 'correcta', 'pregunta_id'
+    ];
 
     public function pregunta()
     {
-        return $this->belongsTo(Pregunta::class, 'pregunta_id');
+        return $this->belongsTo('App\Pregunta', 'pregunta_id');
     }
 }

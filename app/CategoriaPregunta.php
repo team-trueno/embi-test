@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class CategoriaPregunta extends Model
 {
-    protected $fillable = ['detalle'];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'detalle',
+    ];
 
     public function preguntas()
     {
