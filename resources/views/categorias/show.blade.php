@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-            <div class="card-header"><h3>Detalles de la categoría "{{$categoria->detalle}}"</h3></div>
+            <div class="card-header"><h3>Detalles de la categoría "{{ $categoria->detalle }}"</h3></div>
                 <div class="card-body">
                     <p>Categoría: {{$categoria->detalle}}</p>
                 </div>

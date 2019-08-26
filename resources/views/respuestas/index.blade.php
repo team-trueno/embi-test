@@ -1,4 +1,5 @@
 @extends('layouts.master')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -34,9 +35,9 @@
                                         <a class="btn btn-outline-warning btn-xs" href="{{ route('respuestas.edit', $respuesta->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('respuestas.destroy', $respuesta->id) }}" method="post">
-                                            @method('DELETE')
+                                        <form action="{{ route('respuestas.destroy', $respuesta->id) }}" method="POST">
                                             @csrf
+                                            @method('DELETE')
 
                                             <button class="btn btn-dark btn-xs" type="submit">Eliminar</button>
                                         </form>

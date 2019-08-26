@@ -12,8 +12,8 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('respuestas.update',$respuesta->id) }}" role="form">
-                        @method('PATCH')
                         @csrf
+                        @method('PATCH')
 
                         <div class="form-group row">
                             <label for="respuesta"

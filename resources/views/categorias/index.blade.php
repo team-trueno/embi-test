@@ -1,4 +1,5 @@
 @extends('layouts.master')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -19,10 +20,10 @@
                                 <th>Categoria</th>
                             </thead>
                             <tbody>
-                                @if($categorias->count()>0)
+                                @if($categorias->count())
                                 @foreach($categorias as $categoria)
                                 <tr>
-                                    <td>{{$categoria->detalle}}</td>
+                                    <td>{{ $categoria->detalle }}</td>
                                     <td>
                                         <a class="btn btn-warning btn-xs" href="{{ route('categorias.show', $categoria->id) }}">Ver</a>
                                     </td>
@@ -30,13 +31,12 @@
                                         <a class="btn btn-outline-warning btn-xs" href="{{ route('categorias.edit', $categoria->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('categorias.destroy', $categoria->id) }}" method="post">
+                                        <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST">
                                             @csrf
-                                            
-                                            <input name="_method" type="hidden" value="DELETE">
+                                            @method('DELETE')
 
                                             <button class="btn btn-dark btn-xs" type="submit">Eliminar</button>
-                                    </td>                                    
+                                    </td>
                                 </tr>
                                 @endforeach
                                 @else

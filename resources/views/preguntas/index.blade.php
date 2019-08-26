@@ -33,9 +33,9 @@
                                         <a class="btn btn-outline-warning btn-xs" href="{{ route('preguntas.edit', $pregunta->id) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('preguntas.destroy', $pregunta->id) }}" method="post">
-                                            @method('DELETE')
+                                        <form action="{{ route('preguntas.destroy', $pregunta->id) }}" method="POST">
                                             @csrf
+                                            @method('DELETE')
 
                                             {{-- Aca hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
                                             <button class="btn btn-dark btn-xs" type="submit">Eliminar</button>
