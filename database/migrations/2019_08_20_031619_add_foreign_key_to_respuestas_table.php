@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRespuestasTable extends Migration
+class AddForeignKeyToRespuestasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateRespuestasTable extends Migration
      */
     public function up()
     {
-        Schema::create('respuestas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('detalle');
-            $table->boolean('correcta');
-            $table->unsignedBigInteger('pregunta_id');
-            $table->timestamps();
+        Schema::table('respuestas', function (Blueprint $table) {
+            $table->foreign('pregunta_id')
+                  ->references('id')->on('preguntas');
         });
     }
 
@@ -29,6 +26,8 @@ class CreateRespuestasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('respuestas');
+        Schema::table('respuestas', function (Blueprint $table) {
+            $table->dropForeign(['pregunta_id']);
+        });
     }
 }

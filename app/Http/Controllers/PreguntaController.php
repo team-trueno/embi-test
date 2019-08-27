@@ -14,7 +14,8 @@ class PreguntaController extends Controller
      */
     public function index()
     {
-        //
+        $preguntas = Pregunta::orderBy('id','DESC')->paginate(5);
+        return view('preguntas.index', compact('preguntas'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PreguntaController extends Controller
      */
     public function create()
     {
-        //
+        return view('preguntas.create');
     }
 
     /**
@@ -35,7 +36,21 @@ class PreguntaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reglas = [
+            'detalle'=>'required|string|min:5|max:100|unique:preguntas,detalle',
+            'categoria_pregunta_id'=>'required|string|min:1|max:100'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
+            'max'=>'El campo debe tener un máximo de :max caracteres',
+            'unique'=>'Esta pregunta ya está registrada en la Base de Datos'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+        Pregunta::create($request->all());
+        return redirect()->route('preguntas.index');
     }
 
     /**
@@ -46,7 +61,12 @@ class PreguntaController extends Controller
      */
     public function show(Pregunta $pregunta)
     {
-        //
+        //$preguntas = Pregunta::find($id);
+        //$preguntas = Pregunta::findOrFail($id);
+
+        //$preguntas = $pregunta;
+
+        return  view('preguntas.show', compact('pregunta'));
     }
 
     /**
@@ -57,7 +77,7 @@ class PreguntaController extends Controller
      */
     public function edit(Pregunta $pregunta)
     {
-        //
+        return view('preguntas.edit', compact('pregunta'));
     }
 
     /**
@@ -69,7 +89,23 @@ class PreguntaController extends Controller
      */
     public function update(Request $request, Pregunta $pregunta)
     {
-        //
+        $reglas = [
+            'detalle'=>'required|string|min:5|max:100',
+            'categoria_pregunta_id'=>'required|string|min:1|max:100'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
+            'max'=>'El campo debe tener un máximo de :max caracteres',
+            'unique'=>'Esta pregunta ya está registrada en la Base de Datos'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+
+        $pregunta->update($request->all());
+
+        return redirect()->route('preguntas.index');
     }
 
     /**
@@ -80,6 +116,7 @@ class PreguntaController extends Controller
      */
     public function destroy(Pregunta $pregunta)
     {
-        //
+        $pregunta->delete();
+        return redirect()->route('preguntas.index');
     }
 }

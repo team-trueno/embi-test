@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('/preguntas/categorias', 'CategoriaPreguntaController');
+
 Route::resource('/preguntas', 'PreguntaController');
 
 Route::resource('/respuestas', 'RespuestaController');

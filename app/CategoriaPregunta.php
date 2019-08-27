@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Respuesta extends Model
+class CategoriaPregunta extends Model
 {
 
     /**
@@ -13,11 +13,11 @@ class Respuesta extends Model
      * @var array
      */
     protected $fillable = [
-        'detalle', 'correcta', 'pregunta_id'
+        'detalle',
     ];
 
-    public function pregunta()
+    public function preguntas()
     {
-        return $this->belongsTo('App\Pregunta', 'pregunta_id');
+        return $this->hasMany('App\Pregunta', 'categoria_pregunta_id');
     }
 }
