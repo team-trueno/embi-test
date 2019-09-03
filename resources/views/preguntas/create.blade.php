@@ -3,12 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-12 col-md-6">
+            @component('components.card')
 
-                <div class="card-header">
-                    <h3>Nueva Pregunta</h3>
-                </div>
+
+
+                @slot('header')
+                    Nueva pregunta
+                @endslot
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('preguntas.store') }}">
@@ -16,25 +18,29 @@
 
                         <div class="form-group row">
                             <label for="detalle"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Pregunta') }}</label>
+                                class="col-12 col-md-4 col-form-label">{{ __('Pregunta') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-12 col-md-8">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
                                     value="{{ old('detalle') }}" required autocomplete="detalle" autofocus>
-
-                                @error('detalle')
+                                    @if ($errors->has('detalle'))
+                                    <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
+                                    @else
+                                    <div class="form-text small"></div>
+                                @endif
+                                {{-- @error('detalle')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="categoria_pregunta_id"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Categoría de la pregunta') }}</label>
+                                class="col-md-4 col-form-label">{{ __('Categoría') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="categoria_pregunta_id" type="text"
                                     class="form-control @error('categoria_pregunta_id') is-invalid @enderror" name="categoria_pregunta_id"
                                     value="{{ old('categoria_pregunta_id') }}" required autocomplete="categoria_pregunta_id">
@@ -57,7 +63,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            @endcomponent
         </div>
     </div>
 </div>
