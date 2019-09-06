@@ -1,69 +1,76 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
+    <div class="row mb-4">
+        <div class="col">
             @component('components.card')
-
-            @slot('header')
-
-
-
-              Actualizar datos de la pregunta
+                @slot('header')
+                    Actualizar datos de la pregunta
                 @endslot
 
                 <div class="card-body">
-                        <h5 class="card-title mb-3">{{ $pregunta->detalle }}</h5>
                     <form method="POST" action="{{ route('preguntas.update', $pregunta->id) }}" role="form">
                         @csrf
                         @method('PATCH')
 
                         <div class="form-group row">
-                            <label for="detalle"
-                                class="col-sm-4 col-form-label">{{ __('Pregunta') }}</label>
+                            <label for="detalle" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Pregunta') }}
+                            </label>
 
-                            <div class="col-sm-8">
+                            <div class="col-12 col-sm-9 col-lg-9">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
-                                    value="{{ $pregunta->detalle }}" required autocomplete="detalle" autofocus>
+                                    value="{{ $pregunta->detalle }}"  autocomplete="detalle" autofocus>
 
-                                @error('detalle')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                @if ($errors->has('detalle'))
+                                    <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
+                                @else
+                                    <div class="form-text small"></div>
+                                @endif
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="categoria_pregunta_id"
-                                class="col-sm-4 col-form-label">{{ __('Categoría de la pregunta') }}</label>
+                            <label for="categoria_pregunta_id" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Categoría') }}
+                            </label>
 
-                            <div class="col-sm-8">
-                                <input id="categoria_pregunta_id" type="text"
-                                    class="form-control @error('categoria_pregunta_id') is-invalid @enderror" name="categoria_pregunta_id"
-                                    value="{{ $pregunta->categoria_pregunta_id }}" required autocomplete="categoria_pregunta_id">
+                            <div class="col-12 col-sm-9 col-lg-9">
 
-                                @error('categoria_pregunta_id')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <select name="categoria_pregunta_id" class="form-control @error('categoria_pregunta_id') is-invalid @enderror" id="categoria_pregunta_id" required>
+                                    @foreach ($categorias as $categoria)
+
+                                        <option value="{{ $categoria->id }}" {{ $categoria->id == old('categoria_pregunta_id') || $categoria->id == $pregunta->categoriaPregunta->id ? "selected" : "" }}>
+                                            {{ $categoria->detalle }}
+                                        </option>
+                                    @endforeach
+                                </select>
+
+                                @if ($errors->has('detalle'))
+                                    <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
+                                @else
+                                    <div class="form-text small"></div>
+                                @endif
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-sm-8 offset-sm-4">
-                                <button type="submit" class="btn btn-warning">
-                                        {{ __('Guardar') }}
+
+                        <div class="form-group row mb-0 float-right">
+                            <div class="col">
+                                <a href="{{ route('preguntas.show', $pregunta->id) }}" class="btn btn-dark">Atrás</a>
+                                <button type="submit" class="btn btn-info">
+                                    {{ __('Actualizar') }}
                                 </button>
-
-                                <a href="{{ route('preguntas.index') }}" class="btn btn-dark">Atrás</a>
                             </div>
                         </div>
+
                     </form>
                 </div>
-                @endcomponent
+            @endcomponent
         </div>
     </div>
 </div>
+
 @endsection
