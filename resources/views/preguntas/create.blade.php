@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-lg-6">
             @component('components.card')
 
 
@@ -18,9 +18,9 @@
 
                         <div class="form-group row">
                             <label for="detalle"
-                                class="col-12 col-md-4 col-form-label">{{ __('Pregunta') }}</label>
+                                class="col-12 col-sm-3 col-form-label text-sm-right">{{ __('Pregunta') }}</label>
 
-                            <div class="col-12 col-md-8">
+                            <div class="col-12 col-sm-9 col-lg-9">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
                                     value="{{ old('detalle') }}" required autocomplete="detalle" autofocus>
@@ -38,12 +38,22 @@
                         </div>
                         <div class="form-group row">
                             <label for="categoria_pregunta_id"
-                                class="col-md-4 col-form-label">{{ __('Categoría') }}</label>
+                                class="col-12 col-sm-3 col-form-label text-sm-right">{{ __('Categoría') }}</label>
 
-                            <div class="col-md-8">
-                                <input id="categoria_pregunta_id" type="text"
+                            <div class="col-12 col-sm-8 col-lg-6">
+                                <select name="categoria_pregunta_id" class="form-control @error('categoria_pregunta_id') is-invalid @enderror" id="categoria_pregunta_id" required>
+                                    <option value="" disabled selected hidden>Please Choose...</option>
+                                    @foreach ($categorias as $categoria)
+
+                                        <option value="{{ $categoria->id }}" {{ $categoria->id == old('categoria') ? "selected" : "" }}>
+                                            {{ $categoria->detalle }}
+                                        </option>
+                                    @endforeach
+                                </select>
+
+                                {{-- <input id="categoria_pregunta_id" type="text"
                                     class="form-control @error('categoria_pregunta_id') is-invalid @enderror" name="categoria_pregunta_id"
-                                    value="{{ old('categoria_pregunta_id') }}" required autocomplete="categoria_pregunta_id">
+                                    value="{{ old('categoria_pregunta_id') }}" required autocomplete="categoria_pregunta_id"> --}}
 
                                 @error('categoria_pregunta_id')
                                 <span class="invalid-feedback" role="alert">
