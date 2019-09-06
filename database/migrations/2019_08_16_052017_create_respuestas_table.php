@@ -16,7 +16,7 @@ class CreateRespuestasTable extends Migration
         Schema::create('respuestas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('detalle');
-            $table->boolean('correcta');
+            $table->boolean('correcta')->default(false);
             $table->unsignedBigInteger('pregunta_id');
             $table->timestamps();
         });
