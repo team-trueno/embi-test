@@ -15,7 +15,8 @@ class AddForeignKeyToRespuestasTable extends Migration
     {
         Schema::table('respuestas', function (Blueprint $table) {
             $table->foreign('pregunta_id')
-                  ->references('id')->on('preguntas');
+                  ->references('id')->on('preguntas')
+                  ->onDelete('cascade');
         });
     }
 
