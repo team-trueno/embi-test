@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pregunta;
+use App\CategoriaPregunta;
 use Illuminate\Http\Request;
 
 class PreguntaController extends Controller
@@ -25,7 +26,9 @@ class PreguntaController extends Controller
      */
     public function create()
     {
-        return view('preguntas.create');
+        $categorias = CategoriaPregunta::orderBy('detalle')->get();
+        //dd($categorias);
+        return view('preguntas.create', compact('categorias'));
     }
 
     /**
@@ -49,8 +52,11 @@ class PreguntaController extends Controller
         ];
 
         $this->validate($request, $reglas, $mensajes);
-        Pregunta::create($request->all());
-        return redirect()->route('preguntas.index');
+        $pregunta = Pregunta::create($request->all());
+
+        //return redirect()->route('/preguntas/{pregunta}/respuestas');
+        //return view('pregunta_respuesta', compact('pregunta'));
+        return redirect()->route('preguntas.show', compact('pregunta'));
     }
 
     /**
@@ -66,7 +72,7 @@ class PreguntaController extends Controller
 
         //$preguntas = $pregunta;
 
-        return  view('preguntas.show', compact('pregunta'));
+        return view('preguntas.show', compact('pregunta'));
     }
 
     /**
@@ -77,7 +83,8 @@ class PreguntaController extends Controller
      */
     public function edit(Pregunta $pregunta)
     {
-        return view('preguntas.edit', compact('pregunta'));
+        $categorias = CategoriaPregunta::all();
+        return view('preguntas.edit', compact('pregunta', 'categorias'));
     }
 
     /**
@@ -104,8 +111,8 @@ class PreguntaController extends Controller
         $this->validate($request, $reglas, $mensajes);
 
         $pregunta->update($request->all());
-
-        return redirect()->route('preguntas.index');
+        //return back();
+        return redirect()->route('preguntas.show', compact('pregunta'));
     }
 
     /**
