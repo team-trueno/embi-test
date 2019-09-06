@@ -24,3 +24,17 @@ Route::resource('/preguntas/categorias', 'CategoriaPreguntaController');
 Route::resource('/preguntas', 'PreguntaController');
 
 Route::resource('/respuestas', 'RespuestaController');
+
+Route::resource('/jugadores', 'JugadorController')->parameters([
+    'jugadores' => 'jugador',
+]);
+
+Route::resource('/niveles', 'NivelController')->parameters([
+    'niveles' => 'nivel',
+]);
+
+Route::post('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@store');
+Route::patch('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@update');
+Route::get('/preguntas/{pregunta}/respuestas/edit', 'PreguntaRespuestasController@edit');
+
+
