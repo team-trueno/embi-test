@@ -16,6 +16,8 @@ class CreatePreguntasTable extends Migration
         Schema::create('preguntas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('detalle');
+            $table->boolean('completa')->default(false);
+            $table->boolean('activa')->defaul(false);
             $table->unsignedBigInteger('categoria_pregunta_id');
             $table->timestamps();
         });
