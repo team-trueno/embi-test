@@ -31,7 +31,7 @@
                                     <td class="align-middle">{{ $categoria->detalle }}</td>
                                     <td class="align-middle">{{ $categoria->preguntas->isNotEmpty() }}</td>
 
-                                    <td  class="t-min align-middle d-flex justify-content-between">
+                                    <td  class="align-middle d-flex justify-content-between">
                                         {{-- <div class="float-right"> --}}
                                        <a class="btn btn-warning btn-sm" href="{{ route('categorias.show', $categoria->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
 
