@@ -25,6 +25,8 @@ Route::resource('/preguntas', 'PreguntaController');
 
 Route::resource('/respuestas', 'RespuestaController');
 
+Route::resource('/contactos', 'ContactoController');
+
 Route::resource('/jugadores', 'JugadorController')->parameters([
     'jugadores' => 'jugador',
 ]);
