@@ -1,10 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-
 <div class="container">
-    <div class="row mb-4">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Actualizar datos de la pregunta

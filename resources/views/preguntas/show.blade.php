@@ -1,11 +1,9 @@
 @extends('layouts.master')
-@section('css')
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-@endsection
+
 @section('content')
 <div class="container">
-    <div class="row mb-4">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Detalles de la pregunta
@@ -40,7 +38,7 @@
 
                             <div class="col-12 col-sm-9 col-lg-9 d-flex align-items-center">
                                 @if ($pregunta->completa)
-                                    <span class="badge badge-success mr-2">Completo</span>
+                                    <span class="badge badge-success badge-lg mr-2">Completo</span>
                                 @else
                                     <span class="badge badge-danger">Incompleto</span>
                                 @endif
@@ -86,8 +84,8 @@
     </div>
 
     @if ($pregunta->completa)
-    <div class="row mb-5">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Respuestas
@@ -185,8 +183,8 @@
 
 
 
-    <div class="row mb-5">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Respuestas

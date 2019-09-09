@@ -3,15 +3,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-12 col-md-8">
+            <div class="card card-border-color card-border-color-primary shadow">
 
-            <div class="card">
-
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                            <h3 class="float-left">Listado de preguntas</h3>
-                            <a href="{{ route('preguntas.create') }}" class="btn btn-warning align-self-center">Añadir una nueva Pregunta</a>
-                    </div>
-
+                <div class="card-header d-flex align-items-center justify-content-between">
+                    <h4 class="float-left">Listado de preguntas</h4>
+                    <a href="{{ route('preguntas.create') }}" class="btn btn-warning align-self-center">Añadir Pregunta</a>
+                </div>
 
                 <div class="card-body">
                 <div class="table-responsive">
@@ -19,12 +17,13 @@
                         <thead class="thead-dark">
                             <th>#</th>
                             <th>Preguntas</th>
-                            <th>Categoría ID</th>
-
-                            <th class="text-left">Ver</th>
-                            <th class="text-left">Editar</th>
-                            <th class="text-left">Borrar</th>
+                            <th>Categoría</th>
+                            <th class="text-center">Acciones</th>
+                            {{-- <th class="text-center">Ver</th>
+                            <th class="text-center">Editar</th>
+                            <th class="text-center">Borrar</th> --}}
                         </thead>
+
                         <tbody>
                             @if($preguntas->count())
                             @foreach($preguntas as $pregunta)
@@ -33,18 +32,20 @@
                                     <td class="align-middle">{{$pregunta->detalle}}</td>
                                     <td class="align-middle">{{$pregunta->categoriaPregunta->detalle}}</td>
 
-                                    <td  class="align-middle">
+                                    <td  class="align-middle d-flex justify-content-between">
                                         {{-- <div class="float-right"> --}}
-                                       <a class="btn btn-warning btn-sm m-0" href="{{ route('preguntas.show', $pregunta->id) }}">Detalle</a>
-                                    </td>  <td  class="align-middle">
-                                        <a class="btn btn-outline-warning btn-sm m-0" href="{{ route('preguntas.edit', $pregunta->id) }}">Editar</a>
-                                    </td>  <td  class="align-middle">
+                                       <a class="btn btn-warning btn-sm" href="{{ route('preguntas.show', $pregunta->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
+
+
+                                        <a class="btn btn-outline-warning btn-sm mr-1 ml-1" href="{{ route('preguntas.edit', $pregunta->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>
+
+
                                        <form class="d-inline" action="{{ route('preguntas.destroy', $pregunta->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
 
                                             {{-- Aca hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
-                                            <button class="btn btn-dark btn-sm" type="submit">Eliminar</button>
+                                            <button class="btn btn-dark btn-sm" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Eliminar</span></button>
                                         </form>
                                     {{-- </div> --}}
                                     </td>
