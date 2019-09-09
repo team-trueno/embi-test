@@ -26,6 +26,10 @@ class PreguntaRespuestasController extends Controller
             //dd($respuesta);
             $pregunta->addRespuesta($detalle);
         }
+
+        $pregunta->completado();
+        $pregunta->activado();
+
         return back();
     }
 
@@ -54,4 +58,5 @@ class PreguntaRespuestasController extends Controller
         $respuestas = $pregunta->respuestas;
         return view('pregunta_respuesta', compact('pregunta', 'respuestas'));
     }
+
 }
