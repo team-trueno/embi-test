@@ -13,7 +13,7 @@ class Pregunta extends Model
      * @var array
      */
     protected $fillable = [
-        'detalle', 'categoria_pregunta_id',
+        'detalle', 'completa', 'activa', 'categoria_pregunta_id',
     ];
 
     public function respuestas()
@@ -30,4 +30,16 @@ class Pregunta extends Model
     {
         $this->respuestas()->create(compact('detalle'));
     }
+
+    public function completado($completa = true)
+    {
+        $this->update(compact('completa'));
+    }
+
+    public function activado($activa = true)
+    {
+        $this->update(compact('activa'));
+    }
+
+
 }
