@@ -13,7 +13,7 @@ class Nivel extends Model
      * @var array
      */
     protected $fillable = [
-
+        'nombre', 'puntos_superar'
     ];
 
     /**
