@@ -18,7 +18,8 @@
                             <th>#</th>
                             <th>Preguntas</th>
                             <th>Categoría</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center t-min">Acciones</th>
+
                             {{-- <th class="text-center">Ver</th>
                             <th class="text-center">Editar</th>
                             <th class="text-center">Borrar</th> --}}
@@ -32,7 +33,7 @@
                                     <td class="align-middle">{{$pregunta->detalle}}</td>
                                     <td class="align-middle">{{$pregunta->categoriaPregunta->detalle}}</td>
 
-                                    <td  class="align-middle d-flex justify-content-between">
+                                    <td  class="td-action align-middle d-flex justify-content-between">
                                         {{-- <div class="float-right"> --}}
                                        <a class="btn btn-warning btn-sm" href="{{ route('preguntas.show', $pregunta->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
 
