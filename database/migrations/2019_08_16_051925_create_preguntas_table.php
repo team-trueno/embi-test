@@ -17,7 +17,7 @@ class CreatePreguntasTable extends Migration
             $table->bigIncrements('id');
             $table->string('detalle');
             $table->boolean('completa')->default(false);
-            $table->boolean('activa')->defaul(false);
+            $table->boolean('activa')->default(false);
             $table->unsignedBigInteger('categoria_pregunta_id');
             $table->timestamps();
         });
