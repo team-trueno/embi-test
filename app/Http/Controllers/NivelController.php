@@ -14,7 +14,7 @@ class NivelController extends Controller
      */
     public function index()
     {
-        $niveles = Nivel::all();
+        $niveles = Nivel::paginate(15);;
         return view('niveles.index', compact('niveles'));
     }
 
@@ -25,7 +25,7 @@ class NivelController extends Controller
      */
     public function create()
     {
-        //
+        return view('niveles.create');
     }
 
     /**
@@ -36,7 +36,21 @@ class NivelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reglas = [
+            'nombre'=>'required|string|min:1|unique:niveles,nombre',
+            'puntos_superar'=>'required|integer|min:1'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto',
+            'min'=>'El campo debe tener un minimo de :min caracteres',
+            'max'=>'El campo debe tener un máximo de :max caracteres',
+            'unique'=>'Este nombre de nivel ya está registrado en la Base de Datos'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+        Nivel::create($request->all());
+        return redirect()->route('niveles.index');
     }
 
     /**
@@ -47,7 +61,7 @@ class NivelController extends Controller
      */
     public function show(Nivel $nivel)
     {
-        //
+        return view('niveles.show', compact('nivel'));
     }
 
     /**
@@ -58,7 +72,7 @@ class NivelController extends Controller
      */
     public function edit(Nivel $nivel)
     {
-        //
+        return view('niveles.edit', compact('nivel'));
     }
 
     /**
@@ -70,7 +84,22 @@ class NivelController extends Controller
      */
     public function update(Request $request, Nivel $nivel)
     {
-        //
+        $reglas = [
+            'nombre'=>'string|min:1',
+            'puntos_superar'=>'integer|min:1'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo debe ser un texto',
+            'integer'=>'El campo debe ser un número entero',
+            'min'=>'El campo debe tener un minimo de :min caracteres'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+
+        $nivel->update($request->all());
+
+        return redirect()->route('niveles.index');
     }
 
     /**
@@ -81,6 +110,7 @@ class NivelController extends Controller
      */
     public function destroy(Nivel $nivel)
     {
-        //
+        $nivel->delete();
+        return redirect()->route('niveles.index');
     }
 }
