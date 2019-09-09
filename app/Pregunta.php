@@ -38,7 +38,13 @@ class Pregunta extends Model
 
     public function activado($activa = true)
     {
-        $this->update(compact('activa'));
+        if ($this->completa) {
+            $this->update(compact('activa'));
+        } else {
+            $this->update(['activa' => false]);
+        }
+
+
     }
 
 
