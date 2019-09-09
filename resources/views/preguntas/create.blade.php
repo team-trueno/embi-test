@@ -2,12 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-6">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
-
-
-
                 @slot('header')
                     Nueva pregunta
                 @endslot
@@ -17,32 +14,31 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="detalle"
-                                class="col-12 col-sm-3 col-form-label text-sm-right">{{ __('Pregunta') }}</label>
+                            <label for="detalle" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Pregunta') }}
+                            </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
                                     value="{{ old('detalle') }}" required autocomplete="detalle" autofocus>
+
                                     @if ($errors->has('detalle'))
-                                    <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
+                                        <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
                                     @else
-                                    <div class="form-text small"></div>
-                                @endif
-                                {{-- @error('detalle')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror --}}
+                                        <div class="form-text small"></div>
+                                    @endif
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="categoria_pregunta_id"
-                                class="col-12 col-sm-3 col-form-label text-sm-right">{{ __('Categoría') }}</label>
 
-                            <div class="col-12 col-sm-8 col-lg-6">
+                        <div class="form-group row">
+                            <label for="categoria_pregunta_id" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Categoría') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
                                 <select name="categoria_pregunta_id" class="form-control @error('categoria_pregunta_id') is-invalid @enderror" id="categoria_pregunta_id" required>
-                                    <option value="" disabled selected hidden>Please Choose...</option>
+                                    <option value="" disabled selected hidden>Seleccione...</option>
                                     @foreach ($categorias as $categoria)
 
                                         <option value="{{ $categoria->id }}" {{ $categoria->id == old('categoria') ? "selected" : "" }}>
@@ -62,10 +58,11 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+
+                        <div class="form-group row mb-0 float-right">
+                            <div class="col">
                                 <button type="submit" class="btn btn-warning">
-                                        {{ __('Guardar') }}
+                                    {{ __('Guardar') }}
                                 </button>
 
                                 <a href="{{ route('preguntas.index') }}" class="btn btn-dark">Atrás</a>
