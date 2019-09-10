@@ -15,7 +15,7 @@ class FaqTopicoController extends Controller
     public function index()
     {
         $topicos = FaqTopico::orderBy('id','DESC')->paginate(5);
-        return view('faq-topicos.index',compact('topicos'));
+        return view('faq.topicos.index', compact('topicos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class FaqTopicoController extends Controller
      */
     public function create()
     {
-        return view('faq-topicos.create');
+        return view('faq.topicos.create');
     }
 
     /**
@@ -49,39 +49,39 @@ class FaqTopicoController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
         FaqTopico::create($request->all());
-        return redirect()->route('faq-topicos.index');
+        return redirect()->route('faq.topicos.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function show(FaqTopico $faqTopico)
+    public function show(FaqTopico $topico)
     {
-        return view('faq-topicos.show',compact('faqTopico'));
+        return view('faq.topicos.show', compact('topico'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function edit(FaqTopico $faqTopico)
+    public function edit(FaqTopico $topico)
     {
-        return view('faq-topicos.edit',compact('faqTopico'));
+        return view('faq.topicos.edit', compact('topico'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, FaqTopico $faqTopico)
+    public function update(Request $request, FaqTopico $topico)
     {
         $reglas = [
             'detalle'=>'string|min:1|max:100'
@@ -95,20 +95,20 @@ class FaqTopicoController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
  
-        $faqTopico->update($request->all());
+        $topico->update($request->all());
 
-        return redirect()->route('faq-topicos.index');
+        return redirect()->route('faq.topicos.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FaqTopico $faqTopico)
+    public function destroy(FaqTopico $topico)
     {
-        $faqTopico->delete();
-        return redirect()->route('faq-topicos.index');
+        $topico->delete();
+        return redirect()->route('faq.topicos.index');
     }
 }
