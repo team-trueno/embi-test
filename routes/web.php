@@ -27,6 +27,10 @@ Route::resource('/respuestas', 'RespuestaController');
 
 Route::resource('/contactos', 'ContactoController');
 
+Route::resource('/faq-topicos', 'FaqTopicoController');
+
+Route::resource('/faq-preguntas', 'FaqPreguntaController');
+
 Route::resource('/jugadores', 'JugadorController')->parameters([
     'jugadores' => 'jugador',
 ]);
