@@ -124,11 +124,10 @@ class UsuarioController extends Controller
             'min'=>'El campo :attribute debe tener un minimo de :min',
             'max'=>'El campo :attribute debe tener un máximo de :max',
             'numeric'=>'El campo :attribute debe ser un numero',
-            'integer'=>'El campo :attribute debe ser un número entero',
-            'unique'=>'Este e-mail ya existe'
+            'integer'=>'El campo :attribute debe ser un número entero'
         ];
 
-        $route = $request['avatar']->store('public/img/avatars');
+        $route = $request['avatar']->store('storage/avatars');
 
         $fileName = basename($route);
 
@@ -137,14 +136,23 @@ class UsuarioController extends Controller
         /**
          * Ver de pasar al otro formato de UPDATE
          */
-        $usuario->update();
+        $usuario->update([
+            'name' => $request['name'],
+            'apellido' => $request['apellido'],
+            'usuario' => $request['usuario'],
+            'avatar' => $fileName,
+            'pais' => $request['pais'],
+            'email' => $request['email']
+            ]);
 
-        $usuario->name = $request->name;
-        $usuario->apellido = $request->apellido;
-        $usuario->usuario = $request->usuario;
-        $usuario->avatar = $fileName;
-        $usuario->pais = $request->pais;
-        $usuario->email = $request->email;
+        // $usuario->update();
+
+        // $usuario->name = $request->name;
+        // $usuario->apellido = $request->apellido;
+        // $usuario->usuario = $request->usuario;
+        // $usuario->avatar = $fileName;
+        // $usuario->pais = $request->pais;
+        // $usuario->email = $request->email;
 
         $usuario->save();
 
