@@ -25,10 +25,11 @@ class NivelesTableSeeder extends Seeder
             ['nombre' => 'Nivel 10', 'puntos_superar' => 10000],
         ];
 
-        foreach ($nivelesData as $nivel) {
-            Nivel::create(['nombre' => $nivel['nombre'],
-            'puntos_superar' => $nivel['puntos_superar']
-            ]);
+        foreach ($nivelesData as $data) {
+            $nivel = new Nivel();
+            $nivel->nombre = $data['nombre'];
+            $nivel->puntos_superar = $data['puntos_superar'];
+            $nivel->save();
         }
     }
 }

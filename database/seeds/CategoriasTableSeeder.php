@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\CategoriaPregunta;
+use Illuminate\Database\Seeder;
 
 class CategoriasTableSeeder extends Seeder
 {
@@ -21,7 +21,9 @@ class CategoriasTableSeeder extends Seeder
         ];
 
         foreach ($categoriasData as $detalle) {
-            CategoriaPregunta::create(['detalle' => $detalle]);
+            $categoria = new CategoriaPregunta();
+            $categoria->detalle = $detalle;
+            $categoria->save();
         }
 
     }
