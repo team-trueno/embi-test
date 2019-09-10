@@ -38,5 +38,9 @@ Route::resource('/niveles', 'NivelController')->parameters([
 Route::post('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@store');
 Route::patch('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@update');
 Route::get('/preguntas/{pregunta}/respuestas/edit', 'PreguntaRespuestasController@edit');
-
+Route::get('/juego', function() {
+    $pregunta = \App\Pregunta::where('activa', true)->inRandomOrder()->first();
+    // dd($pregunta);
+    return view('jugadas.juego', compact('pregunta'));
+});
 
