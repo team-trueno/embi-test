@@ -12,7 +12,7 @@ class FaqPregunta extends Model
      * @var array
      */
     protected $fillable = [
-        'pregunta', 'respuesta',
+        'detalle', 'respuesta', 'faq_topico_id',
     ];
 
     public function topico()
