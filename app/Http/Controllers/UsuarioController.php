@@ -16,7 +16,7 @@ class UsuarioController extends Controller
     public function index(){
         $usuarios = User::paginate(10);
         // $usuarios = User::paginate(10);
-        return view('usuarios.index',compact('usuarios'));
+        return view('usuarios.index', compact('usuarios'));
     }
     /**
      * Show the form for creating a new resource.
@@ -54,7 +54,7 @@ class UsuarioController extends Controller
             'unique'=>'Este e-mail ya existe'
         ];
 
-        $route = $request['avatar']->store('public/img/avatars');
+        $route = $request['avatar']->store('/public/img/avatars');
 
         $fileName = basename($route);
 
@@ -127,7 +127,7 @@ class UsuarioController extends Controller
             'integer'=>'El campo :attribute debe ser un número entero'
         ];
 
-        $route = $request['avatar']->store('storage/avatars');
+        $route = $request['avatar']->store('/public/img/avatars');
 
         $fileName = basename($route);
 
@@ -154,7 +154,7 @@ class UsuarioController extends Controller
         // $usuario->pais = $request->pais;
         // $usuario->email = $request->email;
 
-        $usuario->save();
+        //$usuario->save();
 
         return redirect()->route('usuarios.index');
     }
