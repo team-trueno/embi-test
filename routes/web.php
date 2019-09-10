@@ -27,9 +27,9 @@ Route::resource('/respuestas', 'RespuestaController');
 
 Route::resource('/contactos', 'ContactoController');
 
-Route::resource('/faq-topicos', 'FaqTopicoController');
+Route::resource('/faq/topicos', 'FaqTopicoController', ['as' => 'faq']);
 
-Route::resource('/faq-preguntas', 'FaqPreguntaController');
+Route::resource('/faq/preguntas', 'FaqPreguntaController', ['as' => 'faq']);
 
 Route::resource('/jugadores', 'JugadorController')->parameters([
     'jugadores' => 'jugador',
