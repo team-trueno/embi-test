@@ -50,13 +50,13 @@
                                         <a class="btn btn-outline-warning btn-sm mr-1 ml-1" href="{{ route('categorias.edit', $categoria->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>
 
 
-                                       <form class="d-inline" action="{{ route('categorias.destroy', $categoria->id) }}" method="POST">
+                                       {{-- <form class="d-inline" action="{{ route('categorias.destroy', $categoria->id) }}" method="POST">
                                             @csrf
-                                            @method('DELETE')
+                                            @method('DELETE') --}}
 
                                             {{-- Aca hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
-                                            <button class="btn btn-dark btn-sm" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Eliminar</span></button>
-                                        </form>
+                                            {{-- <button class="btn btn-dark btn-sm" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Eliminar</span></button>
+                                        </form> --}}
                                     {{-- </div> --}}
                                     </td>
                                 </tr>
