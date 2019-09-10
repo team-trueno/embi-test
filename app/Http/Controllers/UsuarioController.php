@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use PragmaRX\Countries\Package\Countries;
 
-class UsuariosController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
