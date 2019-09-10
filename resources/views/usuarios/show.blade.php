@@ -12,9 +12,9 @@
                 <div class="card-body text-center">
                     <h3 class="card-title">{{$usuario->name}} {{$usuario->apellido}}</h3>
                     @if ($userParam == 'admin')
-                        <span class="badge badge-danger text-uppercase">{{$userParam}}</span>
+                        <span class="badge badge-danger badge-lg mr-2 text-uppercase">{{$userParam}}</span>
                     @else
-                        <span class="badge badge-primary text-uppercase">{{$userParam}}</span>
+                        <span class="badge badge-warning badge-lg mr-2 text-uppercase">{{$userParam}}</span>
                     @endif
                     
                 </div>
