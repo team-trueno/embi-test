@@ -49,9 +49,9 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $paises = Countries::all();
-        
+
         $paises = Countries::all()->pluck('name.common');
-        
+
         return view('auth.register', compact('paises'));
     }
 
@@ -82,7 +82,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $route = $data["avatar"]->store("public");
+        $route = $data['avatar']->store('/public/img/avatars');
 
         $fileName = basename($route);
 
@@ -93,7 +93,7 @@ class RegisterController extends Controller
             'avatar' => $fileName,
             'fecha_nac' => $data['fecha_nac'],
             'pais' => $data['pais'],
-            'email' => $data['email'],            
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }
