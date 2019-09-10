@@ -12,3 +12,10 @@
 .t-min {
     width: 1%;
 }
+
+/* Estilo para imagenes de la tabla */
+table tbody tr td img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

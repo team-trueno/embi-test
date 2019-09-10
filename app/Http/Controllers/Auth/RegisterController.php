@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use PragmaRX\Countries\Package\Countries;
 
 class RegisterController extends Controller
 {
@@ -41,6 +42,20 @@ class RegisterController extends Controller
     }
 
     /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        $paises = Countries::all();
+
+        $paises = Countries::all()->pluck('name.common');
+
+        return view('auth.register', compact('paises'));
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -50,6 +65,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
+            'usuario' => ['required', 'string', 'max:255'],
+            'avatar' => ['required', 'image'],
+            'pais' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -63,8 +82,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $route = $data['avatar']->store('/public/img/avatars');
+
+        $fileName = basename($route);
+
         return User::create([
             'name' => $data['name'],
+            'apellido' => $data['apellido'],
+            'usuario' => $data['usuario'],
+            'avatar' => $fileName,
+            'fecha_nac' => $data['fecha_nac'],
+            'pais' => $data['pais'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
