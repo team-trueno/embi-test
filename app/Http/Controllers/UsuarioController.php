@@ -14,8 +14,8 @@ class UsuariosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $usuarios = User::all();
-        $usuarios = User::paginate(10);
+        $usuarios = User::all()->paginate(10);
+        // $usuarios = User::paginate(10);
         return view('usuarios.index',compact('usuarios'));
     }
     /**
@@ -46,20 +46,20 @@ class UsuariosController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min', 
-            'max'=>'El campo :attribute debe tener un máximo de :max', 
-            'numeric'=>'El campo :attribute debe ser un numero', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min',
+            'max'=>'El campo :attribute debe tener un máximo de :max',
+            'numeric'=>'El campo :attribute debe ser un numero',
             'integer'=>'El campo :attribute debe ser un número entero',
             'unique'=>'Este e-mail ya existe'
         ];
 
-        $route = $request["avatar"]->store("public");
+        $route = $request['avatar']->store('public/img/avatars');
 
         $fileName = basename($route);
 
         $this->validate($request, $reglas, $mensajes);
- 
+
         $usuario = new User();
 
         $usuario->name = $request->name;
@@ -68,9 +68,9 @@ class UsuariosController extends Controller
         $usuario->avatar = $fileName;
         $usuario->pais = $request->pais;
         $usuario->email = $request->email;
-  
+
         $usuario->save();
-        
+
         return redirect()->route('usuarios.index');
     }
 
@@ -94,10 +94,10 @@ class UsuariosController extends Controller
      */
     public function edit(User $usuario)
     {
-        $paises = Countries::all();
-        
+        //$paises = Countries::all();
+
         $paises = Countries::all()->pluck('name.common');
-        
+
         return view('usuarios.edit', compact('usuario', 'paises'));
     }
 
@@ -120,20 +120,23 @@ class UsuariosController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min', 
-            'max'=>'El campo :attribute debe tener un máximo de :max', 
-            'numeric'=>'El campo :attribute debe ser un numero', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min',
+            'max'=>'El campo :attribute debe tener un máximo de :max',
+            'numeric'=>'El campo :attribute debe ser un numero',
             'integer'=>'El campo :attribute debe ser un número entero',
             'unique'=>'Este e-mail ya existe'
         ];
 
-        $route = $request["avatar"]->store("public");
+        $route = $request['avatar']->store('public/img/avatars');
 
         $fileName = basename($route);
-        
+
         $this->validate($request, $reglas, $mensajes);
- 
+
+        /**
+         * Ver de pasar al otro formato de UPDATE
+         */
         $usuario->update();
 
         $usuario->name = $request->name;
@@ -142,9 +145,9 @@ class UsuariosController extends Controller
         $usuario->avatar = $fileName;
         $usuario->pais = $request->pais;
         $usuario->email = $request->email;
-  
+
         $usuario->save();
-        
+
         return redirect()->route('usuarios.index');
     }
 
@@ -156,6 +159,10 @@ class UsuariosController extends Controller
      */
     public function destroy(User $usuario)
     {
+        /**
+         * El usuario no se borra, se desactiva
+         * Si se desactiva el usuario, también hay que desactivar al jugador
+         */
         $usuario->delete();
         return redirect()->route('usuarios.index');
     }
