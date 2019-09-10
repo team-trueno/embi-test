@@ -15,6 +15,7 @@ class CreateFaqTopicosTable extends Migration
     {
         Schema::create('faq_topicos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('detalle');
             $table->timestamps();
         });
     }
