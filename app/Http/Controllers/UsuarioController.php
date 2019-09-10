@@ -14,7 +14,7 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $usuarios = User::all()->paginate(10);
+        $usuarios = User::paginate(10);
         // $usuarios = User::paginate(10);
         return view('usuarios.index',compact('usuarios'));
     }
