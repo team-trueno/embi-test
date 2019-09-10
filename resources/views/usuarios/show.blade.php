@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        
+
         <div class="col-12 col-md-4">
             <div class="card mb-4">
                 <div>
-                    <img src="{{ asset('img/avatars/',$usuario->avatar) }}" class="card-img-top">
-                </div>            
+                    <img src="{{ asset('storage/img/avatars/'.$usuario->avatar) }}" class="card-img-top">
+                </div>
                 <div class="card-body text-center">
                     <h3 class="card-title">{{$usuario->name}} {{$usuario->apellido}}</h3>
                     @if ($userParam == 'admin')
@@ -16,7 +16,7 @@
                     @else
                         <span class="btn btn-warning btn-sm mr-2 text-uppercase">{{$userParam}}</span>
                     @endif
-                    
+
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{$usuario->email}}</li>
@@ -34,7 +34,7 @@
                         <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Eliminar</span></button>
                     </form>
                 </div>
-            </div>            
+            </div>
         </div>
 
         <div class="col-12 col-md-8">
