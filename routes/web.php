@@ -44,3 +44,8 @@ Route::get('/juego', function() {
     return view('jugadas.juego', compact('pregunta'));
 });
 
+Route::get('/faq', function() {
+    $topicos = \App\FaqTopico::all();
+    // dd($topicos);
+    return view('faq.index', compact('topicos'));
+});
