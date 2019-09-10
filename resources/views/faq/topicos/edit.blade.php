@@ -10,7 +10,7 @@
                 @endslot
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('faq-topicos.update', $faqTopico->id) }}" role="form">
+                    <form method="POST" action="{{ route('faq.topicos.update', $topico->id) }}" role="form">
                         @csrf
                         @method('PATCH')
 
@@ -22,7 +22,7 @@
                             <div class="col-12 col-sm-9 col-lg-9">
                                 <input id="detalle" type="text"
                                     class="form-control @error('detalle') is-invalid @enderror" name="detalle"
-                                    value="{{ $faqTopico->detalle }}"  autocomplete="detalle" autofocus>
+                                    value="{{ $topico->detalle }}"  autocomplete="detalle" autofocus>
 
                                 @if ($errors->has('detalle'))
                                     <div class="invalid-feedback">{{ $errors->first('detalle') }}</div>
@@ -37,7 +37,7 @@
                                 <button type="submit" class="btn btn-info">
                                     {{ __('Actualizar') }}
                                 </button>
-                                <a href="{{ route('faq-topicos.show', $faqTopico->id) }}" class="btn btn-dark">Atrás</a>
+                                <a href="{{ route('faq.topicos.show', $topico->id) }}" class="btn btn-dark">Atrás</a>
                             </div>
                         </div>
 

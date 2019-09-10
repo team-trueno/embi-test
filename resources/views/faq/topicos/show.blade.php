@@ -7,17 +7,17 @@
             <div class="card">
             <div class="card-header"><h3>Detalles del tópico</h3></div>
                 <div class="card-body">
-                    <p>Tópico: {{$faqTopico->detalle}}</p>
+                    <p>Tópico: {{ $topico->detalle }}</p>
                 </div>
             </div>
         </div>
         <div class="form-group row mb-0">
             <div class="col-md-8 offset-md-4">
-                <a href="{{ route('faq-topicos.index') }}" class="btn btn-dark">Atrás</a>
+                <a href="{{ route('faq.topicos.index') }}" class="btn btn-dark">Atrás</a>
             </div>
             <br>
             <div class="col-md-8 offset-md-4">
-                <a class="btn btn-outline-warning btn-xs" href="{{ route('faq-topicos.edit', $faqTopico->id) }}">Editar</a>
+                <a class="btn btn-outline-warning btn-xs" href="{{ route('faq.topicos.edit', $topico->id) }}">Editar</a>
             </div>
         </div>
     </div>

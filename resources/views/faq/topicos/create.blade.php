@@ -10,7 +10,7 @@
             @endslot
 
             <div class="card-body">
-                <form method="POST" action="{{ route('faq-topicos.store') }}">
+                <form method="POST" action="{{ route('faq.topicos.store') }}">
                     @csrf
 
                     <div class="form-group row">
@@ -36,7 +36,7 @@
                                 {{ __('Guardar') }}
                             </button>
 
-                            <a href="{{ route('faq-topicos.index') }}" class="btn btn-dark">Atrás</a>
+                            <a href="{{ route('faq.topicos.index') }}" class="btn btn-dark">Atrás</a>
                         </div>
                     </div>
                 </form>
