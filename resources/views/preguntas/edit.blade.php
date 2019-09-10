@@ -58,10 +58,10 @@
 
                         <div class="form-group row mb-0 float-right">
                             <div class="col">
-                                <a href="{{ route('preguntas.show', $pregunta->id) }}" class="btn btn-dark">Atrás</a>
                                 <button type="submit" class="btn btn-info">
                                     {{ __('Actualizar') }}
                                 </button>
+                                <a href="{{ route('preguntas.show', $pregunta->id) }}" class="btn btn-dark">Atrás</a>
                             </div>
                         </div>
 

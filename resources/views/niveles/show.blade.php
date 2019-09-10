@@ -3,23 +3,49 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-            <div class="card-header"><h3>Detalles del nivel</h3></div>
+        <div class="col-12 col-md-8">
+            @component('components.card')
+                @slot('header')
+                    Detalles del nivel
+                @endslot
                 <div class="card-body">
-                    <p><b>Nombre:</b> {{ $nivel->nombre }} </p>
-                    <p><b>Puntos a superar:</b> {{ $nivel->puntos_superar }} </p>
+                    <form action="">
+                        <fieldset disabled="disabled">
+                        <div class="form-group row">
+                            <label for="nombre" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Nombre') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <input type="text" class="form-control" value="{{ $nivel->nombre }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombre" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Puntos a superar') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <input type="text" class="form-control" value="{{ $nivel->puntos_superar }}">
+                            </div>
+                        </div>
+                        </fieldset>
+
+                        <div class="form-group row mb-0 float-right">
+                            <div class="col">
+                                {{-- <a class="btn btn-secondary" href="{{ route('niveles.edit', $nivel->id) }}">
+                                    {{ __('Editar') }}
+                                </a> --}}
+                                <a class="btn btn-secondary" href="{{ route('niveles.edit', $nivel->id) }}">
+                                    {{ __('Editar') }}
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-8 offset-md-4">
-                <a href="{{ route('niveles.index') }}" class="btn btn-dark">Atrás</a>
-            </div>
-            <br>
-            <div class="col-md-8 offset-md-4">
-                <a class="btn btn-outline-warning btn-xs" href="{{ route('niveles.edit', $nivel->id) }}">Editar</a>
-            </div>
+
+            @endcomponent
         </div>
     </div>
 </div>

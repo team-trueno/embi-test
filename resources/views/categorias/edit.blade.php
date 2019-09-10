@@ -16,7 +16,7 @@
 
                         <div class="form-group row">
                             <label for="detalle" class="col-12 col-sm-3 col-form-label text-sm-right">
-                                {{ __('Nombre de la Categoría') }}
+                                {{ __('Nombre') }}
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
@@ -34,10 +34,10 @@
 
                         <div class="form-group row mb-0 float-right">
                             <div class="col">
-                                <a href="{{ route('categorias.show', $categoria->id) }}" class="btn btn-dark">Atrás</a>
                                 <button type="submit" class="btn btn-info">
                                     {{ __('Actualizar') }}
                                 </button>
+                                <a href="{{ route('categorias.index') }}" class="btn btn-dark">Atrás</a>
                             </div>
                         </div>
 

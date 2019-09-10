@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="row mb-4">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Detalles de la pregunta
@@ -37,17 +37,23 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9 d-flex align-items-center">
-                                @if ($pregunta->respuestas->count() === 4)
-                                    <span class="badge badge-success">Completo</span>
+                                @if ($pregunta->completa)
+                                    <span class="btn btn-success btn-sm mr-2">Completo</span>
                                 @else
-                                    <span class="badge badge-danger">Incompleto</span>
+                                    {{-- <span class="badge badge-danger mr-2">Incompleto</span> --}}
+                                    <span class="btn btn-danger btn-sm mr-2">Incompleto</span>
+                                @endif
+                                @if ($pregunta->activa)
+                                    <span class="btn btn-success btn-sm">Activa</span>
+                                @else
+                                    <span class="btn btn-danger btn-sm">Inactiva</span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row mb-0 float-right">
                             <div class="col">
-                                <a class="btn btn-secondary" href="{{ route('preguntas.edit', $pregunta->id) }}">
+                                <a class="btn btn-secondary disabled" href="{{ route('preguntas.edit', $pregunta->id) }}">
                                     {{ __('Editar') }}
                                 </a>
                                 {{-- <button type="button" class="btn btn-secondary">
@@ -79,8 +85,8 @@
         </div>
     </div>
 
-    <div class="row mb-5">
-        <div class="col">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-8">
             @component('components.card')
                 @slot('header')
                     Actualizar respuestas
@@ -169,6 +175,7 @@
                                 <button type="submit" class="btn btn-info">
                                     {{ __('Actualizar') }}
                                 </button>
+                                <a href="{{ route('preguntas.show', $pregunta->id) }}" class="btn btn-dark">Atrás</a>
                             </div>
                         </div>
 

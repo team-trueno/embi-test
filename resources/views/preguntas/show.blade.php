@@ -38,14 +38,15 @@
 
                             <div class="col-12 col-sm-9 col-lg-9 d-flex align-items-center">
                                 @if ($pregunta->completa)
-                                    <span class="badge badge-success badge-lg mr-2">Completo</span>
+                                    <span class="btn btn-success btn-sm mr-2">Completo</span>
                                 @else
-                                    <span class="badge badge-danger">Incompleto</span>
+                                    {{-- <span class="badge badge-danger mr-2">Incompleto</span> --}}
+                                    <span class="btn btn-danger btn-sm mr-2">Incompleto</span>
                                 @endif
                                 @if ($pregunta->activa)
-                                    <span class="badge badge-success">Activa</span>
+                                    <span class="btn btn-success btn-sm">Activa</span>
                                 @else
-                                    <span class="badge badge-danger">Inactiva</span>
+                                    <span class="btn btn-danger btn-sm">Inactiva</span>
                                 @endif
                             </div>
                         </div>
@@ -198,7 +199,7 @@
                                 {{ __('Respuesta #1') }}
                             </label>
 
-                            <div class="col-12 col-sm-6 col-lg-9">
+                            <div class="col-12 col-sm-9 col-lg-9">
                                 <input id="detalle[]" type="text"
                                     class="form-control @error('detalle.0') is-invalid @enderror" name="detalle[]"
                                     value="{{ old('detalle.0') }}"  autocomplete="detalle[]" autofocus>

@@ -29,7 +29,18 @@
                                 <tr>
                                     <td class="align-middle">{{ $categoria->id }}</td>
                                     <td class="align-middle">{{ $categoria->detalle }}</td>
-                                    <td class="align-middle">{{ $categoria->preguntas->isNotEmpty() }}</td>
+                                    <td class="align-middle">
+                                    @if ($categoria->preguntas->isNotEmpty())
+
+                                            <span class="btn btn-success btn-sm">
+                                                Existen    <span class="badge badge-light">{{ $categoria->preguntas->count() }}</span>
+                                            </span>
+
+
+
+                                    @endif
+                                    </td>
+
 
                                     <td  class="align-middle d-flex justify-content-between">
                                         {{-- <div class="float-right"> --}}

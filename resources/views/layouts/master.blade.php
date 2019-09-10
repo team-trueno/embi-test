@@ -63,6 +63,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('respuestas.index') }}">{{ __('Respuestas') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('niveles.index') }}">{{ __('Niveles') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contactos.index') }}">{{ __('Contactos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
+                        </li>
 
                     </ul>
 
