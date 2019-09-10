@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
             @forelse ($topicos as $topico)
-                <div class="card">
+                <div class="card mb-3">
                     <div class="card-header">
                         <h5>
                             {{ $topico->detalle }}
