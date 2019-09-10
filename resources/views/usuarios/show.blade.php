@@ -7,7 +7,7 @@
         <div class="col-12 col-md-4">
             <div class="card mb-4">
                 <div>
-                    <img src="/storage/{{$usuario->avatar}}" class="card-img-top">
+                    <img src="{{ asset('img/avatars/',$usuario->avatar) }}" class="card-img-top">
                 </div>            
                 <div class="card-body text-center">
                     <h3 class="card-title">{{$usuario->name}} {{$usuario->apellido}}</h3>

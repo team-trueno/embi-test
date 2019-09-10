@@ -28,7 +28,7 @@
                                 @forelse ($usuarios as $usuario)
                                 <tr>
                                     <td class="align-middle">{{$usuario->name}}</td>
-                                    <td class="align-middle"><img src="/storage/{{$usuario->avatar}}" alt=""></td>
+                                    <td class="align-middle"><img src="{{ asset('storage/avatars/',$usuario->avatar) }}" alt=""></td>
                                     <td class="align-middle">{{$usuario->apellido}}</td>
                                     <td class="align-middle">{{$usuario->email}}</td>
                                     <td class="align-middle">{{$usuario->usuario}}</td>
