@@ -6,33 +6,49 @@
 
         <div class="col-12 col-md-4">
             <div class="card mb-4">
-                <div>
+                {{-- <div> --}}
                     <img src="{{ asset('storage/img/avatars/'.$usuario->avatar) }}" class="card-img-top">
-                </div>
+                {{-- </div> --}}
                 <div class="card-body text-center">
                     <h3 class="card-title">{{$usuario->name}} {{$usuario->apellido}}</h3>
                     @if ($userParam == 'admin')
-                        <span class="btn btn-danger btn-sm mr-2 text-uppercase">{{$userParam}}</span>
+                        <span class="btn btn-danger btn-sm text-uppercase">{{$userParam}}</span>
                     @else
-                        <span class="btn btn-warning btn-sm mr-2 text-uppercase">{{$userParam}}</span>
+                        <span class="btn btn-warning btn-sm text-uppercase">{{$userParam}}</span>
+                    @endif
+
+                    @if ($usuario->activo)
+                        <span class="btn btn-success btn-sm text-uppercase">Activo</span>
+                    @else
+                        <span class="btn btn-danger btn-sm text-uppercase">Inactivo</span>
                     @endif
 
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{$usuario->email}}</li>
-                    <li class="list-group-item">{{$usuario->usuario}}</li>
+                    <li class="list-group-item">{{ $usuario->email }}</li>
+                    <li class="list-group-item">{{ $usuario->usuario }}</li>
                     {{-- Estaría bueno meter la banderita del país acá --}}
-                    <li class="list-group-item">{{$usuario->pais}}</li>
+                    <li class="list-group-item">{{ $usuario->pais }}</li>
                 </ul>
                 <div class="card-body">
-                    <a class="btn btn-warning btn-sm" href="{{ route('usuarios.edit', $usuario->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>
-                    <form class="d-inline" action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST">
+                    <a class="btn btn-warning" href="{{ route('usuarios.edit', $usuario->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>
+                    @if ($usuario->activo)
+                    <form class="d-inline" action="{{ route('perfiles.destroy', $usuario->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
 
                         {{-- Acá hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
-                        <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Eliminar</span></button>
+                        <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Desactivar</span></button>
                     </form>
+                    @else
+                    <form class="d-inline" action="{{ route('perfiles.store', $usuario->id) }}" method="POST">
+                        @csrf
+
+                        {{-- Acá hay que meter un Modal/Alert que pida confirmacion antes de enviar --}}
+                        <button class="btn btn-success" type="submit"><i class="fas fa-trash-alt d-lg-none"></i><span class="d-none d-lg-block">Activar</span></button>
+                    </form>
+                    @endif
+
                 </div>
             </div>
         </div>
