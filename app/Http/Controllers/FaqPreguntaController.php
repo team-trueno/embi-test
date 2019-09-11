@@ -46,8 +46,8 @@ class FaqPreguntaController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres',
             'max'=>'El campo :attribute debe tener un máximo de :max caracteres',
             'unique'=>'Esta pregunta ya está registrada en la Base de Datos'
         ];
@@ -96,19 +96,19 @@ class FaqPreguntaController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres',
             'max'=>'El campo :attribute debe tener un máximo de :max caracteres'
         ];
 
         $this->validate($request, $reglas, $mensajes);
- 
+
         $pregunta->update([
             'detalle' => $request['detalle'],
             'respuesta' => $request['respuesta'],
             'faq_topico_id' => $request['faq_topico_id']
         ]);
-        
+
         return redirect()->route('faq.preguntas.index');
     }
 
@@ -120,7 +120,7 @@ class FaqPreguntaController extends Controller
      */
     public function destroy(FaqPregunta $pregunta)
     {
-        $faqPregunta->delete();
+        $pregunta->delete();
         return redirect()->route('faq.preguntas.index');
     }
 }

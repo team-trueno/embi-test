@@ -51,7 +51,7 @@
                         <label for="topico" class="col-12 col-sm-3 col-form-label text-sm-right">
                             {{ __('Tópico') }}
                         </label>
-              
+
                         <div class="col-12 col-sm-9 col-lg-9">
                             <select id="faq_topico_id" class="form-control @error('topico') is-invalid @enderror" name="faq_topico_id" required>
                               @foreach ($topicos as $topico)
@@ -59,7 +59,7 @@
                                   {{$topico->detalle}}
                                 </option>
                               @endforeach
-              
+
                             </select>
                             @error('topico')
                                 <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
                                 {{ __('Guardar') }}
                             </button>
 
-                            <a href="{{ route('faq-topicos.index') }}" class="btn btn-dark">Atrás</a>
+                            <a href="{{ route('faq.topicos.index') }}" class="btn btn-dark">Atrás</a>
                         </div>
                     </div>
                 </form>
