@@ -61,7 +61,7 @@
                             <a class="nav-link" href="{{ route('preguntas.index') }}">{{ __('Preguntas') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('respuestas.index') }}">{{ __('Respuestas') }}</a>
+                            <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('Usuarios') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('niveles.index') }}">{{ __('Niveles') }}</a>
