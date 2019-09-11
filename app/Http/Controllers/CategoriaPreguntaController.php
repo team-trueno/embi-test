@@ -14,8 +14,9 @@ class CategoriaPreguntaController extends Controller
      */
     public function index()
     {
-        $categorias = CategoriaPregunta::orderBy('id','DESC')->paginate(5);
-        return view('categorias.index',compact('categorias'));
+        $categorias = CategoriaPregunta::withCount('preguntas')->orderBy('id','DESC')->paginate(5);
+
+        return view('categorias.index', compact('categorias'));
     }
 
     /**
@@ -41,12 +42,12 @@ class CategoriaPreguntaController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres',
             'max'=>'El campo :attribute debe tener un máximo de :max caracteres',
             'unique'=>'Esta categoría ya está registrada en la Base de Datos'
         ];
-        
+
         $this->validate($request, $reglas, $mensajes);
         CategoriaPregunta::create($request->all());
         return redirect()->route('categorias.index');
@@ -88,14 +89,14 @@ class CategoriaPreguntaController extends Controller
         ];
 
         $mensajes = [
-            'string'=>'El campo :attribute debe ser un texto', 
-            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'string'=>'El campo :attribute debe ser un texto',
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres',
             'max'=>'El campo :attribute debe tener un máximo de :max caracteres',
             'unique'=>'Esta categoría ya está registrada en la Base de Datos'
         ];
 
         $this->validate($request, $reglas, $mensajes);
- 
+
         $categoria->update($request->all());
 
         return redirect()->route('categorias.index');
