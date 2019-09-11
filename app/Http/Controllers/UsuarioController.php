@@ -82,6 +82,7 @@ class UsuarioController extends Controller
      */
     public function show(User $usuario)
     {
+        // abort_unless(auth()->user()->id == $usuario->id, 403);
         $userParam = 'admin';
         return view('usuarios.show', compact('usuario', 'userParam'));
     }
@@ -171,7 +172,10 @@ class UsuarioController extends Controller
          * El usuario no se borra, se desactiva
          * Si se desactiva el usuario, también hay que desactivar al jugador
          */
-        $usuario->delete();
+        // $usuario->delete();
+        //dd($usuario);
+        $usuario->desactivar();
+        //dd($usuario->activo);
         return redirect()->route('usuarios.index');
     }
 }
