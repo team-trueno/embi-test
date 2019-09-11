@@ -14,7 +14,7 @@ class NivelController extends Controller
      */
     public function index()
     {
-        $niveles = Nivel::paginate(15);;
+        $niveles = Nivel::paginate(15);
         return view('niveles.index', compact('niveles'));
     }
 
