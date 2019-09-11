@@ -1,0 +1,14 @@
+[
+    {
+        "detalle": "¿Cuál es el nombre de Messi?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "detalle": "¿Funciona cómo debe funcionar?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "detalle": "¿Salimos de gira?",
+        "categoria_pregunta_id": 4
+    }
+]
