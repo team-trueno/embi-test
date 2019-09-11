@@ -49,5 +49,4 @@ Route::get('/juego', function() {
 });
 
 
-Route::post('/usuario-activo/{usuario}', 'UserActivoController@store')->name('perfiles.store');
-Route::delete('/usuario-activo/{usuario}', 'UserActivoController@destroy')->name('perfiles.destroy');
+
