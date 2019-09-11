@@ -30,10 +30,12 @@
                                     <td class="align-middle">{{ $categoria->id }}</td>
                                     <td class="align-middle">{{ $categoria->detalle }}</td>
                                     <td class="align-middle">
-                                    @if ($categoria->preguntas->isNotEmpty())
+                                    {{-- @if ($categoria->preguntas->isNotEmpty()) --}}
+
+                                    @if ($categoria->preguntas_count > 0)
 
                                             <span class="btn btn-success btn-sm">
-                                                Existen    <span class="badge badge-light">{{ $categoria->preguntas->count() }}</span>
+                                                Existen    <span class="badge badge-light">{{ $categoria->preguntas_count }}</span>
                                             </span>
 
 
