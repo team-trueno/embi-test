@@ -13,18 +13,17 @@ class PreguntaRespuestasController extends Controller
     public function store(Request $request, Pregunta $pregunta)
     {
         //$input = $request->input();
-
+        //dd($request);
         $validatedData = $request->validate([
-            'detalle.*' => 'required',
+            'respuestas.*.detalle' => 'required',
+            'gridRadios' => 'required',
         ]);
 
-
-
-        //$detalles = $request->input('detalle.*');
-        //return dd($name);
-        foreach ($validatedData['detalle'] as $detalle) {
-            //dd($respuesta);
-            $pregunta->addRespuesta($detalle);
+        foreach ($validatedData['respuestas'] as $key => $respuesta) {
+            $pregunta->addRespuesta([
+                'detalle' => $respuesta['detalle'],
+                'correcta' => ($key == $validatedData['gridRadios']) ? true : false
+            ]);
         }
 
         $pregunta->completado();
@@ -40,14 +39,16 @@ class PreguntaRespuestasController extends Controller
         $validatedData = $request->validate([
             'respuestas.*.id' => 'required',
             'respuestas.*.detalle' => 'required',
+            'gridRadios' => 'required',
         ]);
 
         //dd($validatedData);
 
-        foreach ($validatedData['respuestas'] as $respuesta) {
+        foreach ($validatedData['respuestas'] as $key => $respuesta) {
             $resp = Respuesta::find($respuesta['id']);
             $resp->update([
                 'detalle' => $respuesta['detalle'],
+                'correcta' => ($key == $validatedData['gridRadios']) ? true : false
             ]);
         }
         return redirect()->route('preguntas.show', compact('pregunta'));

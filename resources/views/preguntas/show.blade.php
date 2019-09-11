@@ -101,15 +101,23 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.0') is-invalid @enderror" name="detalle[]"
-                                    value="{{ $pregunta->respuestas[0]->detalle }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('detalle.0') is-invalid @enderror" name="detalle[]"
+                                        value="{{ $pregunta->respuestas[0]->detalle }}"  autocomplete="detalle[]" autofocus>
 
                                     @if ($errors->has('detalle.0'))
                                         <div class="invalid-feedback">{{ $errors->first('detalle.0') }}</div>
                                     @else
                                         <div class="form-text small"></div>
                                     @endif
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios0" {{ $pregunta->respuestas[0]->correcta ? "checked" : "" }}>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -119,15 +127,23 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.1') is-invalid @enderror" name="detalle[]"
-                                    value="{{ $pregunta->respuestas[1]->detalle }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('detalle.1') is-invalid @enderror" name="detalle[]"
+                                        value="{{ $pregunta->respuestas[1]->detalle }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.1'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.1') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+                                        @if ($errors->has('detalle.1'))
+                                            <div class="invalid-feedback">{{ $errors->first('detalle.1') }}</div>
+                                        @else
+                                            <div class="form-text small"></div>
+                                        @endif
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios0" {{ $pregunta->respuestas[1]->correcta ? "checked" : "" }}>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -137,15 +153,23 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.2') is-invalid @enderror" name="detalle[]"
-                                    value="{{ $pregunta->respuestas[2]->detalle }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('detalle.2') is-invalid @enderror" name="detalle[]"
+                                        value="{{ $pregunta->respuestas[2]->detalle }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.2'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.2') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+                                        @if ($errors->has('detalle.2'))
+                                            <div class="invalid-feedback">{{ $errors->first('detalle.2') }}</div>
+                                        @else
+                                            <div class="form-text small"></div>
+                                        @endif
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios0" {{ $pregunta->respuestas[2]->correcta ? "checked" : "" }}>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -155,15 +179,23 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.3') is-invalid @enderror" name="detalle[]"
-                                    value="{{ $pregunta->respuestas[3]->detalle }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('detalle.3') is-invalid @enderror" name="detalle[]"
+                                        value="{{ $pregunta->respuestas[3]->detalle }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.3'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.3') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+                                        @if ($errors->has('detalle.3'))
+                                            <div class="invalid-feedback">{{ $errors->first('detalle.3') }}</div>
+                                        @else
+                                            <div class="form-text small"></div>
+                                        @endif
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios0" {{ $pregunta->respuestas[3]->correcta ? "checked" : "" }}>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -200,15 +232,24 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.0') is-invalid @enderror" name="detalle[]"
-                                    value="{{ old('detalle.0') }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('respuestas.0.detalle') is-invalid @enderror" name="respuestas[0][detalle]"
+                                        value="{{ old('respuestas.0.detalle') }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.0'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.0') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios0" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- @if ($errors->has('detalle.0'))
+                                <div class="invalid-feedback">{{ $errors->first('detalle.0') }}</div>
+                            @else
+                                <div class="form-text small"></div>
+                            @endif --}}
                             </div>
                         </div>
 
@@ -218,15 +259,35 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.1') is-invalid @enderror" name="detalle[]"
-                                    value="{{ old('detalle.1') }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('respuestas.1.detalle') is-invalid @enderror" name="respuestas[1][detalle]"
+                                        value="{{ old('respuestas.1.detalle') }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.1'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.1') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+                                        {{-- @if ($errors->has('detalle.1'))
+                                            <div class="invalid-feedback">{{ $errors->first('detalle.1') }}</div>
+                                        @else
+                                            <div class="form-text small"></div>
+                                        @endif --}}
+
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <input class="" type="radio" name="gridRadios" id="gridRadios1" value="1">
+                                            </div>
+                                        </div>
+
+                                                                            {{-- @if ($errors->has('detalle.1'))
+                                            <div class="invalid-feedback">{{ $errors->first('detalle.1') }}</div>
+                                        @else
+                                            <div class="form-text small"></div>
+                                        @endif --}}
+                                    @error('detalle.1')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                </div>
+
                             </div>
                         </div>
 
@@ -236,15 +297,19 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.2') is-invalid @enderror" name="detalle[]"
-                                    value="{{ old('detalle.2') }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('respuestas.2.detalle') is-invalid @enderror" name="respuestas[2][detalle]"
+                                        value="{{ old('respuestas.2.detalle') }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.2'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.2') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+
+
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios2" value="2">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -254,15 +319,17 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
-                                <input id="detalle[]" type="text"
-                                    class="form-control @error('detalle.3') is-invalid @enderror" name="detalle[]"
-                                    value="{{ old('detalle.3') }}"  autocomplete="detalle[]" autofocus>
+                                <div class="input-group">
+                                    <input id="detalle[]" type="text"
+                                        class="form-control @error('respuestas.3.detalle') is-invalid @enderror" name="respuestas[3][detalle]"
+                                        value="{{ old('respuestas.3.detalle') }}"  autocomplete="detalle[]" autofocus>
 
-                                    @if ($errors->has('detalle.3'))
-                                        <div class="invalid-feedback">{{ $errors->first('detalle.3') }}</div>
-                                    @else
-                                        <div class="form-text small"></div>
-                                    @endif
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input class="" type="radio" name="gridRadios" id="gridRadios3" value="3">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

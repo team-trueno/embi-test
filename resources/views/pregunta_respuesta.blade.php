@@ -103,6 +103,7 @@
                             </label>
 
                             <div class="col-12 col-sm-6 col-lg-9">
+                                    <div class="input-group">
                                 <input id="detalle[]" type="text"
                                     class="form-control @error('respuestas.0.detalle') is-invalid @enderror" name="respuestas[0][detalle]"
                                     value="{{ $pregunta->respuestas[0]->detalle }}"  autocomplete="detalle[]" autofocus>
@@ -112,6 +113,14 @@
                                     @else
                                         <div class="form-text small"></div>
                                     @endif
+
+
+                                    <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <input class="" type="radio" name="gridRadios" id="gridRadios0" {{ $pregunta->respuestas[0]->correcta ? "checked" : "" }} value="0">
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
 
@@ -121,6 +130,7 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
+                                    <div class="input-group">
                                 <input id="detalle[]" type="text"
                                     class="form-control @error('respuestas.1.detalle') is-invalid @enderror" name="respuestas[1][detalle]"
                                     value="{{ $pregunta->respuestas[1]->detalle }}"  autocomplete="detalle[]" autofocus>
@@ -130,6 +140,14 @@
                                     @else
                                         <div class="form-text small"></div>
                                     @endif
+
+
+                                    <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <input class="" type="radio" name="gridRadios" id="gridRadios1" {{ $pregunta->respuestas[1]->correcta ? "checked" : "" }} value="1">
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
 
@@ -139,6 +157,7 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
+                                    <div class="input-group">
                                 <input id="detalle[]" type="text"
                                     class="form-control @error('respuestas.2.detalle') is-invalid @enderror" name="respuestas[2][detalle]"
                                     value="{{ $pregunta->respuestas[2]->detalle }}"  autocomplete="respuestas.2.detalle" autofocus>
@@ -148,6 +167,14 @@
                                     @else
                                         <div class="form-text small"></div>
                                     @endif
+
+
+                                    <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <input class="" type="radio" name="gridRadios" id="gridRadios2" {{ $pregunta->respuestas[2]->correcta ? "checked" : "" }} value="2">
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
 
@@ -157,6 +184,7 @@
                             </label>
 
                             <div class="col-12 col-sm-9 col-lg-9">
+                                    <div class="input-group">
                                 <input id="respuestas.3.detalle" type="text"
                                     class="form-control @error('respuestas.3.detalle') is-invalid @enderror" name="respuestas[3][detalle]"
                                     value="{{ $pregunta->respuestas[3]->detalle }}"  autocomplete="respuestas.3.detalle" autofocus>
@@ -167,6 +195,14 @@
                                     @else
                                         <div class="form-text small"></div>
                                     @endif
+
+
+                                    <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <input class="" type="radio" name="gridRadios" id="gridRadios3" {{ $pregunta->respuestas[3]->correcta ? "checked" : "" }} value="3">
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
 

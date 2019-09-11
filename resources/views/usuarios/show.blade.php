@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('js')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -33,7 +35,7 @@
                 <div class="card-body">
                     <a class="btn btn-warning" href="{{ route('usuarios.edit', $usuario->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>
                     @if ($usuario->activo)
-                    <form class="d-inline" action="{{ route('perfiles.destroy', $usuario->id) }}" method="POST">
+                    <form id="form" class="d-inline" action="{{ route('perfiles.destroy', $usuario->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
 
@@ -98,4 +100,25 @@
 
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('#form').submit(function(e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), // serializes the form's elements.
+                success: function(data)
+                {
+                    console.log('Completado');
+                    // alert(data); // show response from the php script.
+                }
+         });
+        });
+    });
+</script>
 @endsection
