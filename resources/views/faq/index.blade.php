@@ -40,7 +40,7 @@
                     </div>
                 </div>
             @empty
-
+            <p>No hay preguntas</p>
             @endforelse
         </div>
     </div>
