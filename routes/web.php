@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\UserActivoController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -46,3 +48,6 @@ Route::get('/juego', function() {
     return view('jugadas.juego', compact('pregunta'));
 });
 
+
+Route::post('/usuario-activo/{usuario}', 'UserActivoController@store')->name('perfiles.store');
+Route::delete('/usuario-activo/{usuario}', 'UserActivoController@destroy')->name('perfiles.destroy');
