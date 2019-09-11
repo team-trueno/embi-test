@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\UserActivoController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/usuarios', 'UsuarioController');
 
 Route::resource('/preguntas/categorias', 'CategoriaPreguntaController');
 
@@ -47,6 +51,7 @@ Route::get('/juego', function() {
     // dd($pregunta);
     return view('jugadas.juego', compact('pregunta'));
 });
+
 
 Route::get('/faq', function() {
     $topicos = \App\FaqTopico::all();
