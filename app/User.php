@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'apellido', 'usuario', 'avatar', 'fecha_nac', 'pais', 'email', 'password',
+        'name', 'apellido', 'usuario', 'avatar', 'fecha_nac', 'pais', 'email', 'password', 'activo',
     ];
 
     /**
@@ -47,6 +47,17 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function activar($activo = true)
+    {
+        $this->update(compact('activo'));
+    }
+
+    public function desactivar()
+    {
+        $value = $this->activar(false);
+        $this->update(compact('activo'));
     }
 
     public function authorizeRoles($roles)
