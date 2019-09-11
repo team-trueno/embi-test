@@ -31,6 +31,10 @@ Route::resource('/respuestas', 'RespuestaController');
 
 Route::resource('/contactos', 'ContactoController');
 
+Route::resource('/faq/topicos', 'FaqTopicoController', ['as' => 'faq']);
+
+Route::resource('/faq/preguntas', 'FaqPreguntaController', ['as' => 'faq']);
+
 Route::resource('/jugadores', 'JugadorController')->parameters([
     'jugadores' => 'jugador',
 ]);
@@ -49,4 +53,8 @@ Route::get('/juego', function() {
 });
 
 
-
+Route::get('/faq', function() {
+    $topicos = \App\FaqTopico::all();
+    // dd($topicos);
+    return view('faq.index', compact('topicos'));
+});

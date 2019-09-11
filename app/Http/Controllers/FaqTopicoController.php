@@ -14,7 +14,8 @@ class FaqTopicoController extends Controller
      */
     public function index()
     {
-        //
+        $topicos = FaqTopico::orderBy('id','DESC')->paginate(5);
+        return view('faq.topicos.index', compact('topicos'));
     }
 
     /**
@@ -24,7 +25,7 @@ class FaqTopicoController extends Controller
      */
     public function create()
     {
-        //
+        return view('faq.topicos.create');
     }
 
     /**
@@ -35,51 +36,79 @@ class FaqTopicoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reglas = [
+            'detalle'=>'string|min:1|max:100|unique:faq_topicos,detalle'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo :attribute debe ser un texto', 
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'max'=>'El campo :attribute debe tener un máximo de :max caracteres',
+            'unique'=>'Este tópico ya está registrado en la Base de Datos'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+        FaqTopico::create($request->all());
+        return redirect()->route('faq.topicos.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function show(FaqTopico $faqTopico)
+    public function show(FaqTopico $topico)
     {
-        //
+        return view('faq.topicos.show', compact('topico'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function edit(FaqTopico $faqTopico)
+    public function edit(FaqTopico $topico)
     {
-        //
+        return view('faq.topicos.edit', compact('topico'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, FaqTopico $faqTopico)
+    public function update(Request $request, FaqTopico $topico)
     {
-        //
+        $reglas = [
+            'detalle'=>'string|min:1|max:100'
+        ];
+
+        $mensajes = [
+            'string'=>'El campo :attribute debe ser un texto', 
+            'min'=>'El campo :attribute debe tener un minimo de :min caracteres', 
+            'max'=>'El campo :attribute debe tener un máximo de :max caracteres'
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+ 
+        $topico->update($request->all());
+
+        return redirect()->route('faq.topicos.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\FaqTopico  $faqTopico
+     * @param  \App\FaqTopico  $topico
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FaqTopico $faqTopico)
+    public function destroy(FaqTopico $topico)
     {
-        //
+        $topico->delete();
+        return redirect()->route('faq.topicos.index');
     }
 }

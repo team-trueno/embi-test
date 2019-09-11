@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFaqTopicosTable extends Migration
+class AddForeignToFaqTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateFaqTopicosTable extends Migration
      */
     public function up()
     {
-        Schema::create('faq_topicos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('detalle');
-            $table->timestamps();
+        Schema::table('faq_preguntas', function (Blueprint $table) {
+            $table->foreign('faq_topico_id')
+                  ->references('id')->on('faq_topicos');
         });
     }
 
@@ -27,6 +26,8 @@ class CreateFaqTopicosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faq_topicos');
+        Schema::table('faq_preguntas', function (Blueprint $table) {
+            $table->dropForeign(['faq_topico_id']);
+        });
     }
 }
