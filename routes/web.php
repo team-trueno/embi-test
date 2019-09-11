@@ -58,3 +58,7 @@ Route::get('/faq', function() {
     // dd($topicos);
     return view('faq.index', compact('topicos'));
 });
+
+
+Route::post('/usuario-activo/{usuario}', 'UserActivoController@store')->name('perfiles.store');
+Route::delete('/usuario-activo/{usuario}', 'UserActivoController@destroy')->name('perfiles.destroy');
