@@ -26,9 +26,12 @@ class Pregunta extends Model
         return $this->belongsTo('App\CategoriaPregunta', 'categoria_pregunta_id');
     }
 
-    public function addRespuesta($detalle)
+    public function addRespuesta($respuesta)
     {
-        $this->respuestas()->create(compact('detalle'));
+        $this->respuestas()->create([
+            'detalle' => $respuesta['detalle'],
+            'correcta' => $respuesta['correcta']
+        ]);
     }
 
     public function completado($completa = true)
