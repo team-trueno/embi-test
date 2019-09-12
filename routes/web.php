@@ -50,7 +50,7 @@ Route::get('/juego', function() {
     $pregunta = \App\Pregunta::where('activa', true)->inRandomOrder()->first();
     // dd($pregunta);
     return view('jugadas.juego', compact('pregunta'));
-});
+})->middleware('auth');
 
 
 Route::get('/faq', function() {
