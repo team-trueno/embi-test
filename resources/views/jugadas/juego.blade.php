@@ -53,6 +53,7 @@
         var counter = 10;
         var interval = setInterval(function() {
             counter--;
+            // counterText = counter;
             counterText = (counter < 10) ? ("0" + counter) : (counter);
             $('#time').text(counterText);
             // Display 'counter' wherever you want to display it.
@@ -66,7 +67,7 @@
                     confirmButtonText: 'Cool'
                 });
 
-                $('#timer').html("<h3>Count down complete</h3>");
+                // $('#timer').html("<h3>Count down complete</h3>");
                 jQuery(document).trigger('count_down');
                 return;
             }else{
