@@ -3,20 +3,66 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-            <div class="card-header"><h3>Consulta realizada por "{{$contacto->nombre}}"</h3></div>
+        <div class="col-12 col-md-8">
+            @component('components.card')
+                @slot('header')
+                    Detalle de la consulta
+                @endslot
+
                 <div class="card-body">
-                    <p><b><u>E-mail:</u></b> {{$contacto->email}} </p>
-                    <p><b><u>Asunto:</u></b> {{$contacto->asunto}} </p>
-                    <p><b><u>Mensaje:</u></b> {{$contacto->mensaje}} </p>
+                    <form action="">
+                        <fieldset disabled="disabled">
+                        <div class="form-group row">
+                            <label for="nombre" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Remitente') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <input type="text" class="form-control" value="{{ $contacto->nombre }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Correo electrónico') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <input type="text" class="form-control" value="{{ $contacto->email }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="asunto" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Asunto') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <input type="text" class="form-control" value="{{ $contacto->asunto }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mensaje" class="col-12 col-sm-3 col-form-label text-sm-right">
+                                {{ __('Mensaje') }}
+                            </label>
+
+                            <div class="col-12 col-sm-9 col-lg-9">
+                                <textarea rows="4" class="form-control" >{{ $contacto->mensaje }}</textarea>
+                            </div>
+                        </div>
+                        </fieldset>
+
+                        <div class="form-group row mb-0 float-right">
+                            <div class="col">
+                                <a class="btn btn-dark" href="{{ route('contactos.index') }}">
+                                    {{ __('Atrás') }}
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-8 offset-md-4">
-                <a href="{{ route('contactos.index') }}" class="btn btn-dark">Atrás</a>
-            </div>
+            @endcomponent
         </div>
     </div>
 </div>

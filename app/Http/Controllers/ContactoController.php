@@ -15,7 +15,7 @@ class ContactoController extends Controller
     public function index()
     {
         $contactos = Contacto::orderBy('id','DESC')->paginate(10);
-        return view('contactos.index',compact('contactos'));
+        return view('contactos.index', compact('contactos'));
     }
 
     /**
@@ -38,8 +38,8 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'nombre'=>'required|string|min:2', 
-            'email'=>'required|string', 
+            'nombre'=>'required|string|min:2',
+            'email'=>'required|string',
             'asunto'=>'required|string|min:1',
             'mensaje'=>'required|string|min:2'
         ];
@@ -49,12 +49,12 @@ class ContactoController extends Controller
             'min'=>'El campo :attribute debe tener un minimo de :min',
             'unique'=>'El campo :attribute se encuentra repetido'
         ];
-        
+
         $this->validate($request, $reglas, $mensajes);
 
         Contacto::create($request->all());
 
-        return redirect()->route('contactos.create');
+        return redirect()->route('contactos.index');
 
     }
 

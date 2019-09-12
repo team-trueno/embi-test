@@ -46,5 +46,9 @@ class JuegoController extends Controller
         return compact('respuestas', 'respuesta', 'jugador');
     }
 
+    public function preJuego()
+    {
+        return view('jugadas.prejuego');
+    }
 
 }
