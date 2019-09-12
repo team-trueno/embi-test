@@ -18,10 +18,10 @@
                             <th>Avatar</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Email</th>
-                            <th>Usuario</th>
-                            <th>Fecha Nacimiento</th>
-                            <th>País</th>
+                            <th class="d-none d-md-table-cell">Email</th>
+                            <th class="d-none d-md-table-cell">Usuario</th>
+                            <th class="d-none d-lg-table-cell">Fecha Nacimiento</th>
+                            <th class="d-none d-lg-table-cell">País</th>
                             <th class="text-center t-min">Acciones</th>
                         </thead>
 
@@ -33,10 +33,10 @@
                                 </td>
                                 <td class="align-middle">{{ $usuario->name }}</td>
                                 <td class="align-middle">{{ $usuario->apellido }}</td>
-                                <td class="align-middle">{{ $usuario->email }}</td>
-                                <td class="align-middle">{{ $usuario->usuario }}</td>
-                                <td class="align-middle">{{ $usuario->fecha_nac }}</td>
-                                <td class="align-middle">{{ $usuario->pais }}</td>
+                                <td class="align-middle d-none d-md-table-cell">{{ $usuario->email }}</td>
+                                <td class="align-middle d-none d-md-table-cell">{{ $usuario->usuario }}</td>
+                                <td class="align-middle d-none d-lg-table-cell">{{ $usuario->fecha_nac }}</td>
+                                <td class="align-middle d-none d-lg-table-cell">{{ $usuario->pais }}</td>
                                 <td  class="align-middle d-flex justify-content-between">
                                             {{-- <div class="float-right"> --}}
                                     <a class="btn btn-warning btn-sm" href="{{ route('usuarios.show', $usuario->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
