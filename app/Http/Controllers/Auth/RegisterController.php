@@ -86,7 +86,7 @@ class RegisterController extends Controller
 
         $fileName = basename($route);
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
             'usuario' => $data['usuario'],
@@ -96,5 +96,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $user->jugador()->create();
+
+        return $user;
     }
 }

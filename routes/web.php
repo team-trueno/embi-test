@@ -62,3 +62,6 @@ Route::get('/faq', function() {
 
 Route::post('/usuario-activo/{usuario}', 'UserActivoController@store')->name('perfiles.store');
 Route::delete('/usuario-activo/{usuario}', 'UserActivoController@destroy')->name('perfiles.destroy');
+
+
+Route::post('/jugada', 'JuegoController@test')->name('test.juego');

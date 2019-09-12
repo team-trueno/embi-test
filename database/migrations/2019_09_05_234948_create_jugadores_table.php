@@ -17,7 +17,7 @@ class CreateJugadoresTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedSmallInteger('puntos')->default(0);
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('nivel_id');
+            $table->unsignedBigInteger('nivel_id')->default(1);
             $table->timestamps();
         });
     }
