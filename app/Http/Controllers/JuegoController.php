@@ -22,8 +22,18 @@ class JuegoController extends Controller
 
 
         $jugador = Jugador::find($request['jugador']);
+        //$puntajeJugador = $jugador->puntaje;
+
+        if ($respuesta->correcta) {
+            //dd(1);
+            $jugador->sumarPunto();
+        }
+
+
         // dd($respuesta->id);
         //return ['detalle' => $respuesta->detalle, 'correcta' => $respuesta->correcta, 'msg' => 'HOLA'];
         return compact('respuestas', 'respuesta', 'jugador');
     }
+
+
 }

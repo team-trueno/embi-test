@@ -13,7 +13,7 @@ class Jugador extends Model
      * @var array
      */
     protected $fillable = [
-
+        'puntos',
     ];
 
     /**
@@ -32,6 +32,15 @@ class Jugador extends Model
     public function user()
     {
         return $this->belongsTo('App\User', 'user_id');
+    }
+
+    public function sumarPunto()
+    {
+        $puntosNuevo = $this->puntos + 1 ;
+
+        $this->update([
+            'puntos' => $puntosNuevo
+        ]);
     }
 
 }
