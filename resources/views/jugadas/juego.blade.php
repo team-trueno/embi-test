@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('js')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 @endsection
 @section('content')
 <div class="container">
@@ -41,6 +42,13 @@
 <script>
     $(document).ready(function(){
 
+//         Swal.fire({
+//   title: 'Error!',
+//   text: 'Do you want to continue',
+//   type: 'error',
+//   confirmButtonText: 'Cool'
+// });
+
 
         var counter = 10;
         var interval = setInterval(function() {
@@ -49,7 +57,15 @@
             $('#time').text(counterText);
             // Display 'counter' wherever you want to display it.
             if (counter <= 0) {
-                    clearInterval(interval);
+                clearInterval(interval);
+
+                Swal.fire({
+                    title: 'Tiempo Out!',
+                    text: 'Quieres continuar',
+                    type: 'error',
+                    confirmButtonText: 'Cool'
+                });
+
                 $('#timer').html("<h3>Count down complete</h3>");
                 jQuery(document).trigger('count_down');
                 return;
@@ -140,11 +156,13 @@
                 //     currentButton.addClass('btn-success');
                 // });
                 //var boton = $(".btn-respuesta[data-elegido='" + false +"']");
-                $
+                //$
                 if (data.respuesta.correcta) {
-                    $('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta correcta</span>' );
+                    //$('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta correcta</span>' );
+                    $('#valor-respuesta').text('Respuesta Correcta');
                 } else {
-                    $('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta incorrecta</span>' );
+                    // $('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta incorrecta</span>' );
+                    $('#valor-respuesta').text('Respuesta Incorrecta');
                 }
 
                 // var dataBoton = boton.data();
