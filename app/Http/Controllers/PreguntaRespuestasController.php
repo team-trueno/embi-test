@@ -12,6 +12,7 @@ class PreguntaRespuestasController extends Controller
 {
     public function store(Request $request, Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         //$input = $request->input();
         //dd($request);
         $validatedData = $request->validate([
@@ -34,6 +35,7 @@ class PreguntaRespuestasController extends Controller
 
     public function update(Request $request, Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         //dd($request);
 
         $validatedData = $request->validate([
@@ -56,6 +58,7 @@ class PreguntaRespuestasController extends Controller
 
     public function edit(Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $respuestas = $pregunta->respuestas;
         return view('pregunta_respuesta', compact('pregunta', 'respuestas'));
     }

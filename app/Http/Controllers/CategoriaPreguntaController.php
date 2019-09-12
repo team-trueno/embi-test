@@ -14,6 +14,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $categorias = CategoriaPregunta::withCount('preguntas')->orderBy('id','DESC')->paginate(5);
 
         return view('categorias.index', compact('categorias'));
@@ -26,6 +27,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function create()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('categorias.create');
     }
 
@@ -37,6 +39,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
@@ -72,6 +75,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function edit(CategoriaPregunta $categoria)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('categorias.edit',compact('categoria'));
     }
 
@@ -84,6 +88,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function update(Request $request, CategoriaPregunta $categoria)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'string|min:1|max:100|unique:categoria_preguntas,detalle'
         ];
@@ -110,6 +115,7 @@ class CategoriaPreguntaController extends Controller
      */
     public function destroy(CategoriaPregunta $categoria)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $categoria->delete();
         return redirect()->route('categorias.index');
     }

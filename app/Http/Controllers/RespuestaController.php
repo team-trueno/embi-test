@@ -14,6 +14,7 @@ class RespuestaController extends Controller
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $respuestas = Respuesta::orderBy('id','DESC')->paginate(5);
         return view('respuestas.index', compact('respuestas'));
     }
@@ -25,6 +26,7 @@ class RespuestaController extends Controller
      */
     public function create()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('respuestas.create');
     }
 
@@ -36,6 +38,7 @@ class RespuestaController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'string|min:2|max:100',
             'correcta'=>'required|boolean',
@@ -62,6 +65,7 @@ class RespuestaController extends Controller
      */
     public function show(Respuesta $respuesta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('respuestas.show',compact('respuesta'));
     }
 
@@ -73,6 +77,7 @@ class RespuestaController extends Controller
      */
     public function edit(Respuesta $respuesta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('respuestas.edit', compact('respuesta'));
     }
 
@@ -85,6 +90,7 @@ class RespuestaController extends Controller
      */
     public function update(Request $request, Respuesta $respuesta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'required|string|min:2|max:100',
             'correcta'=>'required|boolean',
@@ -113,6 +119,7 @@ class RespuestaController extends Controller
      */
     public function destroy(Respuesta $respuesta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $respuesta->delete();
         return redirect()->route('respuestas.index');
     }

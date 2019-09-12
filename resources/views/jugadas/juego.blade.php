@@ -9,13 +9,20 @@
         <div class="col-12 col-md-6">
             <div class="card card-border-color card-border-color-primary shadow">
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h4>{{ $pregunta->detalle }}</h4>
+                    <h3>{{ $pregunta->detalle }}</h3>
                     <span class="btn btn-danger align-self-center"><span id="time">10</span> seg</span>
                 </div>
+
                 <div class="card-body">
-                    <div class="card-text">
-                        <span id="valor-respuesta">&nbsp</span>
+                    <div class="card-title text-center">
+                        <span class="btn btn-secondary btn-lg btn-block">
+                            {{ $pregunta->categoriaPregunta->detalle }}
+                        </span>
                     </div>
+                    <hr>
+                    {{-- <div class="card-text">
+                        <span id="valor-respuesta">&nbsp</span>
+                    </div> --}}
                     @foreach ($pregunta->respuestas as $respuesta)
                         <button type="button" class="btn-respuesta btn btn-primary btn-lg btn-block" data-elegido="false" data-respuesta="{{ $respuesta->id }}">
                             {{$respuesta->detalle}}
@@ -31,9 +38,15 @@
 
                 </div>
                 <div class="card-footer">
-                    <a href="">Link</a>
-                    <a href="">Link</a>
-                    <a id="btn-next" class="btn btn-primary" href="">Otra</a>
+                    <div class="row">
+                    <div class="col-6">
+                        <a id="btn-abandonar" class="btn btn-danger btn-block" href="">Abandonar</a>
+                    </div>
+                    <div class="col-6">
+                            <a id="btn-next" class="btn btn-success disabled btn-block" href="">Siguiente</a>
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>
@@ -42,43 +55,81 @@
 <script>
     $(document).ready(function(){
 
-//         Swal.fire({
-//   title: 'Error!',
-//   text: 'Do you want to continue',
-//   type: 'error',
-//   confirmButtonText: 'Cool'
-// });
-
-
-        var counter = 10;
-        var interval = setInterval(function() {
-            counter--;
-            // counterText = counter;
-            counterText = (counter < 10) ? ("0" + counter) : (counter);
-            $('#time').text(counterText);
-            // Display 'counter' wherever you want to display it.
-            if (counter <= 0) {
-                clearInterval(interval);
-
-                Swal.fire({
-                    title: 'Tiempo Out!',
-                    text: 'Quieres continuar',
-                    type: 'error',
-                    confirmButtonText: 'Cool'
-                });
-
-                // $('#timer').html("<h3>Count down complete</h3>");
-                jQuery(document).trigger('count_down');
-                return;
-            }else{
-                //$('#time').text(counter);
-            console.log("Timer --> " + counter);
+        var iconos = [
+            {
+                "id": 1,
+                "icono": '<i class="fas fa-futbol fa-5x"></i>'
+            },
+            {
+                "id": 2,
+                "icono": '<i class="fas fa-music fa-5x"></i>'
+            },
+            {
+                "id": 3,
+                "icono": '<i class="fas fa-tv fa-5x"></i>'
+            },
+            {
+                "id": 4,
+                "icono": '<i class="fas fa-beer fa-5x"></i>'
+            },
+            {
+                "id": 5,
+                "icono": '<i class="fas fa-globe-americas fa-5x"></i>'
             }
-        }, 1000);
+        ];
+
+
+
+        Swal.fire({
+            title: '{{ $pregunta->categoriaPregunta->detalle }}',
+            html: iconos[{{ $pregunta->categoriaPregunta->id - 1 }}].icono,
+            showConfirmButton: true,
+            confirmButtonText: 'JUGAR',
+            //backdrop: '#FFF'
+        }) .then((result) => {
+            if(result.value) {
+                jQuery(document).trigger('count_up');
+            } else {
+                jQuery(document).trigger('dismiss');
+            }
+        });
+
+        $(document).on('dismiss', function(e){
+            location.replace("{{ route('prejuego') }}");
+        });
+
+        $(document).on('count_up', function(e){
+            var counter = 10;
+            var interval = setInterval(function() {
+                counter--;
+                counterText = (counter < 10) ? ("0" + counter) : (counter);
+                $('#time').text(counterText);
+                // Display 'counter' wherever you want to display it.
+                if (counter <= 0) {
+                        clearInterval(interval);
+                    $('#timer').html("<h3>Count down complete</h3>");
+                    jQuery(document).trigger('count_down');
+                    return;
+                }else{
+                    //$('#time').text(counter);
+                console.log("Timer --> " + counter);
+                }
+            }, 1000);
+
+
+
 
         $(document).on('count_down', function(e){
             // alert('CONTADOR EN 0');
+            Swal.fire({
+                title: 'Se acabó el tiempo',
+                type: 'warning',
+                position: 'center',
+                showConfirmButton: false,
+                timer: 1500
+            });
             $('.btn-respuesta').attr('disabled', true);
+            $('#btn-next').removeClass("disabled");
         });
 
 
@@ -135,6 +186,13 @@
                 //$('.btn-respuesta').attr('onClick', null);
                 $('.btn-respuesta').attr('onclick','').unbind('click');
 
+                // if(data.respuesta.correcta) (
+                //     $(".btn-respuesta[data-elegido='" + data.respuest.id +"']").removeClass("btn-primary").addClass("btn-danger");
+                // ) else (
+                //     $(".btn-respuesta[data-elegido='" + data.respuest.id +"']").removeClass("btn-primary").addClass("btn-success");
+                // )
+                // $(".btn-respuesta[data-elegido='" + data.respuest.id +"']")
+
 
                 data.respuestas.forEach(element => {
                     if (element.correcta) {
@@ -148,23 +206,47 @@
                 //$(".btn-respuesta[data-elegido='" + false +"']");
                 //$(".btn-respuesta[data-respuesta!='" + data.respuesta.id +"']").removeClass("btn-primary");
                 //var boton = $(".btn-respuesta[data-elegido='" + true +"']");
+
+
                 var boton = $(".btn-respuesta[data-elegido='" + true +"']");//.removeClass("btn-danger disabled btn-primary").addClass("btn-success");
                 var boton = $(".btn-respuesta[data-elegido='" + true +"']");//.removeClass("btn-danger disabled btn-primary").addClass("btn-success");
                 var botonis = $(".btn-respuesta[data-elegido='" + false +"']");//.removeClass("btn-danger disabled btn-primary").addClass("btn-success");
+
+
                 //var boton = $(".btn-respuesta[data-elegido='" + true +"']");
                 // $(".btn-respuesta[data-elegido='" + true +"']", function(e){
                 //     var currentButton = $(this);
                 //     currentButton.addClass('btn-success');
                 // });
                 //var boton = $(".btn-respuesta[data-elegido='" + false +"']");
-                //$
+
                 if (data.respuesta.correcta) {
-                    //$('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta correcta</span>' );
-                    $('#valor-respuesta').text('Respuesta Correcta');
+                    Swal.fire({
+                        title: 'Correcta',
+                        type: 'success',
+                        position: 'center',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('#btn-next').removeClass("disabled");
                 } else {
-                    // $('#valor-respuesta').replaceWith( '<span id="valor-respuesta">Respuesta incorrecta</span>' );
-                    $('#valor-respuesta').text('Respuesta Incorrecta');
+                    Swal.fire({
+                        title: 'Incorrecta',
+                        type: 'error',
+                        position: 'center',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('#btn-next').removeClass("disabled");
                 }
+
+                // Swal.fire({
+                //     title: 'Correcta',
+                //     type: 'success',
+                //     position: 'center',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                // });
 
                 // var dataBoton = boton.data();
                 // console.log(data.respuesta.id);
@@ -172,7 +254,7 @@
                 // console.log(data.respuesta.id === dataBoton.respuesta);
 
 
-                console.log(botonis);
+                 console.log(botonis);
 
             });
 
@@ -196,6 +278,8 @@
         $('#btn-next').click(function(e){
             location.reload(true);
         });
+
+    });
     });
 
 </script>

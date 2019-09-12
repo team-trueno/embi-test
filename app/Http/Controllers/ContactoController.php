@@ -14,6 +14,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $contactos = Contacto::orderBy('id','DESC')->paginate(10);
         return view('contactos.index', compact('contactos'));
     }
@@ -54,7 +55,7 @@ class ContactoController extends Controller
 
         Contacto::create($request->all());
 
-        return redirect()->route('contactos.index');
+        return redirect()->route('usuarios.show', auth()->user()->id);
 
     }
 
@@ -66,6 +67,7 @@ class ContactoController extends Controller
      */
     public function show(Contacto $contacto)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return  view('contactos.show',compact('contacto'));
     }
 
@@ -100,6 +102,7 @@ class ContactoController extends Controller
      */
     public function destroy(Contacto $contacto)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $contacto->delete();
         return redirect()->route('contactos.index');
     }

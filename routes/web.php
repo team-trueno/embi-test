@@ -11,11 +11,14 @@
 |
 */
 
-use App\Http\Controllers\UserActivoController;
+// use App\Http\Controllers\UserActivoController;
+// use Illuminate\Routing\Route;
+
+use App\Http\Controllers\RankingController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
 
 Auth::routes();
 
@@ -65,3 +68,11 @@ Route::delete('/usuario-activo/{usuario}', 'UserActivoController@destroy')->name
 
 
 Route::post('/jugada', 'JuegoController@test')->name('test.juego');
+
+Route::get('/prejuego', 'JuegoController@preJuego')->name('prejuego');
+
+
+Route::get('/ranking', 'RankingController@index');
+
+Route::post('/usuario-admin/{usuario}', 'UserAdminController@store')->name('admin.store');
+Route::delete('/usuario-admin/{usuario}', 'UserAdminController@destroy')->name('admin.destroy');

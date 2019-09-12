@@ -15,6 +15,7 @@ class FaqPreguntaController extends Controller
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         $preguntas = FaqPregunta::orderBy('id','DESC')->paginate(5);
         return view('faq.preguntas.index', compact('preguntas', 'topicos'));
@@ -27,6 +28,7 @@ class FaqPreguntaController extends Controller
      */
     public function create()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         return view('faq.preguntas.create', compact('topicos'));
     }
@@ -39,6 +41,7 @@ class FaqPreguntaController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'required|string|min:1|max:100|unique:faq_preguntas,detalle',
             'respuesta'=>'required|string|min:1|max:100',
@@ -65,6 +68,7 @@ class FaqPreguntaController extends Controller
      */
     public function show(FaqPregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('faq.preguntas.show', compact('pregunta'));
     }
 
@@ -76,6 +80,7 @@ class FaqPreguntaController extends Controller
      */
     public function edit(FaqPregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         return view('faq.preguntas.edit', compact('pregunta', 'topicos'));
     }
@@ -89,6 +94,7 @@ class FaqPreguntaController extends Controller
      */
     public function update(Request $request, FaqPregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'string|min:1|max:100',
             'respuesta'=>'string|min:1|max:100',
@@ -120,6 +126,7 @@ class FaqPreguntaController extends Controller
      */
     public function destroy(FaqPregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $pregunta->delete();
         return redirect()->route('faq.preguntas.index');
     }

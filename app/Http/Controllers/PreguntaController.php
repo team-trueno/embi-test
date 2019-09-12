@@ -9,12 +9,23 @@ use Illuminate\Http\Request;
 class PreguntaController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $preguntas = Pregunta::orderBy('id','DESC')->paginate(15);
         return view('preguntas.index', compact('preguntas'));
     }
@@ -26,6 +37,7 @@ class PreguntaController extends Controller
      */
     public function create()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $categorias = CategoriaPregunta::orderBy('detalle')->get();
         //dd($categorias);
         return view('preguntas.create', compact('categorias'));
@@ -39,6 +51,7 @@ class PreguntaController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'required|string|min:5|max:100|unique:preguntas,detalle',
             'categoria_pregunta_id'=>'required|string|min:1|max:100'
@@ -67,6 +80,7 @@ class PreguntaController extends Controller
      */
     public function show(Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         //$preguntas = Pregunta::find($id);
         //$preguntas = Pregunta::findOrFail($id);
 
@@ -83,6 +97,7 @@ class PreguntaController extends Controller
      */
     public function edit(Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $categorias = CategoriaPregunta::all();
         return view('preguntas.edit', compact('pregunta', 'categorias'));
     }
@@ -96,6 +111,7 @@ class PreguntaController extends Controller
      */
     public function update(Request $request, Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'required|string|min:5|max:100',
             'categoria_pregunta_id'=>'required|string|min:1|max:100'
@@ -123,6 +139,7 @@ class PreguntaController extends Controller
      */
     public function destroy(Pregunta $pregunta)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $pregunta->delete();
         return redirect()->route('preguntas.index');
     }

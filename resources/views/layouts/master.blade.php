@@ -59,19 +59,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('preguntas.index') }}">{{ __('Preguntas') }}</a>
+                            <a class="nav-link" href="/faq">{{ __('FAQ') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('Usuarios') }}</a>
+                            <a class="nav-link" href="{{ route('contactos.create') }}">{{ __('Consultas') }}</a>
+                        </li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('niveles.index') }}">{{ __('Niveles') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contactos.index') }}">{{ __('Contactos') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
+                            <a class="nav-link" href="/juego">{{ __('Jugar') }}</a>
                         </li>
 
                     </ul>
@@ -89,6 +84,24 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('usuarios.show', auth()->user()->id) }}">{{ __('Perfil') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ranking">{{ __('Ranking') }}</a>
+                            </li>
+                        @if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('superadmin'))
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('preguntas.index') }}">{{ __('Preguntas') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('Usuarios') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
+                            </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -99,11 +112,6 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
-                                    <a class="dropdown-item" href="#"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Perfil
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

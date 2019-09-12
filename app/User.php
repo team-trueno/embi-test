@@ -54,6 +54,20 @@ class User extends Authenticatable
         $this->update(compact('activo'));
     }
 
+    public function hacerAdmin($value = true)
+    {
+        if ($value) {
+            $this->roles()->attach(Role::where('name', 'admin')->first());
+        } else {
+            $this->roles()->detach(Role::where('name', 'admin')->first());
+        }
+    }
+
+    public function sacarAdmin()
+    {
+        hacerAdmin(false);
+    }
+
     public function desactivar()
     {
         $value = $this->activar(false);

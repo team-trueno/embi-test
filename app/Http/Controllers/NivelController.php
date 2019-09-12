@@ -14,6 +14,7 @@ class NivelController extends Controller
      */
     public function index()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $niveles = Nivel::paginate(15);
         return view('niveles.index', compact('niveles'));
     }
@@ -25,6 +26,7 @@ class NivelController extends Controller
      */
     public function create()
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('niveles.create');
     }
 
@@ -36,6 +38,7 @@ class NivelController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'nombre'=>'required|string|min:1|unique:niveles,nombre',
             'puntos_superar'=>'required|integer|min:1'
@@ -61,6 +64,7 @@ class NivelController extends Controller
      */
     public function show(Nivel $nivel)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('niveles.show', compact('nivel'));
     }
 
@@ -72,6 +76,7 @@ class NivelController extends Controller
      */
     public function edit(Nivel $nivel)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('niveles.edit', compact('nivel'));
     }
 
@@ -84,6 +89,7 @@ class NivelController extends Controller
      */
     public function update(Request $request, Nivel $nivel)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'nombre'=>'string|min:1',
             'puntos_superar'=>'integer|min:1'
@@ -110,6 +116,7 @@ class NivelController extends Controller
      */
     public function destroy(Nivel $nivel)
     {
+        auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $nivel->delete();
         return redirect()->route('niveles.index');
     }

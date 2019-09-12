@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
-class UserActivoController extends Controller
+class UserAdminController extends Controller
 {
-
     public function store(User $usuario)
     {
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
@@ -16,7 +15,7 @@ class UserActivoController extends Controller
          * Si se desactiva el usuario, también hay que desactivar al jugador
          */
 
-        $usuario->activar();
+        $usuario->hacerAdmin();
 
         return back();
     }
@@ -30,7 +29,7 @@ class UserActivoController extends Controller
          * Si se desactiva el usuario, también hay que desactivar al jugador
          */
 
-        $usuario->desactivar();
+        $usuario->hacerAdmin(false);
 
         return back();
     }
