@@ -1,0 +1,52 @@
+[
+    {
+        "detalle": "¿Cómo hago para jugar desde mi casa?",
+        "respuesta": "Tenés que descargarte la app de Embirrados.",
+        "faq_topico_id": 1
+    },
+    {
+        "detalle": "¿Se puede jugar en grupo?",
+        "respuesta": "Por el momento el juego no cuenta con el modo grupal.",
+        "faq_topico_id": 1
+    },
+    {
+        "detalle": "¿Cuál es el máximo nivel que puedo alcanzar?",
+        "respuesta": "Nivel 10",
+        "faq_topico_id": 2
+    },
+    {
+        "detalle": "¿El ranking es por niveles?",
+        "respuesta": "Si, el ranking calcula niveles y luego toma en cuenta los puntos de acuerdo al nivel.",
+        "faq_topico_id": 2
+    },
+    {
+        "detalle": "¿Cuántos puntos se necesitan para alcanzar el nivel máximo?",
+        "respuesta": "Se necesitan 10.000 puntos para alcanzar el máximo nivel.",
+        "faq_topico_id": 3
+    },
+    {
+        "detalle": "¿Cuántos puntos se obtienen al responder una pregunta de forma correcta?",
+        "respuesta": "Se obtiene 1 punto por cada respuesta correcta.",
+        "faq_topico_id": 3
+    },
+    {
+        "detalle": "¿Cuáles son las reglas del juego?",
+        "respuesta": "Deberás responder de forma ilimitada preguntas con 4 respuestas hasta alcanzar el nivel máximo.",
+        "faq_topico_id": 4
+    },
+    {
+        "detalle": "¿Puedo abandonar la partida?",
+        "respuesta": "Si, se puede abandonar la partida y volver a jugar en cualquier momento.",
+        "faq_topico_id": 4
+    },
+    {
+        "detalle": "¿Cómo puedo hacer para comprar el juego para mi negocio?",
+        "respuesta": "Podés contactarte a través de nuestra sección de contacto consultando tus dudas.",
+        "faq_topico_id": 5
+    },
+    {
+        "detalle": "¿El juego puede personalizarse de acuerdo al local?",
+        "respuesta": "Embirrados es totalmenta adaptable y 100% personalizable a tu negocio!",
+        "faq_topico_id": 5
+    }
+]
