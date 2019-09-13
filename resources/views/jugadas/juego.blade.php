@@ -40,10 +40,10 @@
                 <div class="card-footer">
                     <div class="row">
                     <div class="col-6">
-                        <a id="btn-abandonar" class="btn btn-danger btn-block" href="">Abandonar</a>
+                        <a id="btn-abandonar" class="btn btn-danger btn-block" href="{{ route('usuarios.show', auth()->user()->id) }}">Abandonar</a>
                     </div>
                     <div class="col-6">
-                            <a id="btn-next" class="btn btn-success disabled btn-block" href="">Siguiente</a>
+                        <a id="btn-next" class="btn btn-success disabled btn-block" href="">Siguiente</a>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@
             html: iconos[{{ $pregunta->categoriaPregunta->id - 1 }}].icono,
             showConfirmButton: true,
             confirmButtonText: 'JUGAR',
-            //backdrop: '#FFF'
+            backdrop: '#000000'
         }) .then((result) => {
             if(result.value) {
                 jQuery(document).trigger('count_up');
