@@ -1,201 +1,251 @@
 [
     {
+        "id": 1,
         "detalle": "¿Cuál es el nombre de Messi?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 2,
         "detalle": "¿Dónde se jugó el primer mundial de fútbol?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 3,
         "detalle": "¿Cuál es la capacidad del Camp Nou?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 4,
         "detalle": "¿En qué año se jugó el primer mundial de futbol?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 5,
         "detalle": "¿Dónde originaron los juegos olímpicos?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 6,
         "detalle": "¿Cuántos jugadores componen un equipo de rugby?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 7,
         "detalle": "¿Qué significa FIFA?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 8,
         "detalle": "¿A qué barrio pertenece el Club Atlético Huracán?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 9,
         "detalle": "¿Cuál es el rival de Racing?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 10,
         "detalle": "¿En qué año le 'cortaron las piernas' a Maradona?",
         "categoria_pregunta_id": 1
     },
     {
+        "id": 11,
         "detalle": "¿Cuántas provincias componen la República argentina?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 12,
         "detalle": "¿De qué provincia es la cantante Nicki Nicole?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 13,
         "detalle": "¿Cuál es el nombre del cantante de calle 13?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 14,
         "detalle": "¿Quién compuso 'Las cuatro estaciones'?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 15,
         "detalle": "¿Quien es el Beatle que esta descalzo en la portada del disco Abbey Road?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 16,
         "detalle": "¿Quien era el vocalista de Led Zeppelin?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 17,
         "detalle": "¿Cuál es el disco más vendido de la historia?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 18,
         "detalle": "¿Quién es el famoso Rey de Rock en los Estados Unidos?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 19,
         "detalle": "¿Cómo se llama la canción del Apache Ness?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 20,
         "detalle": "Mari se deja...",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 21,
         "detalle": "¿De qué película de Disney es la canción 'Libre Soy'?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 22,
         "detalle": "¿De dónde es Mario Luis ?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 23,
         "detalle": "¿Quién canta 'Salió el sol'?",
         "categoria_pregunta_id": 2
     },
     {
+        "id": 24,
         "detalle": "¿A qué se dedica Paulo Londra?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 25,
         "detalle": "¿En qué año se emitió por primera vez el programa Almorzando con Mirtha Legrand?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 26,
         "detalle": "¿Quien muere al final en Avengers: Endgame?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 27,
         "detalle": "¿Quien ganó el Martin Fierro de oro 2018?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 28,
         "detalle": "¿Cuál es la primer pelicula de la saga de Harry Potter?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 29,
         "detalle": "¿Cómo se llama la ultima pelicula de Star Wars que se estrena en diciembre 2019?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 30,
         "detalle": "¿Cuándo se estrena la película Frozen II?",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 31,
         "detalle": "¿Quién acompaña al padre de Nemo en la búsqueda? ",
         "categoria_pregunta_id": 3
     },
     {
+        "id": 32,
         "detalle": "¿Cuál es la capital de Bolivia?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 33,
         "detalle": "¿Quién fue el primer emperador romano?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 34,
         "detalle": "¿Cuál es el lugar más frío de la tierra?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 35,
         "detalle": "¿Cuál es el río más largo del mundo?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 36,
         "detalle": "¿De qué colores es la bandera de México?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 37,
         "detalle": "¿Cuándo acabó la II Guerra Mundial?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 38,
         "detalle": "¿En qué país se encuentra la torre de Pisa?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 39,
         "detalle": "¿Cuál es el océano más grande?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 40,
         "detalle": "¿Cuál es la capital de Brasil?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 41,
         "detalle": "¿Cuál es el país más grande del mundo?",
         "categoria_pregunta_id": 5
     },
     {
+        "id": 42,
         "detalle": "¿Qué hacer si salís del boliche y tu amigo tiene resaca?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 43,
         "detalle": "¿En qué año se fabricaron las primeras referencias alcohólicas?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 44,
         "detalle": "¿Cuál es el nombre de la bebida más alcohólia del mundo?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 45,
         "detalle": "¿Cómo se le llama a la resaca en México?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 46,
         "detalle": "¿Cuál es la bebida alcohólica más vendida del mundo?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 47,
         "detalle": "¿Con qué se prepara el Martini?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 48,
         "detalle": "¿De qué país es originario el Fernet?",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 49,
         "detalle": "Todo el mundo sabe que el borracho..",
         "categoria_pregunta_id": 4
     },
     {
+        "id": 50,
         "detalle": "¿En qué fecha River le ganó a Boca la superfinal de Libertadores?",
         "categoria_pregunta_id": 1
     }

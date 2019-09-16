@@ -17,9 +17,10 @@ class PreguntasTableSeeder extends Seeder
         $data = json_decode($json);
         foreach ($data as $obj) {
             Pregunta::create(array(
-             'detalle' => $obj->detalle,
-             'categoria_pregunta_id' => $obj->categoria_pregunta_id,
-           ));
+                'id' => $obj->id,
+                'detalle' => $obj->detalle,
+                'categoria_pregunta_id' => $obj->categoria_pregunta_id,
+            ));
         }
     }
 }
