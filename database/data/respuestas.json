@@ -80,7 +80,7 @@
         "pregunta_id": 4
     },
     {
-        "detalle": "EE.UU",
+        "detalle": "EE.UU.",
         "correcta": 0,
         "pregunta_id": 5
     },
@@ -200,443 +200,1803 @@
         "pregunta_id": 10
     },
     {
-        "detalle": 20,
+        "detalle": "Cinco",
         "correcta": 0,
         "pregunta_id": 11
     },
     {
-        "detalle": 16,
+        "detalle": "Ocho",
         "correcta": 0,
         "pregunta_id": 11
     },
     {
-        "detalle": 23,
+        "detalle": "Dos",
         "correcta": 0,
         "pregunta_id": 11
     },
     {
-        "detalle": 30,
-        "correcta": 0,
+        "detalle": "Ninguno",
+        "correcta": 1,
         "pregunta_id": 11
     },
     {
-        "detalle": "Buenos Aires",
+        "detalle": "Central",
+        "correcta": 1,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "Colón",
         "correcta": 0,
         "pregunta_id": 12
+    },
+    {
+        "detalle": "Tiro Federal",
+        "correcta": 0,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "Tiro Suizo",
+        "correcta": 0,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "Boca Juniors",
+        "correcta": 1,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "Lanús",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "Almagro",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "San Lorenzo",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "Racing",
+        "correcta": 1,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "San Lorenzo",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Lanús",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Banfield",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Arsenal",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Velez",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Patronato",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Banfield",
+        "correcta": 1,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Asociación de Fútbol Agremiados",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Asociación de Fútbol Argentino",
+        "correcta": 1,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Asociación de Agremiados Forever",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Asociación Argentina de Fútbol",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Tres",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Dos",
+        "correcta": 1,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Una",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Ninguna",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Cuatro",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Dos",
+        "correcta": 1,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Cinco",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Tres",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "La Catorce",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "La Quince",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "La más popular",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "La Doce",
+        "correcta": 1,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "Oso",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "Tucán",
+        "correcta": 1,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "Hormiga",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "Cerebro",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "Buenos Aires ",
+        "correcta": 0,
+        "pregunta_id": 21
     },
     {
         "detalle": "jujuy",
         "correcta": 0,
-        "pregunta_id": 12
+        "pregunta_id": 21
     },
     {
-        "detalle": "Santa Fe",
+        "detalle": "Santa Fe ",
         "correcta": 1,
-        "pregunta_id": 12
+        "pregunta_id": 21
     },
     {
         "detalle": "salta",
         "correcta": 0,
-        "pregunta_id": 12
+        "pregunta_id": 21
     },
     {
-        "detalle": "Milo Joglar",
+        "detalle": "Milo Joglar ",
         "correcta": 0,
-        "pregunta_id": 13
+        "pregunta_id": 22
     },
     {
-        "detalle": "René Gómez",
+        "detalle": "René Gómez ",
         "correcta": 0,
-        "pregunta_id": 13
+        "pregunta_id": 22
     },
     {
-        "detalle": "Eduardo Pérez",
+        "detalle": "Eduardo Pérez ",
         "correcta": 0,
-        "pregunta_id": 13
+        "pregunta_id": 22
     },
     {
-        "detalle": "René Pérez Joglar",
+        "detalle": "René Pérez Joglar ",
         "correcta": 1,
-        "pregunta_id": 13
+        "pregunta_id": 22
     },
     {
         "detalle": "Mozart",
         "correcta": 0,
-        "pregunta_id": 14
+        "pregunta_id": 23
     },
     {
         "detalle": "Bach",
         "correcta": 0,
-        "pregunta_id": 14
+        "pregunta_id": 23
     },
     {
         "detalle": "Vivaldi",
         "correcta": 1,
-        "pregunta_id": 14
+        "pregunta_id": 23
     },
     {
         "detalle": "Beethoven",
         "correcta": 0,
-        "pregunta_id": 14
+        "pregunta_id": 23
     },
     {
         "detalle": "John Lennon",
         "correcta": 0,
-        "pregunta_id": 15
+        "pregunta_id": 24
     },
     {
         "detalle": "Paul McCartney",
         "correcta": 1,
-        "pregunta_id": 15
+        "pregunta_id": 24
     },
     {
         "detalle": "George Harrison",
         "correcta": 0,
-        "pregunta_id": 15
+        "pregunta_id": 24
     },
     {
         "detalle": "Ringo Starr",
         "correcta": 0,
-        "pregunta_id": 15
+        "pregunta_id": 24
     },
     {
         "detalle": "Freddie Mercury",
         "correcta": 0,
-        "pregunta_id": 16
+        "pregunta_id": 25
     },
     {
         "detalle": "Kurt Cobain",
         "correcta": 0,
-        "pregunta_id": 16
+        "pregunta_id": 25
     },
     {
         "detalle": "Robert Plant",
         "correcta": 1,
-        "pregunta_id": 16
+        "pregunta_id": 25
     },
     {
         "detalle": "Roger Waters",
         "correcta": 0,
-        "pregunta_id": 16
+        "pregunta_id": 25
     },
     {
         "detalle": "Thriller",
         "correcta": 1,
-        "pregunta_id": 17
+        "pregunta_id": 26
     },
     {
         "detalle": "Beat it",
         "correcta": 0,
-        "pregunta_id": 17
+        "pregunta_id": 26
     },
     {
         "detalle": "Abbey Road",
         "correcta": 0,
-        "pregunta_id": 17
+        "pregunta_id": 26
     },
     {
         "detalle": "El bombón asesino",
         "correcta": 0,
-        "pregunta_id": 17
+        "pregunta_id": 26
     },
     {
         "detalle": "Elvis Presley",
         "correcta": 1,
-        "pregunta_id": 18
+        "pregunta_id": 27
     },
     {
         "detalle": "Axl Rose",
         "correcta": 0,
-        "pregunta_id": 18
+        "pregunta_id": 27
     },
     {
         "detalle": "Eric Adams",
         "correcta": 0,
-        "pregunta_id": 18
+        "pregunta_id": 27
     },
     {
         "detalle": "Max Carl",
         "correcta": 0,
-        "pregunta_id": 18
+        "pregunta_id": 27
     },
     {
-        "detalle": "terremoto para tu mami",
+        "detalle": "Terremoto para tu mami",
         "correcta": 0,
-        "pregunta_id": 19
+        "pregunta_id": 28
     },
     {
-        "detalle": "terremoto terremoto",
+        "detalle": "Terremoto terremoto",
         "correcta": 0,
-        "pregunta_id": 19
+        "pregunta_id": 28
     },
     {
-        "detalle": "terremoto pa tu cola",
+        "detalle": "Terremoto pa tu cola",
         "correcta": 1,
-        "pregunta_id": 19
+        "pregunta_id": 28
     },
     {
-        "detalle": "terremoto dale duro",
+        "detalle": "Terremoto dale duro",
         "correcta": 0,
-        "pregunta_id": 19
-    },
-    {
-        "detalle": "si la invitan unos tragos",
-        "correcta": 0,
-        "pregunta_id": 20
-    },
-    {
-        "detalle": "si por el cuello la besan",
-        "correcta": 1,
-        "pregunta_id": 20
-    },
-    {
-        "detalle": "si bailan cumbia",
-        "correcta": 0,
-        "pregunta_id": 20
-    },
-    {
-        "detalle": "le dan lo que ella quiere",
-        "correcta": 0,
-        "pregunta_id": 20
+        "pregunta_id": 28
     },
     {
         "detalle": "Moana",
         "correcta": 0,
-        "pregunta_id": 21
+        "pregunta_id": 29
     },
     {
         "detalle": "Frozen",
         "correcta": 1,
-        "pregunta_id": 21
+        "pregunta_id": 29
     },
     {
-        "detalle": "Nemo",
+        "detalle": "Nemo ",
         "correcta": 0,
-        "pregunta_id": 21
+        "pregunta_id": 29
     },
     {
         "detalle": "Enrredados",
         "correcta": 0,
-        "pregunta_id": 21
+        "pregunta_id": 29
     },
     {
-        "detalle": "con mati al lado",
-        "correcta": 0,
-        "pregunta_id": 22
-    },
-    {
-        "detalle": "con los parlantes en la vereda",
+        "detalle": "Pablito Lescano",
         "correcta": 1,
-        "pregunta_id": 22
+        "pregunta_id": 30
     },
     {
-        "detalle": "con un vinito",
+        "detalle": "Pibes Chorros",
         "correcta": 0,
-        "pregunta_id": 22
+        "pregunta_id": 30
     },
     {
-        "detalle": "con tu vieja",
+        "detalle": "El Polaco",
         "correcta": 0,
-        "pregunta_id": 22
+        "pregunta_id": 30
+    },
+    {
+        "detalle": "El Villano",
+        "correcta": 0,
+        "pregunta_id": 30
     },
     {
         "detalle": "San Genaro",
         "correcta": 1,
-        "pregunta_id": 23
+        "pregunta_id": 31
     },
     {
         "detalle": "Rosario",
         "correcta": 0,
-        "pregunta_id": 23
+        "pregunta_id": 31
     },
     {
         "detalle": "Santa Fe",
         "correcta": 0,
-        "pregunta_id": 23
+        "pregunta_id": 31
     },
     {
         "detalle": "reconquista",
         "correcta": 0,
-        "pregunta_id": 23
+        "pregunta_id": 31
     },
     {
-        "detalle": "El original",
+        "detalle": "El original ",
         "correcta": 0,
-        "pregunta_id": 24
+        "pregunta_id": 32
     },
     {
         "detalle": "Néstor en bloque",
         "correcta": 0,
-        "pregunta_id": 24
+        "pregunta_id": 32
     },
     {
         "detalle": "Don Omar",
         "correcta": 1,
-        "pregunta_id": 24
+        "pregunta_id": 32
     },
     {
         "detalle": "la re pandilla",
         "correcta": 0,
-        "pregunta_id": 24
+        "pregunta_id": 32
     },
     {
-        "detalle": "Es proxeneta",
+        "detalle": "Los charros",
         "correcta": 0,
-        "pregunta_id": 25
+        "pregunta_id": 33
+    },
+    {
+        "detalle": "Los palmeras",
+        "correcta": 1,
+        "pregunta_id": 33
+    },
+    {
+        "detalle": "Babasónicos",
+        "correcta": 0,
+        "pregunta_id": 33
+    },
+    {
+        "detalle": "Los del Fuego",
+        "correcta": 0,
+        "pregunta_id": 33
+    },
+    {
+        "detalle": "México",
+        "correcta": 0,
+        "pregunta_id": 34
+    },
+    {
+        "detalle": "Puerto Rico",
+        "correcta": 1,
+        "pregunta_id": 34
+    },
+    {
+        "detalle": "Cuba",
+        "correcta": 0,
+        "pregunta_id": 34
+    },
+    {
+        "detalle": "Venezuela",
+        "correcta": 0,
+        "pregunta_id": 34
+    },
+    {
+        "detalle": "Mariano Pérez",
+        "correcta": 0,
+        "pregunta_id": 35
+    },
+    {
+        "detalle": "René Pérez",
+        "correcta": 1,
+        "pregunta_id": 35
+    },
+    {
+        "detalle": "Eduardo Pérez ",
+        "correcta": 0,
+        "pregunta_id": 35
+    },
+    {
+        "detalle": "Roberto Sanchez",
+        "correcta": 0,
+        "pregunta_id": 35
+    },
+    {
+        "detalle": "Indio Solari",
+        "correcta": 0,
+        "pregunta_id": 36
+    },
+    {
+        "detalle": "Los Redonditos de Ricota",
+        "correcta": 1,
+        "pregunta_id": 36
+    },
+    {
+        "detalle": "La Renga",
+        "correcta": 0,
+        "pregunta_id": 36
+    },
+    {
+        "detalle": "Los Piojos",
+        "correcta": 0,
+        "pregunta_id": 36
+    },
+    {
+        "detalle": "El Villano",
+        "correcta": 1,
+        "pregunta_id": 37
+    },
+    {
+        "detalle": "El Polaco",
+        "correcta": 0,
+        "pregunta_id": 37
+    },
+    {
+        "detalle": "El Cuelgue",
+        "correcta": 0,
+        "pregunta_id": 37
+    },
+    {
+        "detalle": "Sui Generis",
+        "correcta": 0,
+        "pregunta_id": 37
+    },
+    {
+        "detalle": "Rock Nacional",
+        "correcta": 1,
+        "pregunta_id": 38
+    },
+    {
+        "detalle": "Pop Latinoamericano",
+        "correcta": 0,
+        "pregunta_id": 38
+    },
+    {
+        "detalle": "Cumbia Villera",
+        "correcta": 0,
+        "pregunta_id": 38
+    },
+    {
+        "detalle": "Chamamé",
+        "correcta": 0,
+        "pregunta_id": 38
+    },
+    {
+        "detalle": "Corriente alterna / Corriente Continua",
+        "correcta": 1,
+        "pregunta_id": 39
+    },
+    {
+        "detalle": "Ácido",
+        "correcta": 0,
+        "pregunta_id": 39
+    },
+    {
+        "detalle": "Aceite ",
+        "correcta": 0,
+        "pregunta_id": 39
+    },
+    {
+        "detalle": "Corriente alterna / Corriente Discontinua",
+        "correcta": 0,
+        "pregunta_id": 39
+    },
+    {
+        "detalle": "Axl Rose",
+        "correcta": 1,
+        "pregunta_id": 40
+    },
+    {
+        "detalle": "Axel Rose",
+        "correcta": 0,
+        "pregunta_id": 40
+    },
+    {
+        "detalle": "Axel Rouse",
+        "correcta": 0,
+        "pregunta_id": 40
+    },
+    {
+        "detalle": "Axl Rouse",
+        "correcta": 0,
+        "pregunta_id": 40
+    },
+    {
+        "detalle": "Es senador",
+        "correcta": 0,
+        "pregunta_id": 41
     },
     {
         "detalle": "Es diputado",
-        "correcta": 1,
-        "pregunta_id": 25
+        "correcta": 0,
+        "pregunta_id": 41
     },
     {
         "detalle": "Es cantante",
-        "correcta": 0,
-        "pregunta_id": 25
+        "correcta": 1,
+        "pregunta_id": 41
     },
     {
         "detalle": "Es programador",
         "correcta": 0,
-        "pregunta_id": 25
+        "pregunta_id": 41
     },
     {
         "detalle": 1972,
         "correcta": 0,
-        "pregunta_id": 26
+        "pregunta_id": 42
     },
     {
         "detalle": 1968,
         "correcta": 1,
-        "pregunta_id": 26
+        "pregunta_id": 42
     },
     {
         "detalle": 1960,
         "correcta": 0,
-        "pregunta_id": 26
+        "pregunta_id": 42
     },
     {
         "detalle": 1966,
         "correcta": 0,
-        "pregunta_id": 26
+        "pregunta_id": 42
     },
     {
         "detalle": "Nadie",
         "correcta": 0,
-        "pregunta_id": 27
+        "pregunta_id": 43
     },
     {
         "detalle": "Todos",
         "correcta": 0,
-        "pregunta_id": 27
+        "pregunta_id": 43
     },
     {
         "detalle": "Tony Stark",
-        "correcta": 1,
-        "pregunta_id": 27
+        "correcta": 0,
+        "pregunta_id": 43
     },
     {
         "detalle": "Thor",
-        "correcta": 0,
-        "pregunta_id": 27
+        "correcta": 1,
+        "pregunta_id": 43
     },
     {
         "detalle": "Amar despues de amar",
         "correcta": 0,
-        "pregunta_id": 28
+        "pregunta_id": 44
     },
     {
         "detalle": "Un Gallo para esculapio",
         "correcta": 1,
-        "pregunta_id": 28
+        "pregunta_id": 44
     },
     {
         "detalle": "El maestro",
         "correcta": 0,
-        "pregunta_id": 28
+        "pregunta_id": 44
     },
     {
         "detalle": "Las estrellas",
         "correcta": 0,
-        "pregunta_id": 28
+        "pregunta_id": 44
     },
     {
         "detalle": "Harry Potter y el Prisionero de Azcaban",
         "correcta": 0,
-        "pregunta_id": 29
+        "pregunta_id": 45
     },
     {
         "detalle": "Harry Potter y la Orden del Fénix",
         "correcta": 0,
-        "pregunta_id": 29
+        "pregunta_id": 45
     },
     {
         "detalle": "Harry Potter y la Cámara secreta",
         "correcta": 0,
-        "pregunta_id": 29
+        "pregunta_id": 45
     },
     {
         "detalle": "Harry Potter y la Piedra Filosofal",
         "correcta": 1,
-        "pregunta_id": 29
+        "pregunta_id": 45
     },
     {
         "detalle": "Star Wars: El despertar de la Fuerza",
         "correcta": 0,
-        "pregunta_id": 30
+        "pregunta_id": 46
     },
     {
         "detalle": "Star Wars: Los últimos Jedi",
         "correcta": 0,
-        "pregunta_id": 30
+        "pregunta_id": 46
     },
     {
         "detalle": "Rogue One: una historia de Star Wars",
         "correcta": 0,
-        "pregunta_id": 30
+        "pregunta_id": 46
     },
     {
         "detalle": "Star Wars: El Ascenso de Skywalker",
         "correcta": 1,
-        "pregunta_id": 30
+        "pregunta_id": 46
     },
     {
         "detalle": "2 de enero de 2020",
         "correcta": 1,
-        "pregunta_id": 31
+        "pregunta_id": 47
     },
     {
         "detalle": "1 de enero de 2020",
         "correcta": 0,
-        "pregunta_id": 31
+        "pregunta_id": 47
     },
     {
         "detalle": "3 enero de 2020",
         "correcta": 0,
-        "pregunta_id": 31
+        "pregunta_id": 47
     },
     {
         "detalle": "No se estrena",
         "correcta": 0,
-        "pregunta_id": 31
+        "pregunta_id": 47
     },
     {
         "detalle": "todo el mar",
         "correcta": 0,
-        "pregunta_id": 32
+        "pregunta_id": 48
     },
     {
         "detalle": "Dory",
         "correcta": 1,
-        "pregunta_id": 32
+        "pregunta_id": 48
     },
     {
         "detalle": "Sydney",
         "correcta": 0,
-        "pregunta_id": 32
+        "pregunta_id": 48
     },
     {
         "detalle": "Lara",
         "correcta": 0,
-        "pregunta_id": 32
+        "pregunta_id": 48
+    },
+    {
+        "detalle": "Analía",
+        "correcta": 0,
+        "pregunta_id": 49
+    },
+    {
+        "detalle": "Anabelle",
+        "correcta": 1,
+        "pregunta_id": 49
+    },
+    {
+        "detalle": "Andrea",
+        "correcta": 0,
+        "pregunta_id": 49
+    },
+    {
+        "detalle": "Anabela",
+        "correcta": 0,
+        "pregunta_id": 49
+    },
+    {
+        "detalle": 1991,
+        "correcta": 1,
+        "pregunta_id": 50
+    },
+    {
+        "detalle": 1990,
+        "correcta": 0,
+        "pregunta_id": 50
+    },
+    {
+        "detalle": 1987,
+        "correcta": 0,
+        "pregunta_id": 50
+    },
+    {
+        "detalle": 1992,
+        "correcta": 0,
+        "pregunta_id": 50
+    },
+    {
+        "detalle": "Pepe Argento",
+        "correcta": 1,
+        "pregunta_id": 51
+    },
+    {
+        "detalle": "Coky Argento",
+        "correcta": 0,
+        "pregunta_id": 51
+    },
+    {
+        "detalle": "Dardo",
+        "correcta": 0,
+        "pregunta_id": 51
+    },
+    {
+        "detalle": "Fatiga",
+        "correcta": 0,
+        "pregunta_id": 51
+    },
+    {
+        "detalle": "Uno",
+        "correcta": 0,
+        "pregunta_id": 52
+    },
+    {
+        "detalle": "Dos",
+        "correcta": 0,
+        "pregunta_id": 52
+    },
+    {
+        "detalle": "Tres",
+        "correcta": 0,
+        "pregunta_id": 52
+    },
+    {
+        "detalle": "Ninguno",
+        "correcta": 1,
+        "pregunta_id": 52
+    },
+    {
+        "detalle": "Fatiga",
+        "correcta": 1,
+        "pregunta_id": 53
+    },
+    {
+        "detalle": "Bernabeu",
+        "correcta": 0,
+        "pregunta_id": 53
+    },
+    {
+        "detalle": "Coky",
+        "correcta": 0,
+        "pregunta_id": 53
+    },
+    {
+        "detalle": "Pepe",
+        "correcta": 0,
+        "pregunta_id": 53
+    },
+    {
+        "detalle": 11,
+        "correcta": 1,
+        "pregunta_id": 54
+    },
+    {
+        "detalle": 10,
+        "correcta": 0,
+        "pregunta_id": 54
+    },
+    {
+        "detalle": 2,
+        "correcta": 0,
+        "pregunta_id": 54
+    },
+    {
+        "detalle": 101,
+        "correcta": 0,
+        "pregunta_id": 54
+    },
+    {
+        "detalle": "Jesusito",
+        "correcta": 0,
+        "pregunta_id": 55
+    },
+    {
+        "detalle": "Diosito",
+        "correcta": 1,
+        "pregunta_id": 55
+    },
+    {
+        "detalle": "Peque",
+        "correcta": 0,
+        "pregunta_id": 55
+    },
+    {
+        "detalle": "Enano",
+        "correcta": 0,
+        "pregunta_id": 55
+    },
+    {
+        "detalle": "Man in Black",
+        "correcta": 1,
+        "pregunta_id": 56
+    },
+    {
+        "detalle": "Man in Blade",
+        "correcta": 0,
+        "pregunta_id": 56
+    },
+    {
+        "detalle": "Man Blame",
+        "correcta": 0,
+        "pregunta_id": 56
+    },
+    {
+        "detalle": "Man Institute Black",
+        "correcta": 0,
+        "pregunta_id": 56
+    },
+    {
+        "detalle": "Marcela",
+        "correcta": 0,
+        "pregunta_id": 57
+    },
+    {
+        "detalle": "Matilda",
+        "correcta": 1,
+        "pregunta_id": 57
+    },
+    {
+        "detalle": "Macarena",
+        "correcta": 0,
+        "pregunta_id": 57
+    },
+    {
+        "detalle": "Sabrina",
+        "correcta": 0,
+        "pregunta_id": 57
+    },
+    {
+        "detalle": 800,
+        "correcta": 1,
+        "pregunta_id": 58
+    },
+    {
+        "detalle": 8000,
+        "correcta": 0,
+        "pregunta_id": 58
+    },
+    {
+        "detalle": 80,
+        "correcta": 0,
+        "pregunta_id": 58
+    },
+    {
+        "detalle": 800000,
+        "correcta": 0,
+        "pregunta_id": 58
+    },
+    {
+        "detalle": 10,
+        "correcta": 1,
+        "pregunta_id": 59
+    },
+    {
+        "detalle": 100,
+        "correcta": 0,
+        "pregunta_id": 59
+    },
+    {
+        "detalle": 1,
+        "correcta": 0,
+        "pregunta_id": 59
+    },
+    {
+        "detalle": 1000,
+        "correcta": 0,
+        "pregunta_id": 59
+    },
+    {
+        "detalle": "Man",
+        "correcta": 0,
+        "pregunta_id": 60
+    },
+    {
+        "detalle": "Meanings",
+        "correcta": 0,
+        "pregunta_id": 60
+    },
+    {
+        "detalle": "Words",
+        "correcta": 0,
+        "pregunta_id": 60
+    },
+    {
+        "detalle": "Things",
+        "correcta": 1,
+        "pregunta_id": 60
+    },
+    {
+        "detalle": "Dejarlo tirado",
+        "correcta": 0,
+        "pregunta_id": 61
+    },
+    {
+        "detalle": "Llevarlo a la casa",
+        "correcta": 0,
+        "pregunta_id": 61
+    },
+    {
+        "detalle": "Esconderlo hasta que vuelva a la vida",
+        "correcta": 1,
+        "pregunta_id": 61
+    },
+    {
+        "detalle": "«Yo a él no lo conozco»",
+        "correcta": 0,
+        "pregunta_id": 61
+    },
+    {
+        "detalle": "9500 A.C",
+        "correcta": 1,
+        "pregunta_id": 62
+    },
+    {
+        "detalle": "4000 A.C",
+        "correcta": 0,
+        "pregunta_id": 62
+    },
+    {
+        "detalle": "4500 A.C",
+        "correcta": 0,
+        "pregunta_id": 62
+    },
+    {
+        "detalle": "3000 A.C",
+        "correcta": 0,
+        "pregunta_id": 62
+    },
+    {
+        "detalle": "Everclear",
+        "correcta": 1,
+        "pregunta_id": 63
+    },
+    {
+        "detalle": "Vodka",
+        "correcta": 0,
+        "pregunta_id": 63
+    },
+    {
+        "detalle": "Fernet",
+        "correcta": 0,
+        "pregunta_id": 63
+    },
+    {
+        "detalle": "Tequila",
+        "correcta": 0,
+        "pregunta_id": 63
+    },
+    {
+        "detalle": "Cruda",
+        "correcta": 1,
+        "pregunta_id": 64
+    },
+    {
+        "detalle": "Pedal",
+        "correcta": 0,
+        "pregunta_id": 64
+    },
+    {
+        "detalle": "Chava",
+        "correcta": 0,
+        "pregunta_id": 64
+    },
+    {
+        "detalle": "Chicha",
+        "correcta": 0,
+        "pregunta_id": 64
+    },
+    {
+        "detalle": "Jinro",
+        "correcta": 1,
+        "pregunta_id": 65
+    },
+    {
+        "detalle": "Vodka",
+        "correcta": 0,
+        "pregunta_id": 65
+    },
+    {
+        "detalle": "Tequila",
+        "correcta": 0,
+        "pregunta_id": 65
+    },
+    {
+        "detalle": "Chicha",
+        "correcta": 0,
+        "pregunta_id": 65
+    },
+    {
+        "detalle": "Vermut, ginebra y hielo",
+        "correcta": 1,
+        "pregunta_id": 66
+    },
+    {
+        "detalle": "Vodka, ginebra y hielo",
+        "correcta": 0,
+        "pregunta_id": 66
+    },
+    {
+        "detalle": "Vermut, ron y hielo",
+        "correcta": 0,
+        "pregunta_id": 66
+    },
+    {
+        "detalle": "Ginebra y hielo",
+        "correcta": 0,
+        "pregunta_id": 66
+    },
+    {
+        "detalle": "Italia",
+        "correcta": 1,
+        "pregunta_id": 67
+    },
+    {
+        "detalle": "Checoslovaquia",
+        "correcta": 0,
+        "pregunta_id": 67
+    },
+    {
+        "detalle": "Francia",
+        "correcta": 0,
+        "pregunta_id": 67
+    },
+    {
+        "detalle": "Argentina",
+        "correcta": 0,
+        "pregunta_id": 67
+    },
+    {
+        "detalle": "El tipo de alcohol utilizado",
+        "correcta": 0,
+        "pregunta_id": 68
+    },
+    {
+        "detalle": "El tipo de levadura utilizado",
+        "correcta": 0,
+        "pregunta_id": 68
+    },
+    {
+        "detalle": "La fermentación",
+        "correcta": 1,
+        "pregunta_id": 68
+    },
+    {
+        "detalle": "La combinación de la mezcla",
+        "correcta": 0,
+        "pregunta_id": 68
+    },
+    {
+        "detalle": "Pinta",
+        "correcta": 0,
+        "pregunta_id": 69
+    },
+    {
+        "detalle": "Piña",
+        "correcta": 0,
+        "pregunta_id": 69
+    },
+    {
+        "detalle": "Pote",
+        "correcta": 1,
+        "pregunta_id": 69
+    },
+    {
+        "detalle": "Birra",
+        "correcta": 0,
+        "pregunta_id": 69
+    },
+    {
+        "detalle": "Vino con Prity",
+        "correcta": 1,
+        "pregunta_id": 70
+    },
+    {
+        "detalle": "Vino con Coca",
+        "correcta": 0,
+        "pregunta_id": 70
+    },
+    {
+        "detalle": "Vodka con Prity",
+        "correcta": 0,
+        "pregunta_id": 70
+    },
+    {
+        "detalle": "Fernet con Fanta",
+        "correcta": 0,
+        "pregunta_id": 70
+    },
+    {
+        "detalle": "Baron B",
+        "correcta": 0,
+        "pregunta_id": 71
+    },
+    {
+        "detalle": "Renascense",
+        "correcta": 0,
+        "pregunta_id": 71
+    },
+    {
+        "detalle": "Mumm",
+        "correcta": 0,
+        "pregunta_id": 71
+    },
+    {
+        "detalle": "Don Perignon",
+        "correcta": 1,
+        "pregunta_id": 71
+    },
+    {
+        "detalle": "Derecha",
+        "correcta": 0,
+        "pregunta_id": 72
+    },
+    {
+        "detalle": "Izquierda",
+        "correcta": 1,
+        "pregunta_id": 72
+    },
+    {
+        "detalle": "Da lo mismo",
+        "correcta": 0,
+        "pregunta_id": 72
+    },
+    {
+        "detalle": "Depende la fecha",
+        "correcta": 0,
+        "pregunta_id": 72
+    },
+    {
+        "detalle": "El corazón",
+        "correcta": 0,
+        "pregunta_id": 73
+    },
+    {
+        "detalle": "El riñón",
+        "correcta": 0,
+        "pregunta_id": 73
+    },
+    {
+        "detalle": "El colon",
+        "correcta": 0,
+        "pregunta_id": 73
+    },
+    {
+        "detalle": "El hígado",
+        "correcta": 1,
+        "pregunta_id": 73
+    },
+    {
+        "detalle": 2018,
+        "correcta": 0,
+        "pregunta_id": 74
+    },
+    {
+        "detalle": 2017,
+        "correcta": 0,
+        "pregunta_id": 74
+    },
+    {
+        "detalle": 2019,
+        "correcta": 1,
+        "pregunta_id": 74
+    },
+    {
+        "detalle": 2016,
+        "correcta": 0,
+        "pregunta_id": 74
+    },
+    {
+        "detalle": "Un limón cortado adentro",
+        "correcta": 1,
+        "pregunta_id": 75
+    },
+    {
+        "detalle": "Una naranja cortada adentro",
+        "correcta": 0,
+        "pregunta_id": 75
+    },
+    {
+        "detalle": "Una cereza entera adentro",
+        "correcta": 0,
+        "pregunta_id": 75
+    },
+    {
+        "detalle": "Una ciruela partida por la mitad adentro",
+        "correcta": 0,
+        "pregunta_id": 75
+    },
+    {
+        "detalle": "Marcianos",
+        "correcta": 0,
+        "pregunta_id": 76
+    },
+    {
+        "detalle": "Tripulantes de avión",
+        "correcta": 0,
+        "pregunta_id": 76
+    },
+    {
+        "detalle": "Piratas",
+        "correcta": 1,
+        "pregunta_id": 76
+    },
+    {
+        "detalle": "Nocheros",
+        "correcta": 0,
+        "pregunta_id": 76
+    },
+    {
+        "detalle": "Coca Cola",
+        "correcta": 1,
+        "pregunta_id": 77
+    },
+    {
+        "detalle": "Fanta",
+        "correcta": 0,
+        "pregunta_id": 77
+    },
+    {
+        "detalle": "Sprite",
+        "correcta": 0,
+        "pregunta_id": 77
+    },
+    {
+        "detalle": "Manaos",
+        "correcta": 0,
+        "pregunta_id": 77
+    },
+    {
+        "detalle": "Tierra del Fuego",
+        "correcta": 0,
+        "pregunta_id": 78
+    },
+    {
+        "detalle": "Misiones",
+        "correcta": 0,
+        "pregunta_id": 78
+    },
+    {
+        "detalle": "Entre Ríos",
+        "correcta": 0,
+        "pregunta_id": 78
+    },
+    {
+        "detalle": "Mendoza",
+        "correcta": 1,
+        "pregunta_id": 78
+    },
+    {
+        "detalle": "Bordolino",
+        "correcta": 0,
+        "pregunta_id": 79
+    },
+    {
+        "detalle": "Uvita",
+        "correcta": 0,
+        "pregunta_id": 79
+    },
+    {
+        "detalle": "Toro",
+        "correcta": 1,
+        "pregunta_id": 79
+    },
+    {
+        "detalle": "Tinto",
+        "correcta": 0,
+        "pregunta_id": 79
+    },
+    {
+        "detalle": "Vodka",
+        "correcta": 1,
+        "pregunta_id": 80
+    },
+    {
+        "detalle": "Fernet",
+        "correcta": 0,
+        "pregunta_id": 80
+    },
+    {
+        "detalle": "Cerveza",
+        "correcta": 0,
+        "pregunta_id": 80
+    },
+    {
+        "detalle": "Ron",
+        "correcta": 0,
+        "pregunta_id": 80
+    },
+    {
+        "detalle": "La Paz",
+        "correcta": 0,
+        "pregunta_id": 81
+    },
+    {
+        "detalle": "Sucre",
+        "correcta": 1,
+        "pregunta_id": 81
+    },
+    {
+        "detalle": "Potosí",
+        "correcta": 0,
+        "pregunta_id": 81
+    },
+    {
+        "detalle": "Oruro",
+        "correcta": 0,
+        "pregunta_id": 81
+    },
+    {
+        "detalle": "Julio Cesar",
+        "correcta": 0,
+        "pregunta_id": 82
+    },
+    {
+        "detalle": "Cesar Augusto",
+        "correcta": 1,
+        "pregunta_id": 82
+    },
+    {
+        "detalle": "Nerón",
+        "correcta": 0,
+        "pregunta_id": 82
+    },
+    {
+        "detalle": "Calígula",
+        "correcta": 0,
+        "pregunta_id": 82
+    },
+    {
+        "detalle": "La Antártida",
+        "correcta": 1,
+        "pregunta_id": 83
+    },
+    {
+        "detalle": "Ushuaia",
+        "correcta": 0,
+        "pregunta_id": 83
+    },
+    {
+        "detalle": "Polo Norte",
+        "correcta": 0,
+        "pregunta_id": 83
+    },
+    {
+        "detalle": "Glaciar Perito Moreno",
+        "correcta": 0,
+        "pregunta_id": 83
+    },
+    {
+        "detalle": "Nilo",
+        "correcta": 0,
+        "pregunta_id": 84
+    },
+    {
+        "detalle": "Amazonas",
+        "correcta": 1,
+        "pregunta_id": 84
+    },
+    {
+        "detalle": "Tibet",
+        "correcta": 0,
+        "pregunta_id": 84
+    },
+    {
+        "detalle": "Mississippi",
+        "correcta": 0,
+        "pregunta_id": 84
+    },
+    {
+        "detalle": "Verde, blando y rojo",
+        "correcta": 1,
+        "pregunta_id": 85
+    },
+    {
+        "detalle": "Verde, blanco y bordó",
+        "correcta": 0,
+        "pregunta_id": 85
+    },
+    {
+        "detalle": "Verde, blanco y dorado",
+        "correcta": 0,
+        "pregunta_id": 85
+    },
+    {
+        "detalle": "Verde, blanco y azul",
+        "correcta": 0,
+        "pregunta_id": 85
+    },
+    {
+        "detalle": 1945,
+        "correcta": 1,
+        "pregunta_id": 86
+    },
+    {
+        "detalle": 1913,
+        "correcta": 0,
+        "pregunta_id": 86
+    },
+    {
+        "detalle": 1946,
+        "correcta": 0,
+        "pregunta_id": 86
+    },
+    {
+        "detalle": 1948,
+        "correcta": 0,
+        "pregunta_id": 86
+    },
+    {
+        "detalle": "Italia",
+        "correcta": 1,
+        "pregunta_id": 87
+    },
+    {
+        "detalle": "Francia",
+        "correcta": 0,
+        "pregunta_id": 87
+    },
+    {
+        "detalle": "Andorra",
+        "correcta": 0,
+        "pregunta_id": 87
+    },
+    {
+        "detalle": "España",
+        "correcta": 0,
+        "pregunta_id": 87
+    },
+    {
+        "detalle": "Océano Pacífico",
+        "correcta": 1,
+        "pregunta_id": 88
+    },
+    {
+        "detalle": "Océano Índico",
+        "correcta": 0,
+        "pregunta_id": 88
+    },
+    {
+        "detalle": "Océano Atlántico",
+        "correcta": 0,
+        "pregunta_id": 88
+    },
+    {
+        "detalle": "Océano Antártico",
+        "correcta": 0,
+        "pregunta_id": 88
+    },
+    {
+        "detalle": "Rio de Janeiro",
+        "correcta": 0,
+        "pregunta_id": 89
+    },
+    {
+        "detalle": "Brasilia",
+        "correcta": 1,
+        "pregunta_id": 89
+    },
+    {
+        "detalle": "Sao Pablo",
+        "correcta": 0,
+        "pregunta_id": 89
+    },
+    {
+        "detalle": "Fortaleza",
+        "correcta": 0,
+        "pregunta_id": 89
+    },
+    {
+        "detalle": "si",
+        "correcta": 0,
+        "pregunta_id": 90
+    },
+    {
+        "detalle": "no",
+        "correcta": 0,
+        "pregunta_id": 90
+    },
+    {
+        "detalle": "se llevo el credito",
+        "correcta": 1,
+        "pregunta_id": 90
+    },
+    {
+        "detalle": "no llego",
+        "correcta": 0,
+        "pregunta_id": 90
+    },
+    {
+        "detalle": "Rusia",
+        "correcta": 1,
+        "pregunta_id": 91
+    },
+    {
+        "detalle": "Brasil",
+        "correcta": 0,
+        "pregunta_id": 91
+    },
+    {
+        "detalle": "Canadá",
+        "correcta": 0,
+        "pregunta_id": 91
+    },
+    {
+        "detalle": "Francia",
+        "correcta": 0,
+        "pregunta_id": 91
+    },
+    {
+        "detalle": "México",
+        "correcta": 0,
+        "pregunta_id": 92
+    },
+    {
+        "detalle": "EE.UU",
+        "correcta": 0,
+        "pregunta_id": 92
+    },
+    {
+        "detalle": "China",
+        "correcta": 0,
+        "pregunta_id": 92
+    },
+    {
+        "detalle": "Alemania",
+        "correcta": 1,
+        "pregunta_id": 92
+    },
+    {
+        "detalle": "Roja y negra",
+        "correcta": 1,
+        "pregunta_id": 93
+    },
+    {
+        "detalle": "Verde y blanca",
+        "correcta": 0,
+        "pregunta_id": 93
+    },
+    {
+        "detalle": "Amarilla y negra",
+        "correcta": 0,
+        "pregunta_id": 93
+    },
+    {
+        "detalle": "Roja y amarilla",
+        "correcta": 0,
+        "pregunta_id": 93
+    },
+    {
+        "detalle": "EE.UU",
+        "correcta": 1,
+        "pregunta_id": 94
+    },
+    {
+        "detalle": "México",
+        "correcta": 0,
+        "pregunta_id": 94
+    },
+    {
+        "detalle": "China",
+        "correcta": 0,
+        "pregunta_id": 94
+    },
+    {
+        "detalle": "Canadá",
+        "correcta": 0,
+        "pregunta_id": 94
+    },
+    {
+        "detalle": "EE.UU",
+        "correcta": 1,
+        "pregunta_id": 95
+    },
+    {
+        "detalle": "México",
+        "correcta": 0,
+        "pregunta_id": 95
+    },
+    {
+        "detalle": "Japón",
+        "correcta": 0,
+        "pregunta_id": 95
+    },
+    {
+        "detalle": "Argentina",
+        "correcta": 0,
+        "pregunta_id": 95
+    },
+    {
+        "detalle": "México",
+        "correcta": 0,
+        "pregunta_id": 96
+    },
+    {
+        "detalle": "Chile",
+        "correcta": 1,
+        "pregunta_id": 96
+    },
+    {
+        "detalle": "Perú",
+        "correcta": 0,
+        "pregunta_id": 96
+    },
+    {
+        "detalle": "Brasil",
+        "correcta": 0,
+        "pregunta_id": 96
+    },
+    {
+        "detalle": "Francia",
+        "correcta": 1,
+        "pregunta_id": 97
+    },
+    {
+        "detalle": "España",
+        "correcta": 0,
+        "pregunta_id": 97
+    },
+    {
+        "detalle": "Alemania",
+        "correcta": 0,
+        "pregunta_id": 97
+    },
+    {
+        "detalle": "Grecia",
+        "correcta": 0,
+        "pregunta_id": 97
+    },
+    {
+        "detalle": "Clinton",
+        "correcta": 0,
+        "pregunta_id": 98
+    },
+    {
+        "detalle": "Obama",
+        "correcta": 1,
+        "pregunta_id": 98
+    },
+    {
+        "detalle": "Bush",
+        "correcta": 0,
+        "pregunta_id": 98
+    },
+    {
+        "detalle": "Trump",
+        "correcta": 0,
+        "pregunta_id": 98
+    },
+    {
+        "detalle": "Verde, amarillo y rojo",
+        "correcta": 1,
+        "pregunta_id": 99
+    },
+    {
+        "detalle": "Verde y amarillo",
+        "correcta": 0,
+        "pregunta_id": 99
+    },
+    {
+        "detalle": "Verde y rojo",
+        "correcta": 0,
+        "pregunta_id": 99
+    },
+    {
+        "detalle": "Rojo y negro",
+        "correcta": 0,
+        "pregunta_id": 99
+    },
+    {
+        "detalle": "Managua",
+        "correcta": 1,
+        "pregunta_id": 100
+    },
+    {
+        "detalle": "Georgetown",
+        "correcta": 0,
+        "pregunta_id": 100
+    },
+    {
+        "detalle": "La Habana",
+        "correcta": 0,
+        "pregunta_id": 100
+    },
+    {
+        "detalle": "Nicaragua City",
+        "correcta": 0,
+        "pregunta_id": 100
     }
 ]
