@@ -1,0 +1,642 @@
+[
+    {
+        "detalle": "Hermenegildo",
+        "correcta": 0,
+        "pregunta_id": 1
+    },
+    {
+        "detalle": "Lionel",
+        "correcta": 1,
+        "pregunta_id": 1
+    },
+    {
+        "detalle": "Matias",
+        "correcta": 0,
+        "pregunta_id": 1
+    },
+    {
+        "detalle": "Lucas",
+        "correcta": 0,
+        "pregunta_id": 1
+    },
+    {
+        "detalle": "Argentina",
+        "correcta": 0,
+        "pregunta_id": 2
+    },
+    {
+        "detalle": "Uruguay",
+        "correcta": 1,
+        "pregunta_id": 2
+    },
+    {
+        "detalle": "Francia",
+        "correcta": 0,
+        "pregunta_id": 2
+    },
+    {
+        "detalle": "La Luna",
+        "correcta": 0,
+        "pregunta_id": 2
+    },
+    {
+        "detalle": 99354,
+        "correcta": 1,
+        "pregunta_id": 3
+    },
+    {
+        "detalle": 80540,
+        "correcta": 0,
+        "pregunta_id": 3
+    },
+    {
+        "detalle": 100000,
+        "correcta": 0,
+        "pregunta_id": 3
+    },
+    {
+        "detalle": 40250,
+        "correcta": 0,
+        "pregunta_id": 3
+    },
+    {
+        "detalle": 1945,
+        "correcta": 0,
+        "pregunta_id": 4
+    },
+    {
+        "detalle": 1930,
+        "correcta": 1,
+        "pregunta_id": 4
+    },
+    {
+        "detalle": 1950,
+        "correcta": 0,
+        "pregunta_id": 4
+    },
+    {
+        "detalle": 1935,
+        "correcta": 0,
+        "pregunta_id": 4
+    },
+    {
+        "detalle": "EE.UU",
+        "correcta": 0,
+        "pregunta_id": 5
+    },
+    {
+        "detalle": "Canadá",
+        "correcta": 0,
+        "pregunta_id": 5
+    },
+    {
+        "detalle": "Mongolia",
+        "correcta": 0,
+        "pregunta_id": 5
+    },
+    {
+        "detalle": "Grecia",
+        "correcta": 1,
+        "pregunta_id": 5
+    },
+    {
+        "detalle": 7,
+        "correcta": 0,
+        "pregunta_id": 6
+    },
+    {
+        "detalle": 15,
+        "correcta": 1,
+        "pregunta_id": 6
+    },
+    {
+        "detalle": 11,
+        "correcta": 0,
+        "pregunta_id": 6
+    },
+    {
+        "detalle": 14,
+        "correcta": 0,
+        "pregunta_id": 6
+    },
+    {
+        "detalle": "Federación Internacional de Fútbol Asociación",
+        "correcta": 1,
+        "pregunta_id": 7
+    },
+    {
+        "detalle": "Federación Interna de Fútbol Asociado",
+        "correcta": 0,
+        "pregunta_id": 7
+    },
+    {
+        "detalle": "Federalismo Internacional de Fútbol Académico",
+        "correcta": 0,
+        "pregunta_id": 7
+    },
+    {
+        "detalle": "Federación Internacional de Fútbol Académico",
+        "correcta": 0,
+        "pregunta_id": 7
+    },
+    {
+        "detalle": "La paternal",
+        "correcta": 0,
+        "pregunta_id": 8
+    },
+    {
+        "detalle": "Parque Patricios",
+        "correcta": 1,
+        "pregunta_id": 8
+    },
+    {
+        "detalle": "Sarandí",
+        "correcta": 0,
+        "pregunta_id": 8
+    },
+    {
+        "detalle": "Avellaneda",
+        "correcta": 0,
+        "pregunta_id": 8
+    },
+    {
+        "detalle": "Colón",
+        "correcta": 0,
+        "pregunta_id": 9
+    },
+    {
+        "detalle": "Independiente",
+        "correcta": 1,
+        "pregunta_id": 9
+    },
+    {
+        "detalle": "Arsenal",
+        "correcta": 0,
+        "pregunta_id": 9
+    },
+    {
+        "detalle": "River Plate",
+        "correcta": 0,
+        "pregunta_id": 9
+    },
+    {
+        "detalle": 1986,
+        "correcta": 0,
+        "pregunta_id": 10
+    },
+    {
+        "detalle": 1990,
+        "correcta": 0,
+        "pregunta_id": 10
+    },
+    {
+        "detalle": 1994,
+        "correcta": 1,
+        "pregunta_id": 10
+    },
+    {
+        "detalle": "Todavía tiene las dos",
+        "correcta": 0,
+        "pregunta_id": 10
+    },
+    {
+        "detalle": 20,
+        "correcta": 0,
+        "pregunta_id": 11
+    },
+    {
+        "detalle": 16,
+        "correcta": 0,
+        "pregunta_id": 11
+    },
+    {
+        "detalle": 23,
+        "correcta": 0,
+        "pregunta_id": 11
+    },
+    {
+        "detalle": 30,
+        "correcta": 0,
+        "pregunta_id": 11
+    },
+    {
+        "detalle": "Buenos Aires",
+        "correcta": 0,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "jujuy",
+        "correcta": 0,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "Santa Fe",
+        "correcta": 1,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "salta",
+        "correcta": 0,
+        "pregunta_id": 12
+    },
+    {
+        "detalle": "Milo Joglar",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "René Gómez",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "Eduardo Pérez",
+        "correcta": 0,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "René Pérez Joglar",
+        "correcta": 1,
+        "pregunta_id": 13
+    },
+    {
+        "detalle": "Mozart",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Bach",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Vivaldi",
+        "correcta": 1,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "Beethoven",
+        "correcta": 0,
+        "pregunta_id": 14
+    },
+    {
+        "detalle": "John Lennon",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Paul McCartney",
+        "correcta": 1,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "George Harrison",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Ringo Starr",
+        "correcta": 0,
+        "pregunta_id": 15
+    },
+    {
+        "detalle": "Freddie Mercury",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Kurt Cobain",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Robert Plant",
+        "correcta": 1,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Roger Waters",
+        "correcta": 0,
+        "pregunta_id": 16
+    },
+    {
+        "detalle": "Thriller",
+        "correcta": 1,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Beat it",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Abbey Road",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "El bombón asesino",
+        "correcta": 0,
+        "pregunta_id": 17
+    },
+    {
+        "detalle": "Elvis Presley",
+        "correcta": 1,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Axl Rose",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Eric Adams",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "Max Carl",
+        "correcta": 0,
+        "pregunta_id": 18
+    },
+    {
+        "detalle": "terremoto para tu mami",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "terremoto terremoto",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "terremoto pa tu cola",
+        "correcta": 1,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "terremoto dale duro",
+        "correcta": 0,
+        "pregunta_id": 19
+    },
+    {
+        "detalle": "si la invitan unos tragos",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "si por el cuello la besan",
+        "correcta": 1,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "si bailan cumbia",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "le dan lo que ella quiere",
+        "correcta": 0,
+        "pregunta_id": 20
+    },
+    {
+        "detalle": "Moana",
+        "correcta": 0,
+        "pregunta_id": 21
+    },
+    {
+        "detalle": "Frozen",
+        "correcta": 1,
+        "pregunta_id": 21
+    },
+    {
+        "detalle": "Nemo",
+        "correcta": 0,
+        "pregunta_id": 21
+    },
+    {
+        "detalle": "Enrredados",
+        "correcta": 0,
+        "pregunta_id": 21
+    },
+    {
+        "detalle": "con mati al lado",
+        "correcta": 0,
+        "pregunta_id": 22
+    },
+    {
+        "detalle": "con los parlantes en la vereda",
+        "correcta": 1,
+        "pregunta_id": 22
+    },
+    {
+        "detalle": "con un vinito",
+        "correcta": 0,
+        "pregunta_id": 22
+    },
+    {
+        "detalle": "con tu vieja",
+        "correcta": 0,
+        "pregunta_id": 22
+    },
+    {
+        "detalle": "San Genaro",
+        "correcta": 1,
+        "pregunta_id": 23
+    },
+    {
+        "detalle": "Rosario",
+        "correcta": 0,
+        "pregunta_id": 23
+    },
+    {
+        "detalle": "Santa Fe",
+        "correcta": 0,
+        "pregunta_id": 23
+    },
+    {
+        "detalle": "reconquista",
+        "correcta": 0,
+        "pregunta_id": 23
+    },
+    {
+        "detalle": "El original",
+        "correcta": 0,
+        "pregunta_id": 24
+    },
+    {
+        "detalle": "Néstor en bloque",
+        "correcta": 0,
+        "pregunta_id": 24
+    },
+    {
+        "detalle": "Don Omar",
+        "correcta": 1,
+        "pregunta_id": 24
+    },
+    {
+        "detalle": "la re pandilla",
+        "correcta": 0,
+        "pregunta_id": 24
+    },
+    {
+        "detalle": "Es proxeneta",
+        "correcta": 0,
+        "pregunta_id": 25
+    },
+    {
+        "detalle": "Es diputado",
+        "correcta": 1,
+        "pregunta_id": 25
+    },
+    {
+        "detalle": "Es cantante",
+        "correcta": 0,
+        "pregunta_id": 25
+    },
+    {
+        "detalle": "Es programador",
+        "correcta": 0,
+        "pregunta_id": 25
+    },
+    {
+        "detalle": 1972,
+        "correcta": 0,
+        "pregunta_id": 26
+    },
+    {
+        "detalle": 1968,
+        "correcta": 1,
+        "pregunta_id": 26
+    },
+    {
+        "detalle": 1960,
+        "correcta": 0,
+        "pregunta_id": 26
+    },
+    {
+        "detalle": 1966,
+        "correcta": 0,
+        "pregunta_id": 26
+    },
+    {
+        "detalle": "Nadie",
+        "correcta": 0,
+        "pregunta_id": 27
+    },
+    {
+        "detalle": "Todos",
+        "correcta": 0,
+        "pregunta_id": 27
+    },
+    {
+        "detalle": "Tony Stark",
+        "correcta": 1,
+        "pregunta_id": 27
+    },
+    {
+        "detalle": "Thor",
+        "correcta": 0,
+        "pregunta_id": 27
+    },
+    {
+        "detalle": "Amar despues de amar",
+        "correcta": 0,
+        "pregunta_id": 28
+    },
+    {
+        "detalle": "Un Gallo para esculapio",
+        "correcta": 1,
+        "pregunta_id": 28
+    },
+    {
+        "detalle": "El maestro",
+        "correcta": 0,
+        "pregunta_id": 28
+    },
+    {
+        "detalle": "Las estrellas",
+        "correcta": 0,
+        "pregunta_id": 28
+    },
+    {
+        "detalle": "Harry Potter y el Prisionero de Azcaban",
+        "correcta": 0,
+        "pregunta_id": 29
+    },
+    {
+        "detalle": "Harry Potter y la Orden del Fénix",
+        "correcta": 0,
+        "pregunta_id": 29
+    },
+    {
+        "detalle": "Harry Potter y la Cámara secreta",
+        "correcta": 0,
+        "pregunta_id": 29
+    },
+    {
+        "detalle": "Harry Potter y la Piedra Filosofal",
+        "correcta": 1,
+        "pregunta_id": 29
+    },
+    {
+        "detalle": "Star Wars: El despertar de la Fuerza",
+        "correcta": 0,
+        "pregunta_id": 30
+    },
+    {
+        "detalle": "Star Wars: Los últimos Jedi",
+        "correcta": 0,
+        "pregunta_id": 30
+    },
+    {
+        "detalle": "Rogue One: una historia de Star Wars",
+        "correcta": 0,
+        "pregunta_id": 30
+    },
+    {
+        "detalle": "Star Wars: El Ascenso de Skywalker",
+        "correcta": 1,
+        "pregunta_id": 30
+    },
+    {
+        "detalle": "2 de enero de 2020",
+        "correcta": 1,
+        "pregunta_id": 31
+    },
+    {
+        "detalle": "1 de enero de 2020",
+        "correcta": 0,
+        "pregunta_id": 31
+    },
+    {
+        "detalle": "3 enero de 2020",
+        "correcta": 0,
+        "pregunta_id": 31
+    },
+    {
+        "detalle": "No se estrena",
+        "correcta": 0,
+        "pregunta_id": 31
+    },
+    {
+        "detalle": "todo el mar",
+        "correcta": 0,
+        "pregunta_id": 32
+    },
+    {
+        "detalle": "Dory",
+        "correcta": 1,
+        "pregunta_id": 32
+    },
+    {
+        "detalle": "Sydney",
+        "correcta": 0,
+        "pregunta_id": 32
+    },
+    {
+        "detalle": "Lara",
+        "correcta": 0,
+        "pregunta_id": 32
+    }
+]
