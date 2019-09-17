@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "detalle": "Deporte"
+    },
+    {
+        "id": 2,
+        "detalle": "Música"
+    },
+    {
+        "id": 3,
+        "detalle": "Entretenimiento"
+    },
+    {
+        "id": 4,
+        "detalle": "Borrachos"
+    },
+    {
+        "id": 5,
+        "detalle": "Mundo"
+    }
+]
