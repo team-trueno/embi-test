@@ -1,6 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
+{{-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+    </div>
+
+</div> --}}
 
 
         <div class="flex-center position-ref full-height">
@@ -34,7 +45,7 @@
                             <form>
                                 <label for="inputNombre" class="sr-only">Nombre</label>
                                 <input type="text" id="inputEmail" class="form-control mb-3" placeholder="Nombre completo" required
-                                    autofocus>
+                                    >
 
                                 <label for="inputEmail" class="sr-only">Correo electrónico</label>
                                 <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Correo electrónico" required>
@@ -80,4 +91,4 @@
                         </div>
                     </footer>
         </div>
-        @endsection
+@endsection
