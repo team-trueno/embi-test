@@ -1,7 +1,7 @@
 <?php
 
-use App\CategoriaPregunta;
 use Illuminate\Database\Seeder;
+use App\CategoriaPregunta;
 
 class CategoriasTableSeeder extends Seeder
 {
@@ -12,19 +12,29 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
-        $categoriasData = [
-            'Deporte',
-            'Música',
-            'Entretenimiento',
-            'Borrachos',
-            'Mundo',
-        ];
-
-        foreach ($categoriasData as $detalle) {
-            $categoria = new CategoriaPregunta();
-            $categoria->detalle = $detalle;
-            $categoria->save();
+        DB::table('categoria_preguntas')->delete();
+        $json = File::get('database/data/categorias.json');
+        $data = json_decode($json);
+        foreach ($data as $obj) {
+            CategoriaPregunta::create(array(
+                'id' => $obj->id,
+                'detalle' => $obj->detalle,
+            ));
         }
+
+        // $categoriasData = [
+        //     'Deporte',
+        //     'Música',
+        //     'Entretenimiento',
+        //     'Borrachos',
+        //     'Mundo',
+        // ];
+
+        // foreach ($categoriasData as $detalle) {
+        //     $categoria = new CategoriaPregunta();
+        //     $categoria->detalle = $detalle;
+        //     $categoria->save();
+        // }
 
     }
 }
