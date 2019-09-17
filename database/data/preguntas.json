@@ -21,7 +21,7 @@
     },
     {
         "id": 5,
-        "detalle": "¿Dónde originaron los juegos olímpicos?",
+        "detalle": "¿Dónde se originaron los juegos olímpicos?",
         "categoria_pregunta_id": 1
     },
     {
@@ -46,207 +46,457 @@
     },
     {
         "id": 10,
-        "detalle": "¿En qué año le 'cortaron las piernas' a Maradona?",
+        "detalle": "¿En qué año «le cortaron las piernas» a Maradona?",
         "categoria_pregunta_id": 1
     },
     {
         "id": 11,
-        "detalle": "¿Cuántas provincias componen la República argentina?",
-        "categoria_pregunta_id": 5
+        "detalle": "¿Cuántos campeonatos tiene Gim. y E. de La Plata?",
+        "categoria_pregunta_id": 1
     },
     {
         "id": 12,
+        "detalle": "¿Cuál es el clásico rival de Newell's Old Boys?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 13,
+        "detalle": "¿Cuál es el clásico rival de River Plate?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 14,
+        "detalle": "¿Cuál es el clásico rival de Independiente?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 15,
+        "detalle": "¿Cuál es el clásico rival de Lanús?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 16,
+        "detalle": "¿Qué significa AFA?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 17,
+        "detalle": "¿Cuántas copas libertadores ganó Milton Casco?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 18,
+        "detalle": "¿Cuántas copas libertadores ganó Marcelo Gallardo?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 19,
+        "detalle": "¿Cómo le dicen a la hinchada de Boca Juniors?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 20,
+        "detalle": "¿Cómo le dicen al jugador de fútbol Ignacio Scocco?",
+        "categoria_pregunta_id": 1
+    },
+    {
+        "id": 21,
         "detalle": "¿De qué provincia es la cantante Nicki Nicole?",
         "categoria_pregunta_id": 2
     },
     {
-        "id": 13,
+        "id": 22,
         "detalle": "¿Cuál es el nombre del cantante de calle 13?",
         "categoria_pregunta_id": 2
     },
     {
-        "id": 14,
-        "detalle": "¿Quién compuso 'Las cuatro estaciones'?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 15,
-        "detalle": "¿Quien es el Beatle que esta descalzo en la portada del disco Abbey Road?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 16,
-        "detalle": "¿Quien era el vocalista de Led Zeppelin?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 17,
-        "detalle": "¿Cuál es el disco más vendido de la historia?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 18,
-        "detalle": "¿Quién es el famoso Rey de Rock en los Estados Unidos?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 19,
-        "detalle": "¿Cómo se llama la canción del Apache Ness?",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 20,
-        "detalle": "Mari se deja...",
-        "categoria_pregunta_id": 2
-    },
-    {
-        "id": 21,
-        "detalle": "¿De qué película de Disney es la canción 'Libre Soy'?",
-        "categoria_pregunta_id": 3
-    },
-    {
-        "id": 22,
-        "detalle": "¿De dónde es Mario Luis ?",
-        "categoria_pregunta_id": 2
-    },
-    {
         "id": 23,
-        "detalle": "¿Quién canta 'Salió el sol'?",
+        "detalle": "¿Quién compuso «Las cuatro estaciones»?",
         "categoria_pregunta_id": 2
     },
     {
         "id": 24,
+        "detalle": "¿Quien es el Beatle que esta descalzo en la portada del disco Abbey Road?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 25,
+        "detalle": "¿Quien era el vocalista de Led Zeppelin?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 26,
+        "detalle": "¿Cuál es el disco más vendido de la historia?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 27,
+        "detalle": "¿Quién es el famoso Rey de Rock en los Estados Unidos?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 28,
+        "detalle": "¿Cómo se llama la canción del Apache Ness?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 29,
+        "detalle": "¿De qué película de Disney es la canción «Libre Soy»?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 30,
+        "detalle": "¿Con quien canta Virus Cumbieron?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 31,
+        "detalle": "¿De dónde es Mario Luis ?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 32,
+        "detalle": "¿Quién canta salió el sol?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 33,
+        "detalle": "¿Quién popularizó la canción «El bombón asesino»?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 34,
+        "detalle": "¿De que nacionalidad es Luis Miguel?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 35,
+        "detalle": "¿Cómo se llama el cantante de Calle 13?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 36,
+        "detalle": "¿Quién canta la canción «Jijiji»?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 37,
+        "detalle": "¿Quién canta la canción «Yo voy a hacerme millonario»?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 38,
+        "detalle": "¿A qué género musical pertenece la banda «Las Pastillas del Abuelo»?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 39,
+        "detalle": "¿Qué significa AC/DC?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 40,
+        "detalle": "¿Cómo se llama el cantante de los Guns and Roses?",
+        "categoria_pregunta_id": 2
+    },
+    {
+        "id": 41,
         "detalle": "¿A qué se dedica Paulo Londra?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 25,
-        "detalle": "¿En qué año se emitió por primera vez el programa Almorzando con Mirtha Legrand?",
+        "id": 42,
+        "detalle": "¿En qué año se emitió por primera vez el programa «Almorzando con Mirtha Legrand»?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 26,
+        "id": 43,
         "detalle": "¿Quien muere al final en Avengers: Endgame?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 27,
+        "id": 44,
         "detalle": "¿Quien ganó el Martin Fierro de oro 2018?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 28,
+        "id": 45,
         "detalle": "¿Cuál es la primer pelicula de la saga de Harry Potter?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 29,
+        "id": 46,
         "detalle": "¿Cómo se llama la ultima pelicula de Star Wars que se estrena en diciembre 2019?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 30,
+        "id": 47,
         "detalle": "¿Cuándo se estrena la película Frozen II?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 31,
-        "detalle": "¿Quién acompaña al padre de Nemo en la búsqueda? ",
+        "id": 48,
+        "detalle": "¿Quién acompaña al padre de Nemo en la búsqueda?",
         "categoria_pregunta_id": 3
     },
     {
-        "id": 32,
-        "detalle": "¿Cuál es la capital de Bolivia?",
-        "categoria_pregunta_id": 5
+        "id": 49,
+        "detalle": "¿Como se llama la muñeca maldita de la famosa película?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 33,
-        "detalle": "¿Quién fue el primer emperador romano?",
-        "categoria_pregunta_id": 5
+        "id": 50,
+        "detalle": "¿En qué año se presentó Michael Jackson en los escenarios de Argentina?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 34,
-        "detalle": "¿Cuál es el lugar más frío de la tierra?",
-        "categoria_pregunta_id": 5
+        "id": 51,
+        "detalle": "¿Quién es el protagonista principal de Casados con Hijos?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 35,
-        "detalle": "¿Cuál es el río más largo del mundo?",
-        "categoria_pregunta_id": 5
+        "id": 52,
+        "detalle": "¿Cuántos hijos tienen Dardo y María Helena en Casados con Hijos?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 36,
-        "detalle": "¿De qué colores es la bandera de México?",
-        "categoria_pregunta_id": 5
+        "id": 53,
+        "detalle": "¿Cómo se llama el perro de Los Argento?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 37,
-        "detalle": "¿Cuándo acabó la II Guerra Mundial?",
-        "categoria_pregunta_id": 5
+        "id": 54,
+        "detalle": "¿Cuánto es 1 y 1?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 38,
-        "detalle": "¿En qué país se encuentra la torre de Pisa?",
-        "categoria_pregunta_id": 5
+        "id": 55,
+        "detalle": "¿Cómo es el apodo de uno de los protagonistas de la Serie El Marginal?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 39,
-        "detalle": "¿Cuál es el océano más grande?",
-        "categoria_pregunta_id": 5
+        "id": 56,
+        "detalle": "¿Qué significa MIB?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 40,
-        "detalle": "¿Cuál es la capital de Brasil?",
-        "categoria_pregunta_id": 5
+        "id": 57,
+        "detalle": "¿Cómo era el nombre de la niña con superpoderes?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 41,
-        "detalle": "¿Cuál es el país más grande del mundo?",
-        "categoria_pregunta_id": 5
+        "id": 58,
+        "detalle": "¿Cuánto es 40 x 20?",
+        "categoria_pregunta_id": 3
     },
     {
-        "id": 42,
+        "id": 59,
+        "detalle": "¿Cuántos metros equivalen a 1 decámetro?",
+        "categoria_pregunta_id": 3
+    },
+    {
+        "id": 60,
+        "detalle": "¿La famosa serie de Netflix se llama Stranger...?",
+        "categoria_pregunta_id": 3
+    },
+    {
+        "id": 61,
         "detalle": "¿Qué hacer si salís del boliche y tu amigo tiene resaca?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 43,
+        "id": 62,
         "detalle": "¿En qué año se fabricaron las primeras referencias alcohólicas?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 44,
+        "id": 63,
         "detalle": "¿Cuál es el nombre de la bebida más alcohólia del mundo?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 45,
-        "detalle": "¿Cómo se le llama a la resaca en México?",
+        "id": 64,
+        "detalle": "¿Cómo se le llama a la «resaca» en México?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 46,
+        "id": 65,
         "detalle": "¿Cuál es la bebida alcohólica más vendida del mundo?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 47,
+        "id": 66,
         "detalle": "¿Con qué se prepara el Martini?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 48,
+        "id": 67,
         "detalle": "¿De qué país es originario el Fernet?",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 49,
-        "detalle": "Todo el mundo sabe que el borracho..",
+        "id": 68,
+        "detalle": "La diferencia del grado de alcohol de la cerveza se debe a....",
         "categoria_pregunta_id": 4
     },
     {
-        "id": 50,
-        "detalle": "¿En qué fecha River le ganó a Boca la superfinal de Libertadores?",
-        "categoria_pregunta_id": 1
+        "id": 69,
+        "detalle": "¿Cómo se le llama actualmente al vaso de cerveza?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 70,
+        "detalle": "¿Qué es un pritiado?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 71,
+        "detalle": "¿Cuál de los siguientes Champagnes es más costoso?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 72,
+        "detalle": "¿Con qué mano debe agarrarse una copa para brindar?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 73,
+        "detalle": "¿La cirrosis es una enfermedad que afecta...?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 74,
+        "detalle": "¿En qué año se lanzó Embirrados?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 75,
+        "detalle": "¿La botella de cerveza Corona se toma habitualmente con...?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 76,
+        "detalle": "¿Quienes tomaban Ron?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 77,
+        "detalle": "¿El fernet se toma con....?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 78,
+        "detalle": "¿La mayor cantidad de bodegas argentinas se encuentran en...?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 79,
+        "detalle": "Al pan pan y al vino....?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 80,
+        "detalle": "¿Qué bebida tiene más porcentaje de alcohol?",
+        "categoria_pregunta_id": 4
+    },
+    {
+        "id": 81,
+        "detalle": "¿Cuál es la capital de Bolivia?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 82,
+        "detalle": "¿Quién fue el primer emperador romano?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 83,
+        "detalle": "¿Cuál es el lugar más frío de la tierra?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 84,
+        "detalle": "¿Cuál es el río más largo del mundo?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 85,
+        "detalle": "¿De qué colores es la bandera de México?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 86,
+        "detalle": "¿Cuándo acabó la II Guerra Mundial?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 87,
+        "detalle": "¿En qué país se encuentra la torre de Pisa?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 88,
+        "detalle": "¿Cuál es el océano más grande?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 89,
+        "detalle": "¿Cuál es la capital de Brasil?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 90,
+        "detalle": "¿Colon descubrio america?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 91,
+        "detalle": "¿Cuál es el país más grande del mundo?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 92,
+        "detalle": "¿En dónde se encuentra el Muro de Berlín?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 93,
+        "detalle": "¿De qué color es la bandera de Angola?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 94,
+        "detalle": "¿En qué país se encuentra Broklyn Bridge?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 95,
+        "detalle": "¿En qué país se llevó a cabo el atentado del 11-S?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 96,
+        "detalle": "¿Qué país triacionó a Argentina en la guerra de Malvinas?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 97,
+        "detalle": "¿Dónde está ubicada la Torre Eiffel?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 98,
+        "detalle": "¿Quién fue el primer presidente negro de EE.UU?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 99,
+        "detalle": "¿Qué colores tiene la bandera de Camerún?",
+        "categoria_pregunta_id": 5
+    },
+    {
+        "id": 100,
+        "detalle": "¿Cuál es la capital de Nicaragua?",
+        "categoria_pregunta_id": 5
     }
 ]
