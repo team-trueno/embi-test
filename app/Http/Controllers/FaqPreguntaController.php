@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FaqPregunta;
 use App\FaqTopico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FaqPreguntaController extends Controller
 {
@@ -15,6 +16,7 @@ class FaqPreguntaController extends Controller
      */
     public function index()
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         $preguntas = FaqPregunta::orderBy('id','DESC')->paginate(5);
@@ -28,6 +30,7 @@ class FaqPreguntaController extends Controller
      */
     public function create()
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         return view('faq.preguntas.create', compact('topicos'));
@@ -41,6 +44,7 @@ class FaqPreguntaController extends Controller
      */
     public function store(Request $request)
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'required|string|min:1|max:100|unique:faq_preguntas,detalle',
@@ -68,6 +72,7 @@ class FaqPreguntaController extends Controller
      */
     public function show(FaqPregunta $pregunta)
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         return view('faq.preguntas.show', compact('pregunta'));
     }
@@ -80,6 +85,7 @@ class FaqPreguntaController extends Controller
      */
     public function edit(FaqPregunta $pregunta)
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $topicos = FaqTopico::all();
         return view('faq.preguntas.edit', compact('pregunta', 'topicos'));
@@ -94,6 +100,7 @@ class FaqPreguntaController extends Controller
      */
     public function update(Request $request, FaqPregunta $pregunta)
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $reglas = [
             'detalle'=>'string|min:1|max:100',
@@ -126,6 +133,7 @@ class FaqPreguntaController extends Controller
      */
     public function destroy(FaqPregunta $pregunta)
     {
+        abort_unless(Auth::check(), 401);
         auth()->user()->authorizeRoles(['admin', 'superadmin']);
         $pregunta->delete();
         return redirect()->route('faq.preguntas.index');

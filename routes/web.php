@@ -11,10 +11,6 @@
 |
 */
 
-// use App\Http\Controllers\UserActivoController;
-// use Illuminate\Routing\Route;
-
-use App\Http\Controllers\RankingController;
 
 Route::get('/', function () {
     return view('welcome');
