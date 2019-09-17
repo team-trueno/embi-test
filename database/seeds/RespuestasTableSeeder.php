@@ -22,5 +22,12 @@ class RespuestasTableSeeder extends Seeder
                 'pregunta_id' => $obj->pregunta_id,
             ));
         }
+
+        App\Pregunta::has('respuestas', '=', 4)
+                    ->update([
+                        'activa' => true,
+                        'completa' => true,
+        ]);
+
     }
 }
