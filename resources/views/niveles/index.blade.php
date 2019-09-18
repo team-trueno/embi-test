@@ -7,8 +7,8 @@
             <div class="card card-border-color card-border-color-primary shadow">
 
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h4 class="float-left">Listado de Niveles</h4>
-                    <a href="{{ route('niveles.create') }}" class="btn btn-warning align-self-center">Añadir Nivel</a>
+                    <h4 class="float-left mb-0">Listado de Niveles</h4>
+                    {{-- <a href="{{ route('niveles.create') }}" class="btn btn-warning align-self-center">Añadir Nivel</a> --}}
                 </div>
 
                 <div class="card-body">

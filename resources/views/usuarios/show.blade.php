@@ -28,8 +28,11 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">
+                        @if ($usuario->hasJugador())
                         <span class="btn btn-dark btn-lg">{{ $usuario->jugador->nivel->nombre }}</span>
                         <span class="btn btn-secondary btn-lg">Puntos <span class="badge badge-light">{{ $usuario->jugador->puntos }}</span></span>
+                        @endif
+
                     </li>
                     <li class="list-group-item">{{ $usuario->email }}</li>
                     <li class="list-group-item">{{ $usuario->usuario }}</li>
@@ -83,12 +86,14 @@
             <div class="card mb-4">
             <div class="card-header"><h3>Datos generales</h3></div>
                 <div class="card-body col-md-8">
-                    <p>Nombre: {{$usuario->name}}</p>
-                    <p>Apellido: {{$usuario->apellido}}</p>
-                    <p>E-mail: {{$usuario->email}}</p>
-                    <p>Usuario: {{$usuario->usuario}}</p>
-                    <p>Fecha Nacimiento: {{$usuario->fecha_nac}}</p>
-                    <p>País: {{$usuario->pais}}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Nombre: {{$usuario->name}}</li>
+                        <li class="list-group-item">Apellido: {{$usuario->apellido}}</li>
+                        <li class="list-group-item">E-mail: {{$usuario->email}}</li>
+                        <li class="list-group-item">Usuario: {{$usuario->usuario}}</li>
+                        <li class="list-group-item">Fecha Nacimiento: {{$usuario->fecha_nac}}</li>
+                        <li class="list-group-item">País: {{$usuario->pais}}</li>
+                </ul>
                     <a href="{{ route('usuarios.index') }}" class="btn btn-dark btn-sm">Atrás</a>
                 </div>
             </div>
@@ -112,10 +117,12 @@
             <div class="card mb-4">
                     <div class="card-header"><h3>Datos Jugador</h3></div>
                     <div class="card-body col-md-8">
+                            @if ($usuario->hasJugador())
                         {{-- $user->jugador->nivel ó jugador->nivel --}}
                         <p>{{$usuario->jugador->nivel->nombre}}</p>
                         {{-- $user->jugador->puntos ó jugador->puntos --}}
                         <p>Puntos: {{$usuario->jugador->puntos}}</p>
+                        @endif
                         {{-- realizar una consulta de su posición en el ranking gral --}}
                         <a href="{{ route('usuarios.index') }}" class="btn btn-dark btn-sm">Atrás</a>
                     </div>
