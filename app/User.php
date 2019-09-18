@@ -104,4 +104,12 @@ class User extends Authenticatable
         return false;
     }
 
+    public function hasJugador()
+    {
+        if($this->jugador()->first()) {
+            return true;
+        }
+        return false;
+    }
+
 }
