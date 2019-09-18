@@ -45,7 +45,7 @@
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow">
+        <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="img-fluid pb-1" src="{{ asset('embirrados-gris.svg') }}" width="30" height="30" alt="">
@@ -128,6 +128,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            @yield('footer')
+        </footer>
     </div>
 </body>
 
