@@ -30,9 +30,19 @@ Route::resource('/respuestas', 'RespuestaController');
 
 Route::resource('/contactos', 'ContactoController');
 
-Route::resource('/faq/topicos', 'FaqTopicoController', ['as' => 'faq']);
+// Route::prefix('/faq')->name('faq.')->group(function() {
+//     Route::resource('/topicos', 'FaqTopicoController');
+//     Route::resource('/preguntas', 'FaqPreguntaController');
+// });
 
-Route::resource('/faq/preguntas', 'FaqPreguntaController', ['as' => 'faq']);
+Route::group(['prefix' => 'faq', 'as' => 'faq.'], function () {
+    Route::resource('/topicos', 'FaqTopicoController');
+    Route::resource('/preguntas', 'FaqPreguntaController');
+});
+
+// Route::resource('/faq/topicos', 'FaqTopicoController', ['as' => 'faq']);
+
+// Route::resource('/faq/preguntas', 'FaqPreguntaController', ['as' => 'faq']);
 
 Route::resource('/jugadores', 'JugadorController')->parameters([
     'jugadores' => 'jugador',
@@ -40,12 +50,12 @@ Route::resource('/jugadores', 'JugadorController')->parameters([
 
 Route::resource('/niveles', 'NivelController')->parameters([
     'niveles' => 'nivel',
-]);
+])->only(['index', 'show', 'edit', 'update']);
 
 Route::post('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@store');
 Route::patch('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@update');
 Route::get('/preguntas/{pregunta}/respuestas/edit', 'PreguntaRespuestasController@edit');
-Route::get('/juego', function() {
+Route::get('/juego', function () {
     $pregunta = \App\Pregunta::where('activa', true)->inRandomOrder()->first();
     // dd($pregunta);
     return view('jugadas.juego', compact('pregunta'));
