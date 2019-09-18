@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('apellido');
             $table->string('usuario');
-            $table->string('avatar')->nullable();
+            $table->string('avatar')->nullable()->default('default.png');
             $table->date('fecha_nac')->nullable();
             $table->string('pais');
             $table->boolean('activo')->default(true);
