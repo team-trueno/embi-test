@@ -8,6 +8,11 @@
                 @slot('header')
                     Detalles de la pregunta
                 @endslot
+
+                @slot('boton')
+                    <a href="{{ route('preguntas.index') }}" class="btn btn-primary align-self-center">Inicio</a>
+                @endslot
+
                 <div class="card-body">
                     <form action="">
                             <fieldset disabled="disabled">

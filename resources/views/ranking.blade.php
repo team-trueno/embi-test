@@ -7,7 +7,7 @@
                 <div class="card card-border-color card-border-color-primary shadow">
 
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h4 class="float-left">Ranking de jugadores</h4>
+                        <h4 class="float-left mb-0">Ranking de jugadores</h4>
                         {{-- <a href="{{ route('preguntas.create') }}" class="btn btn-warning align-self-center">Añadir Usuario</a> --}}
                     </div>
 
@@ -30,8 +30,8 @@
                                         </td>
                                         <td class="align-middle">{{ $jugador->user->name }}</td>
                                         <td class="align-middle">{{ $jugador->user->apellido }}</td>
-                                        <td class="align-middle d-none d-md-table-cell">{{ $jugador->nivel->nombre }}</td>
-                                        <td class="align-middle d-none d-md-table-cell">{{ $jugador->puntos }}</td>
+                                        <td class="align-middle">{{ $jugador->nivel->nombre }}</td>
+                                        <td class="align-middle">{{ $jugador->puntos }}</td>
                                     </tr>
                                     @empty
                                         <tr>

@@ -7,8 +7,8 @@
             <div class="card card-border-color card-border-color-primary shadow">
 
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h4 class="float-left">Listado de categorías</h4>
-                    <a href="{{ route('categorias.create') }}" class="btn btn-warning align-self-center">Añadir Categoría</a>
+                    <h4 class="float-left mb-0">Listado de categorías</h4>
+                    <a href="{{ route('categorias.create') }}" class="btn btn-warning align-self-center disabled">Añadir Categoría</a>
                 </div>
 
                 <div class="card-body">
@@ -46,7 +46,7 @@
 
                                     <td  class="align-middle d-flex justify-content-between">
                                         {{-- <div class="float-right"> --}}
-                                       <a class="btn btn-warning btn-sm" href="{{ route('categorias.show', $categoria->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
+                                       <a class="btn btn-warning btn-sm disabled" href="{{ route('categorias.show', $categoria->id) }}"><i class="fas fa-eye d-lg-none"></i><span class="d-none d-lg-block">Detalle</span></a>
 
 
                                         <a class="btn btn-outline-warning btn-sm mr-1 ml-1" href="{{ route('categorias.edit', $categoria->id) }}"><i class="fas fa-edit d-lg-none"></i><span class="d-none d-lg-block">Editar</span></a>

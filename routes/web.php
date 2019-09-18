@@ -56,6 +56,7 @@ Route::post('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@st
 Route::patch('/preguntas/{pregunta}/respuestas', 'PreguntaRespuestasController@update');
 Route::get('/preguntas/{pregunta}/respuestas/edit', 'PreguntaRespuestasController@edit');
 Route::get('/juego', function () {
+    abort_unless(auth()->user()->hasJugador(), 401);
     $pregunta = \App\Pregunta::where('activa', true)->inRandomOrder()->first();
     // dd($pregunta);
     return view('jugadas.juego', compact('pregunta'));
