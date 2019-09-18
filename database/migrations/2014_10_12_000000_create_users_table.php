@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('apellido');
             $table->string('usuario');
-            $table->string('avatar');
-            $table->date('fecha_nac');
+            $table->string('avatar')->nullable();
+            $table->date('fecha_nac')->nullable();
             $table->string('pais');
             $table->boolean('activo')->default(true);
             $table->string('email')->unique();
