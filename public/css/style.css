@@ -19,3 +19,73 @@ table tbody tr td img {
     height: 30px;
     border-radius: 50%;
 }
+
+
+footer.page-footer {
+	bottom: 0;
+	color: #fff
+}
+
+footer.page-footer .container-fluid {
+	width: auto
+}
+
+footer.page-footer .footer-copyright {
+	overflow: hidden;
+	color: rgba(255,255,255,.6);
+	background-color: rgba(0,0,0,.2)
+}
+
+footer.page-footer a {
+	color: #fff
+}
+
+.deep-purple {
+	background-color: #673ab7!important
+}
+
+.unique-color-dark {
+	background-color: #1c2331!important
+}
+
+/* .fb-ic {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    border: 2px #fff solid;
+    justify-content: center;
+    display: flex;
+} */
+
+.redes {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.redes a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #d0103a;
+}
+
+
+
+.redes a:hover > .social {
+    border-color: #d0103a;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 36px;
+    border: 2px #fff solid;
+}
