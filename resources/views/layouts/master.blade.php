@@ -129,9 +129,11 @@
             @yield('content')
         </main>
 
-        <footer>
+        @include('components.footer')
+
+        {{-- <footer>
             @yield('footer')
-        </footer>
+        </footer> --}}
     </div>
 </body>
 
