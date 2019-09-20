@@ -32,6 +32,7 @@ $factory->define(User::class, function (Faker $faker) {
 
 $factory->afterCreating(User::class, function ($user, $faker) {
     $user->roles()->attach(App\Role::where('name', 'user')->first());
+    $user->profile()->create();
 });
 
 $factory->afterCreatingState(User::class, 'jugador', function ($user, $faker) {

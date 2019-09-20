@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\UserWasCreated;
 use App\User;
 use App\Role;
 use App\Http\Controllers\Controller;
@@ -98,7 +99,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $user->jugador()->create();
+        event(new UserWasCreated($user));
+
+        // $user->jugador()->create();
 
         $user->roles()->attach(Role::where('name', 'user')->first());
 

@@ -112,4 +112,13 @@ class User extends Authenticatable
         return false;
     }
 
+    public function isSuperAdmin()
+    {
+        return $this->hasRole('superadmin');
+    }
+
+    public function profile()
+    {
+        return $this->hasOne('App\Profile', 'owner_id');
+    }
 }

@@ -11,6 +11,15 @@
 |
 */
 
+use App\Events\UserWasCreated;
+
+Route::get('/eventito', function () {
+    $user = auth()->user();
+
+    event(new UserWasCreated($user));
+
+    return 'Hola';
+})->middleware('guest');
 
 Route::get('/', function () {
     return view('welcome');
@@ -83,3 +92,5 @@ Route::get('/ranking', 'RankingController@index');
 
 Route::post('/usuario-admin/{usuario}', 'UserAdminController@store')->name('admin.store');
 Route::delete('/usuario-admin/{usuario}', 'UserAdminController@destroy')->name('admin.destroy');
+
+Route::resource('profile', 'ProfileController');
