@@ -20,6 +20,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\UserWasCreated' => [
             'App\Listeners\AttachJugador',
+            'App\Listeners\AttachProfile',
         ],
     ];
 

@@ -6,7 +6,7 @@ use App\Events\UserWasCreated;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class AttachJugador
+class AttachProfile
 {
     /**
      * Create the event listener.
@@ -26,7 +26,6 @@ class AttachJugador
      */
     public function handle(UserWasCreated $event)
     {
-        $event->user->jugador()->create();
-        // var_dump('Notify ' . $event->user->id . ' se creo.');
+        $event->user->profile()->create();
     }
 }
